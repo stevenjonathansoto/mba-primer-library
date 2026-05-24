@@ -10,17 +10,19 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --navy: #1B3A6B;
-    --navy-deep: #0f2347;
-    --navy-mid: #254d8f;
-    --gold: #C9A84C;
-    --gold-light: #e8c96a;
-    --gold-pale: #f5e9c4;
-    --cream: #FAF7F2;
+    --navy: #003087;
+    --navy-deep: #001a57;
+    --navy-mid: #185FA5;
+    --columbia-blue: #B9D9EB;
+    --columbia-blue-light: #d4ecf5;
+    --columbia-blue-pale: #e6eef8;
+    --accent: #E8B84B;
+    --accent-pale: #fdf3d8;
+    --cream: #F5F8FC;
     --white: #ffffff;
     --text: #1a1a2e;
     --muted: #6b7280;
-    --border: #e5e1d8;
+    --border: #dde3ee;
   }
 
   html { scroll-behavior: smooth; }
@@ -50,8 +52,8 @@
 
   .header-grid {
     position: absolute; inset: 0;
-    background-image: linear-gradient(rgba(201,168,76,0.06) 1px, transparent 1px),
-                      linear-gradient(90deg, rgba(201,168,76,0.06) 1px, transparent 1px);
+    background-image: linear-gradient(rgba(232,184,75,0.06) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(232,184,75,0.06) 1px, transparent 1px);
     background-size: 60px 60px;
     pointer-events: none;
   }
@@ -61,7 +63,7 @@
     top: -80px; left: 50%;
     transform: translateX(-50%);
     width: 600px; height: 300px;
-    background: radial-gradient(ellipse, rgba(201,168,76,0.15) 0%, transparent 70%);
+    background: radial-gradient(ellipse, rgba(232,184,75,0.12) 0%, transparent 70%);
     pointer-events: none;
   }
 
@@ -79,7 +81,7 @@
 
   .eyebrow-line {
     width: 32px; height: 1.5px;
-    background: var(--gold);
+    background: var(--accent);
   }
 
   .eyebrow-text {
@@ -88,7 +90,7 @@
     font-weight: 500;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--gold);
+    color: var(--accent);
   }
 
   .header-title {
@@ -103,7 +105,7 @@
 
   .header-title em {
     font-style: italic;
-    color: var(--gold-light);
+    color: var(--accent);
   }
 
   .header-subtitle {
@@ -115,63 +117,67 @@
     margin-bottom: 36px;
   }
 
-  .header-meta {
-    display: flex; align-items: center; gap: 24px;
-    flex-wrap: wrap;
-  }
-
-  .meta-pill {
-    display: flex; align-items: center; gap: 8px;
-    background: rgba(255,255,255,0.07);
-    border: 1px solid rgba(201,168,76,0.25);
-    border-radius: 100px;
-    padding: 6px 14px;
-    font-size: 12px;
-    font-weight: 500;
-    color: rgba(255,255,255,0.7);
-  }
-
-  .meta-pill .dot {
-    width: 6px; height: 6px;
-    border-radius: 50%;
-    background: var(--gold);
-  }
-
-  /* ── NAV STRIP ── */
-  .nav-strip {
+  /* ── SEARCH + FILTER BAR ── */
+  .search-strip {
     background: var(--navy);
-    border-bottom: 1px solid rgba(201,168,76,0.2);
-    padding: 0 40px;
+    border-bottom: 1px solid rgba(232,184,75,0.2);
+    padding: 12px 40px;
   }
 
-  .nav-inner {
+  .search-inner {
     max-width: 1100px; margin: 0 auto;
-    display: flex; align-items: center; gap: 32px;
-    height: 48px;
+    display: flex; align-items: center; gap: 12px;
   }
 
-  .nav-label {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px; letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.4);
-    flex-shrink: 0;
+  /* search input */
+  .search-wrap {
+    position: relative;
+    flex: 1;
   }
 
-  .nav-filters {
-    display: flex; gap: 6px;
-    overflow-x: auto;
-    scrollbar-width: none;
+  .search-wrap input {
+    width: 100%;
+    padding: 9px 12px 9px 42px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.08);
+    color: var(--white);
+    font-size: 14px;
+    font-family: 'DM Sans', sans-serif;
+    outline: none;
+    transition: border-color 0.18s, background 0.18s;
   }
-  .nav-filters::-webkit-scrollbar { display: none; }
+
+  .search-wrap input::placeholder { color: rgba(255,255,255,0.4); }
+
+  .search-wrap input:focus {
+    border-color: var(--columbia-blue);
+    background: rgba(255,255,255,0.12);
+  }
+
+  .search-icon {
+    position: absolute;
+    left: 13px; top: 50%;
+    transform: translateY(-50%);
+    width: 15px; height: 15px;
+    stroke: rgba(255,255,255,0.4);
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    pointer-events: none;
+  }
+
+  /* filter dropdown */
+  .filter-wrap { position: relative; }
 
   .filter-btn {
-    padding: 5px 14px;
-    border-radius: 100px;
+    display: flex; align-items: center; gap: 7px;
+    padding: 9px 16px;
+    border-radius: 8px;
     border: 1px solid rgba(255,255,255,0.15);
-    background: transparent;
-    color: rgba(255,255,255,0.6);
-    font-size: 12px;
+    background: rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.85);
+    font-size: 13px;
     font-family: 'DM Sans', sans-serif;
     font-weight: 500;
     cursor: pointer;
@@ -180,14 +186,74 @@
   }
 
   .filter-btn:hover {
-    border-color: rgba(201,168,76,0.5);
-    color: var(--gold-light);
+    border-color: var(--columbia-blue);
+    background: rgba(185,217,235,0.12);
   }
 
   .filter-btn.active {
-    background: rgba(201,168,76,0.15);
-    border-color: var(--gold);
-    color: var(--gold-light);
+    border-color: var(--columbia-blue);
+    background: rgba(185,217,235,0.18);
+    color: var(--columbia-blue);
+  }
+
+  .chevron {
+    width: 14px; height: 14px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    transition: transform 0.15s;
+  }
+
+  .chevron.open { transform: rotate(180deg); }
+
+  .dropdown {
+    position: absolute;
+    top: calc(100% + 6px); right: 0;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    min-width: 180px;
+    z-index: 100;
+    overflow: hidden;
+    display: none;
+  }
+
+  .dropdown.open { display: block; }
+
+  .dropdown-item {
+    display: flex; align-items: center; gap: 10px;
+    padding: 10px 16px;
+    font-size: 13px;
+    color: var(--text);
+    cursor: pointer;
+    transition: background 0.1s;
+  }
+
+  .dropdown-item:hover { background: var(--columbia-blue-pale); }
+
+  .dropdown-item.selected {
+    color: var(--navy);
+    font-weight: 500;
+  }
+
+  .dropdown-item.selected .check { opacity: 1; }
+
+  .check {
+    width: 14px; height: 14px;
+    stroke: var(--navy);
+    fill: none;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    opacity: 0;
+    margin-left: auto;
+  }
+
+  .dropdown-divider {
+    height: 1px;
+    background: var(--border);
+    margin: 4px 0;
   }
 
   /* ── MAIN CONTENT ── */
@@ -218,6 +284,13 @@
     color: var(--muted);
   }
 
+  .no-results {
+    font-size: 14px;
+    color: var(--muted);
+    padding: 2rem 0;
+    display: none;
+  }
+
   /* ── PRIMER GRID ── */
   .primer-grid {
     display: grid;
@@ -236,9 +309,12 @@
     animation: fadeUp 0.4s ease both;
   }
 
+  /* hidden = completely gone */
+  .primer-card.hidden { display: none; }
+
   .primer-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 40px rgba(27,58,107,0.12);
+    box-shadow: 0 12px 40px rgba(0,48,135,0.10);
   }
 
   @keyframes fadeUp {
@@ -264,8 +340,8 @@
     position: absolute;
     right: 0; top: 0; bottom: 0;
     width: 40%;
-    background: linear-gradient(90deg, transparent, var(--gold));
-    opacity: 0.6;
+    background: linear-gradient(90deg, transparent, var(--accent));
+    opacity: 0.7;
   }
 
   .card-body {
@@ -277,9 +353,9 @@
 
   .card-tag {
     display: inline-flex; align-items: center; gap: 6px;
-    background: var(--gold-pale);
-    border: 1px solid rgba(201,168,76,0.3);
-    color: #8a6820;
+    background: var(--accent-pale);
+    border: 1px solid rgba(232,184,75,0.4);
+    color: #7a5c0a;
     font-family: 'DM Mono', monospace;
     font-size: 10px;
     font-weight: 500;
@@ -309,30 +385,18 @@
     margin-bottom: 20px;
   }
 
-  .card-meta {
-    display: flex; gap: 16px;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-    padding-top: 16px;
-    border-top: 1px solid var(--border);
-  }
-
-  .meta-item {
-    display: flex; flex-direction: column; gap: 2px;
-  }
-
-  .meta-key {
-    font-family: 'DM Mono', monospace;
-    font-size: 9px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-
-  .meta-val {
+  /* single-line updated row */
+  .card-updated {
     font-size: 12px;
-    font-weight: 600;
+    color: var(--muted);
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+    margin-bottom: 16px;
+  }
+
+  .card-updated strong {
     color: var(--navy);
+    font-weight: 600;
   }
 
   .card-sections {
@@ -343,8 +407,8 @@
   .section-chip {
     font-size: 11px;
     padding: 2px 8px;
-    background: #f0f4ff;
-    border: 1px solid #d4ddf7;
+    background: var(--columbia-blue-pale);
+    border: 1px solid rgba(185,217,235,0.6);
     border-radius: 4px;
     color: var(--navy-mid);
     font-weight: 500;
@@ -384,31 +448,24 @@
     flex-shrink: 0;
   }
 
-  .btn-preview {
-    display: flex; align-items: center; justify-content: center;
-    width: 40px; height: 40px;
+  .btn-request {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 7px 14px;
     border-radius: 8px;
-    border: 1px solid var(--border);
+    border: 1px solid var(--navy);
     background: transparent;
-    color: var(--muted);
-    cursor: pointer;
-    transition: all 0.18s;
-    text-decoration: none;
-  }
-
-  .btn-preview:hover {
-    border-color: var(--navy);
     color: var(--navy);
-    background: #f0f4ff;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'DM Sans', sans-serif;
+    text-decoration: none;
+    transition: background 0.18s, color 0.18s;
+    white-space: nowrap;
   }
 
-  .btn-preview svg {
-    width: 15px; height: 15px;
-    stroke: currentColor;
-    fill: none;
-    stroke-width: 2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
+  .btn-request:hover {
+    background: var(--navy);
+    color: var(--white);
   }
 
   /* ── COMING SOON CARD ── */
@@ -438,74 +495,6 @@
     width: fit-content;
   }
 
-  /* ── HOW TO USE SECTION ── */
-  .how-to {
-    margin-top: 64px;
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    overflow: hidden;
-  }
-
-  .how-to-header {
-    background: var(--navy);
-    padding: 20px 28px;
-    display: flex; align-items: center; gap: 12px;
-  }
-
-  .how-to-header h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--white);
-  }
-
-  .how-to-body {
-    padding: 28px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 24px;
-  }
-
-  .step {
-    display: flex; flex-direction: column; gap: 10px;
-  }
-
-  .step-num {
-    width: 32px; height: 32px;
-    border-radius: 8px;
-    background: var(--gold-pale);
-    border: 1px solid rgba(201,168,76,0.3);
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Playfair Display', serif;
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--navy);
-    flex-shrink: 0;
-  }
-
-  .step-title {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--navy);
-  }
-
-  .step-desc {
-    font-size: 13px;
-    font-weight: 300;
-    color: var(--muted);
-    line-height: 1.55;
-  }
-
-  .step-desc code {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    background: #f0f4ff;
-    padding: 1px 5px;
-    border-radius: 3px;
-    color: var(--navy);
-  }
-
   /* ── FOOTER ── */
   footer {
     background: var(--navy-deep);
@@ -513,9 +502,7 @@
     text-align: center;
   }
 
-  .footer-inner {
-    max-width: 1100px; margin: 0 auto;
-  }
+  .footer-inner { max-width: 1100px; margin: 0 auto; }
 
   .footer-logo {
     font-family: 'Playfair Display', serif;
@@ -533,16 +520,16 @@
 
   .footer-divider {
     width: 40px; height: 1px;
-    background: var(--gold);
+    background: var(--accent);
     margin: 16px auto;
-    opacity: 0.5;
+    opacity: 0.6;
   }
 
   /* ── RESPONSIVE ── */
   @media (max-width: 640px) {
     .header-inner { padding: 40px 20px 36px; }
     main { padding: 36px 20px 60px; }
-    .nav-strip { padding: 0 20px; }
+    .search-strip { padding: 10px 20px; }
     .primer-grid { grid-template-columns: 1fr; }
     footer { padding: 24px 20px; }
     .how-to-body { padding: 20px; gap: 16px; }
@@ -558,31 +545,57 @@
   <div class="header-glow"></div>
   <div class="header-inner">
     <div class="header-eyebrow">
-      <div class="eyebrow-line"></div>
-      <span class="eyebrow-text">Columbia Business School · Energy & Infrastructure Series</span>
+      <span style="font-size:14px; line-height:1;">⚡</span>
+      <span class="eyebrow-text">Columbia Business School · Energy & Infrastructure Club</span>
     </div>
-    <h1 class="header-title">MBA Industry<br><em>Primer Library</em></h1>
+    <h1 class="header-title">Industry <em>Primer Library</em></h1>
     <p class="header-subtitle">
-      Comprehensive, research-backed industry primers built for supercharging your knowledge.
+      Industry primers built to supercharge your knowledge
     </p>
-    <div class="header-meta">
-      <div class="meta-pill"><div class="dot"></div>April 2026 Edition</div>
-      <div class="meta-pill"><div class="dot"></div>Energy & Infrastructure Focus</div>
-      <div class="meta-pill"><div class="dot"></div>Free to Download</div>
-    </div>
   </div>
 </header>
 
-<!-- NAV FILTERS -->
-<nav class="nav-strip">
-  <div class="nav-inner">
-    <span class="nav-label">Filter</span>
-    <div class="nav-filters">
-      <button class="filter-btn active" onclick="filterCards('all')">All Primers</button>
-      <button class="filter-btn" onclick="filterCards('energy')">Energy</button>
-      <button class="filter-btn" onclick="filterCards('materials')">Materials</button>
-      <button class="filter-btn" onclick="filterCards('finance')">Finance</button>
+<!-- SEARCH + FILTER BAR -->
+<nav class="search-strip">
+  <div class="search-inner">
+
+    <!-- search box -->
+    <div class="search-wrap">
+      <svg class="search-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>
+      <input type="text" id="searchInput" placeholder="Search primers..." oninput="applyFilters()" />
     </div>
+
+    <!-- filter dropdown -->
+    <div class="filter-wrap">
+      <button class="filter-btn" id="filterBtn" onclick="toggleDropdown()">
+        <span id="filterLabel">Filter</span>
+        <svg class="chevron" id="chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="dropdown" id="dropdown">
+        <div class="dropdown-item selected" onclick="selectFilter('all', this)">
+          All Primers
+          <svg class="check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="dropdown-divider"></div>
+        <div class="dropdown-item" onclick="selectFilter('energy', this)">
+          ⚡ Energy
+          <svg class="check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="dropdown-item" onclick="selectFilter('materials', this)">
+          ⛏️ Materials
+          <svg class="check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="dropdown-item" onclick="selectFilter('infrastructure', this)">
+          🏗️ Infrastructure
+          <svg class="check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="dropdown-item" onclick="selectFilter('finance', this)">
+          📊 Finance
+          <svg class="check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+      </div>
+    </div>
+
   </div>
 </nav>
 
@@ -590,24 +603,26 @@
 <main>
   <div class="section-header">
     <h2 class="section-title">Available Primers</h2>
-    <span class="section-count" id="countLabel">5 documents</span>
+    <div style="display:flex; align-items:center; gap:16px;">
+      <span class="section-count" id="countLabel">9 documents</span>
+      <a href="mailto:ssoto27@gsb.columbia.edu?subject=Primer%20Request&body=Hi%20Steven%2C%0A%0AI%27d%20like%20to%20request%20a%20primer%20on%3A%0A%0A[Industry%20name]%0A%0AThanks!" class="btn-request">
+        Request a Primer
+      </a>
+    </div>
   </div>
+
+  <div class="no-results" id="noResults">No primers match your search.</div>
 
   <div class="primer-grid" id="primerGrid">
 
     <!-- SOLAR -->
-    <div class="primer-card" data-category="energy">
+    <div class="primer-card" data-category="energy" data-title="solar energy">
       <div class="card-banner"></div>
       <div class="card-body">
         <span class="card-tag">⚡ Energy Transition</span>
         <h3 class="card-title">Solar Energy</h3>
         <p class="card-desc">The world's fastest-growing electricity source. Covers the IRA's manufacturing renaissance, the One Big Beautiful Bill's policy reversal, tariff escalation, and AI data center demand as the next tailwind.</p>
-        <div class="card-meta">
-          <div class="meta-item"><span class="meta-key">Market (2025)</span><span class="meta-val">~$286B</span></div>
-          <div class="meta-item"><span class="meta-key">CAGR</span><span class="meta-val">~6.2%</span></div>
-          <div class="meta-item"><span class="meta-key">Pages</span><span class="meta-val">14</span></div>
-          <div class="meta-item"><span class="meta-key">Updated</span><span class="meta-val">Apr 2026</span></div>
-        </div>
+        <div class="card-updated">Last Updated: <strong>April 2026</strong></div>
         <div class="card-sections">
           <span class="section-chip">History</span>
           <span class="section-chip">Value Chain</span>
@@ -619,25 +634,20 @@
         <div class="card-footer">
           <a href="solar_energy_industry_primer.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Download .docx
+            Download
           </a>
         </div>
       </div>
     </div>
 
     <!-- ONSHORE WIND -->
-    <div class="primer-card" data-category="energy">
+    <div class="primer-card" data-category="energy" data-title="onshore wind energy">
       <div class="card-banner"></div>
       <div class="card-body">
         <span class="card-tag">💨 Energy Transition</span>
         <h3 class="card-title">Onshore Wind Energy</h3>
         <p class="card-desc">The lowest-cost source of new electricity in most markets. Covers the IRA's capital stack transformation, federal permitting headwinds, AI data center PPAs, and the interconnection bottleneck.</p>
-        <div class="card-meta">
-          <div class="meta-item"><span class="meta-key">Market (2024)</span><span class="meta-val">~$112–131B</span></div>
-          <div class="meta-item"><span class="meta-key">CAGR</span><span class="meta-val">~6–10%</span></div>
-          <div class="meta-item"><span class="meta-key">Pages</span><span class="meta-val">13</span></div>
-          <div class="meta-item"><span class="meta-key">Updated</span><span class="meta-val">Apr 2026</span></div>
-        </div>
+        <div class="card-updated">Last Updated: <strong>April 2026</strong></div>
         <div class="card-sections">
           <span class="section-chip">History</span>
           <span class="section-chip">Value Chain</span>
@@ -649,25 +659,20 @@
         <div class="card-footer">
           <a href="onshore_wind_industry_primer_final.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Download .docx
+            Download
           </a>
         </div>
       </div>
     </div>
 
     <!-- GEOTHERMAL -->
-    <div class="primer-card" data-category="energy">
+    <div class="primer-card" data-category="energy" data-title="geothermal energy">
       <div class="card-banner"></div>
       <div class="card-body">
         <span class="card-tag">🌋 Energy Transition</span>
         <h3 class="card-title">Geothermal Energy</h3>
         <p class="card-desc">The only renewable that delivers 24/7 baseload power. Covers the EGS commercial breakthrough, Fervo's Cape Station, Google and Meta's hyperscaler procurement, and the DOE's 90 GW potential by 2050.</p>
-        <div class="card-meta">
-          <div class="meta-item"><span class="meta-key">Market (2025)</span><span class="meta-val">~$7.8–9.8B</span></div>
-          <div class="meta-item"><span class="meta-key">CAGR</span><span class="meta-val">~5–7%</span></div>
-          <div class="meta-item"><span class="meta-key">Pages</span><span class="meta-val">14</span></div>
-          <div class="meta-item"><span class="meta-key">Updated</span><span class="meta-val">Apr 2026</span></div>
-        </div>
+        <div class="card-updated">Last Updated: <strong>April 2026</strong></div>
         <div class="card-sections">
           <span class="section-chip">EGS Technology</span>
           <span class="section-chip">Value Chain</span>
@@ -679,25 +684,20 @@
         <div class="card-footer">
           <a href="geothermal_energy_industry_primer.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Download .docx
+            Download
           </a>
         </div>
       </div>
     </div>
 
     <!-- CRITICAL MINERALS -->
-    <div class="primer-card" data-category="materials">
+    <div class="primer-card" data-category="materials" data-title="critical minerals">
       <div class="card-banner"></div>
       <div class="card-body">
         <span class="card-tag">⛏️ Materials & Supply Chain</span>
         <h3 class="card-title">Critical Minerals</h3>
         <p class="card-desc">The physical foundation of the energy transition, AI, and defense. Covers China's 2025 export control escalation, FEOC restrictions, lithium's 80% price collapse, and the battery recycling opportunity.</p>
-        <div class="card-meta">
-          <div class="meta-item"><span class="meta-key">Market (2025)</span><span class="meta-val">~$391B</span></div>
-          <div class="meta-item"><span class="meta-key">CAGR</span><span class="meta-val">~6–8%</span></div>
-          <div class="meta-item"><span class="meta-key">Pages</span><span class="meta-val">15</span></div>
-          <div class="meta-item"><span class="meta-key">Updated</span><span class="meta-val">Apr 2026</span></div>
-        </div>
+        <div class="card-updated">Last Updated: <strong>April 2026</strong></div>
         <div class="card-sections">
           <span class="section-chip">China Controls</span>
           <span class="section-chip">FEOC Policy</span>
@@ -709,33 +709,139 @@
         <div class="card-footer">
           <a href="critical_minerals_industry_primer.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Download .docx
+            Download
           </a>
         </div>
       </div>
     </div>
 
-    <!-- COMING SOON -->
-    <div class="primer-card coming-soon" data-category="finance">
+    <!-- BATTERY STORAGE -->
+    <div class="primer-card" data-category="energy" data-title="battery storage bess">
       <div class="card-banner"></div>
       <div class="card-body">
-        <span class="coming-badge">Coming Soon</span>
-        <h3 class="card-title" style="color:#6b7280;">More Primers</h3>
-        <p class="card-desc">Future primers in this series: Battery Storage, Nuclear Energy, Offshore Wind, Private Equity, and Venture Capital. Check back as the library grows through recruiting season.</p>
-        <div class="card-meta">
-          <div class="meta-item"><span class="meta-key">Next up</span><span class="meta-val" style="color:#6b7280;">Battery Storage</span></div>
-          <div class="meta-item"><span class="meta-key">Then</span><span class="meta-val" style="color:#6b7280;">Nuclear / Offshore</span></div>
+        <span class="card-tag">🔋 Energy Transition</span>
+        <h3 class="card-title">Battery Storage</h3>
+        <p class="card-desc">The connective tissue of the clean energy grid. Covers lithium-ion and long-duration technology, IRA incentives, the co-location boom with solar and wind, and grid services revenue models.</p>
+        <div class="card-updated">Last Updated: <strong>April 2026</strong></div>
+        <div class="card-sections">
+          <span class="section-chip">Technology</span>
+          <span class="section-chip">Value Chain</span>
+          <span class="section-chip">IRA Policy</span>
+          <span class="section-chip">Grid Services</span>
+          <span class="section-chip">Key Players</span>
+          <span class="section-chip">Interview Starters</span>
         </div>
         <div class="card-footer">
-          <button class="btn-download" disabled style="background:#d1d5db;cursor:not-allowed;opacity:0.6;">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-            Not yet available
-          </button>
+          <a href="battery_storage_industry_primer.docx" download class="btn-download">
+            <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- NUCLEAR ENERGY -->
+    <div class="primer-card" data-category="energy" data-title="nuclear energy smr">
+      <div class="card-banner"></div>
+      <div class="card-body">
+        <span class="card-tag">☢️ Energy Transition</span>
+        <h3 class="card-title">Nuclear Energy</h3>
+        <p class="card-desc">The original firm zero-carbon power source, now experiencing a policy and investment renaissance. Covers SMR technology, hyperscaler procurement, the fleet restart debate, and uranium supply chains.</p>
+        <div class="card-updated">Last Updated: <strong>April 2026</strong></div>
+        <div class="card-sections">
+          <span class="section-chip">SMR Technology</span>
+          <span class="section-chip">Fleet Restart</span>
+          <span class="section-chip">Uranium Supply</span>
+          <span class="section-chip">AI Demand</span>
+          <span class="section-chip">Key Players</span>
+          <span class="section-chip">Interview Starters</span>
+        </div>
+        <div class="card-footer">
+          <a href="nuclear_energy_industry_primer.docx" download class="btn-download">
+            <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ELECTRIC VEHICLES -->
+    <div class="primer-card" data-category="energy" data-title="electric vehicles ev">
+      <div class="card-banner"></div>
+      <div class="card-body">
+        <span class="card-tag">🚗 Energy Transition</span>
+        <h3 class="card-title">Electric Vehicles</h3>
+        <p class="card-desc">The largest demand driver for critical minerals and the centerpiece of global industrial policy competition. Covers OEM strategy, battery technology, FEOC rules, charging infrastructure, and the China competitive threat.</p>
+        <div class="card-updated">Last Updated: <strong>April 2026</strong></div>
+        <div class="card-sections">
+          <span class="section-chip">OEM Strategy</span>
+          <span class="section-chip">Battery Tech</span>
+          <span class="section-chip">FEOC Rules</span>
+          <span class="section-chip">Charging</span>
+          <span class="section-chip">China Competition</span>
+          <span class="section-chip">Interview Starters</span>
+        </div>
+        <div class="card-footer">
+          <a href="electric_vehicles_industry_primer.docx" download class="btn-download">
+            <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- NATURAL GAS & LNG -->
+    <div class="primer-card" data-category="energy" data-title="natural gas lng liquefied">
+      <div class="card-banner"></div>
+      <div class="card-body">
+        <span class="card-tag">🔥 Conventional Energy</span>
+        <h3 class="card-title">Natural Gas & LNG</h3>
+        <p class="card-desc">The bridge fuel powering the AI data center boom and global energy security. Covers LNG export infrastructure, U.S. permitting dynamics, global trade flows, and the long-term demand outlook amid energy transition pressures.</p>
+        <div class="card-updated">Last Updated: <strong>April 2026</strong></div>
+        <div class="card-sections">
+          <span class="section-chip">LNG Export</span>
+          <span class="section-chip">Trade Flows</span>
+          <span class="section-chip">Permitting</span>
+          <span class="section-chip">AI Demand</span>
+          <span class="section-chip">Key Players</span>
+          <span class="section-chip">Interview Starters</span>
+        </div>
+        <div class="card-footer">
+          <a href="natural_gas_lng_industry_primer.docx" download class="btn-download">
+            <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- DATA CENTERS -->
+    <div class="primer-card" data-category="infrastructure" data-title="data centers ai infrastructure">
+      <div class="card-banner"></div>
+      <div class="card-body">
+        <span class="card-tag">🏗️ Infrastructure</span>
+        <h3 class="card-title">Data Centers</h3>
+        <p class="card-desc">The defining infrastructure investment of the AI era. Covers hyperscaler capital allocation, power procurement strategies, cooling technology, site selection, and the intersection with clean energy and grid infrastructure.</p>
+        <div class="card-updated">Last Updated: <strong>April 2026</strong></div>
+        <div class="card-sections">
+          <span class="section-chip">Hyperscalers</span>
+          <span class="section-chip">Power Procurement</span>
+          <span class="section-chip">Cooling Tech</span>
+          <span class="section-chip">Site Selection</span>
+          <span class="section-chip">Grid Impact</span>
+          <span class="section-chip">Interview Starters</span>
+        </div>
+        <div class="card-footer">
+          <a href="data_centers_industry_primer.docx" download class="btn-download">
+            <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
         </div>
       </div>
     </div>
 
   </div>
+
 
 </main>
 
@@ -753,25 +859,54 @@
 </footer>
 
 <script>
-  function filterCards(category) {
-    // Update active button
-    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-    event.target.classList.add('active');
+  let activeFilter = 'all';
 
-    // Filter cards
+  function toggleDropdown() {
+    const dd = document.getElementById('dropdown');
+    const ch = document.getElementById('chevron');
+    const btn = document.getElementById('filterBtn');
+    const isOpen = dd.classList.contains('open');
+    dd.classList.toggle('open', !isOpen);
+    ch.classList.toggle('open', !isOpen);
+    btn.classList.toggle('active', !isOpen);
+  }
+
+  function selectFilter(cat, el) {
+    activeFilter = cat;
+    document.querySelectorAll('.dropdown-item').forEach(i => i.classList.remove('selected'));
+    el.classList.add('selected');
+    const labels = { all: 'Filter', energy: '⚡ Energy', materials: '⛏️ Materials', infrastructure: '🏗️ Infrastructure', finance: '📊 Finance' };
+    document.getElementById('filterLabel').textContent = labels[cat];
+    document.getElementById('dropdown').classList.remove('open');
+    document.getElementById('chevron').classList.remove('open');
+    document.getElementById('filterBtn').classList.toggle('active', cat !== 'all');
+    applyFilters();
+  }
+
+  function applyFilters() {
+    const query = document.getElementById('searchInput').value.toLowerCase();
     const cards = document.querySelectorAll('.primer-card');
     let visible = 0;
+
     cards.forEach(card => {
-      const cat = card.dataset.category;
-      const show = category === 'all' || cat === category;
-      card.style.display = show ? 'flex' : 'none';
+      const catMatch = activeFilter === 'all' || card.dataset.category === activeFilter;
+      const titleMatch = card.dataset.title.includes(query);
+      const show = catMatch && titleMatch;
+      card.classList.toggle('hidden', !show);
       if (show) visible++;
     });
 
-    // Update count
-    const label = document.getElementById('countLabel');
-    label.textContent = visible === 1 ? '1 document' : `${visible} documents`;
+    document.getElementById('countLabel').textContent = visible === 1 ? '1 document' : `${visible} documents`;
+    document.getElementById('noResults').style.display = visible === 0 ? 'block' : 'none';
   }
+
+  /* close dropdown when clicking outside */
+  document.addEventListener('click', function(e) {
+    if (!document.getElementById('filterBtn').contains(e.target)) {
+      document.getElementById('dropdown').classList.remove('open');
+      document.getElementById('chevron').classList.remove('open');
+    }
+  });
 </script>
 
 </body>
