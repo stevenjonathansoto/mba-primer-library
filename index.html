@@ -559,7 +559,7 @@
 
   /* ── COLLAPSED DESCRIPTION ── */
   .card-desc { font-size: 13.5px; font-weight: 300; color: var(--muted); line-height: 1.6; margin-bottom: 12px; }
-  .card-desc-text { overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+  .card-desc-text { overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
   .card-desc-text.expanded { -webkit-line-clamp: unset; display: block; }
   .read-more-btn {
     background: none; border: none; padding: 2px 0 0; font-size: 12px; font-weight: 600;
@@ -568,26 +568,7 @@
   }
   .read-more-btn:hover { color: var(--navy); text-decoration: underline; }
 
-  /* ── META ROW (updated + read time) ── */
-  .card-meta-row {
-    display: flex; align-items: center; justify-content: space-between;
-    padding-top: 14px; border-top: 1px solid var(--border); margin-bottom: 16px;
-  }
-  .card-updated { font-size: 12px; color: var(--muted); }
-  .card-updated strong { color: var(--navy); font-weight: 600; }
-  .card-read-time { font-size: 11px; color: var(--muted); display: flex; align-items: center; gap: 4px; }
-  .card-read-time svg { width: 11px; height: 11px; stroke: var(--muted); fill: none; stroke-width: 2; stroke-linecap: round; }
 
-  /* ── PAIRS WELL WITH ── */
-  .card-pairs { margin-bottom: 14px; }
-  .pairs-label { font-size: 10px; font-family: 'DM Mono', monospace; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
-  .pairs-chips { display: flex; flex-wrap: wrap; gap: 5px; }
-  .pairs-chip {
-    font-size: 11px; padding: 2px 8px;
-    background: var(--accent-pale); border: 1px solid rgba(232,184,75,0.35);
-    border-radius: 4px; color: #7a5c0a; font-weight: 500; cursor: pointer; transition: background 0.15s;
-  }
-  .pairs-chip:hover { background: #fde9a0; }
 
   /* ── ANCHOR LINK BUTTON ── */
   .btn-anchor {
@@ -627,6 +608,16 @@
   }
   .filter-pill:hover { background: rgba(185,217,235,0.35); }
   .filter-pill-x { font-size: 14px; line-height: 1; opacity: 0.7; }
+
+
+  .card-updated {
+    font-size: 12px;
+    color: var(--muted);
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+    margin-bottom: 16px;
+  }
+  .card-updated strong { color: var(--navy); font-weight: 600; }
 
 </style>
 </head>
@@ -730,21 +721,7 @@
           <span class="card-desc-text">The connective tissue of the clean energy grid. Covers lithium-ion and long-duration technology, IRA incentives, the co-location boom with solar and wind, and grid services revenue models.</span>
           <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
         </div>
-      <div class="card-pairs">
-        <div class="pairs-label">Pairs well with</div>
-        <div class="pairs-chips">
-          <span class="pairs-chip" onclick="jumpToCard('card-energy-storage-grid')">Energy Storage & Grid</span>
-          <span class="pairs-chip" onclick="jumpToCard('card-critical-minerals')">Critical Minerals</span>
-          <span class="pairs-chip" onclick="jumpToCard('card-onshore-wind-energy')">Onshore Wind Energy</span>
-        </div>
-      </div>
-        <div class="card-meta-row">
-          <div class="card-updated">Last Updated: <strong>April 2026</strong></div>
-          <div class="card-read-time">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-            ~45 min
-          </div>
-        </div>
+        <div class="card-updated">Last Updated: <strong>April 2026</strong></div>
         <div class="card-sections">
           <span class="section-chip">Technology</span>
           <span class="section-chip">Value Chain</span>
@@ -775,21 +752,7 @@
           <span class="card-desc-text">The technology the IEA says makes net-zero "virtually impossible" without. Covers point-source CCS, direct air capture (DAC), the IRA's 45Q credit, Oxy's Stratos plant, ExxonMobil's Houston hub, and the CO₂ pipeline bottleneck.</span>
           <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
         </div>
-      <div class="card-pairs">
-        <div class="pairs-label">Pairs well with</div>
-        <div class="pairs-chips">
-          <span class="pairs-chip" onclick="jumpToCard('card-hydrogen-energy')">Hydrogen Energy</span>
-          <span class="pairs-chip" onclick="jumpToCard('card-natural-gas-lng')">Natural Gas & LNG</span>
-          <span class="pairs-chip" onclick="jumpToCard('card-climatetech-venture-capital')">ClimateTech Venture Capital</span>
-        </div>
-      </div>
-        <div class="card-meta-row">
-          <div class="card-updated">Last Updated: <strong>May 2026</strong></div>
-          <div class="card-read-time">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-            ~50 min
-          </div>
-        </div>
+        <div class="card-updated">Last Updated: <strong>May 2026</strong></div>
         <div class="card-sections">
           <span class="section-chip">45Q Policy</span>
           <span class="section-chip">DAC Technology</span>
@@ -820,21 +783,7 @@
           <span class="card-desc-text">The broadest investment category of the 21st century. Covers Cleantech 1.0's collapse and 2.0's structural reinvention, Sightline's six-vertical taxonomy, FOAK financing methodology, the OBBBA policy reversal, and key funds from Breakthrough Energy to Lowercarbon Capital.</span>
           <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
         </div>
-      <div class="card-pairs">
-        <div class="pairs-label">Pairs well with</div>
-        <div class="pairs-chips">
-          <span class="pairs-chip" onclick="jumpToCard('card-energytech-venture-capital')">EnergyTech Venture Capital</span>
-          <span class="pairs-chip" onclick="jumpToCard('card-infrastructure-investing')">Infrastructure Investing</span>
-          <span class="pairs-chip" onclick="jumpToCard('card-pe-in-energy-infrastructure')">PE in Energy & Infrastructure</span>
-        </div>
-      </div>
-        <div class="card-meta-row">
-          <div class="card-updated">Last Updated: <strong>May 2026</strong></div>
-          <div class="card-read-time">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-            ~55 min
-          </div>
-        </div>
+        <div class="card-updated">Last Updated: <strong>May 2026</strong></div>
         <div class="card-sections">
           <span class="section-chip">1.0 vs. 2.0 History</span>
           <span class="section-chip">6 Verticals</span>
@@ -865,21 +814,7 @@
           <span class="card-desc-text">The physical foundation of the energy transition, AI, and defense. Covers China's 2025 export control escalation, FEOC restrictions, lithium's 80% price collapse, and the battery recycling opportunity.</span>
           <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
         </div>
-      <div class="card-pairs">
-        <div class="pairs-label">Pairs well with</div>
-        <div class="pairs-chips">
-          <span class="pairs-chip" onclick="jumpToCard('card-battery-storage')">Battery Storage</span>
-          <span class="pairs-chip" onclick="jumpToCard('card-electric-vehicles')">Electric Vehicles</span>
-          <span class="pairs-chip" onclick="jumpToCard('card-semiconductors-ai-chips')">Semiconductors & AI Chips</span>
-        </div>
-      </div>
-        <div class="card-meta-row">
-          <div class="card-updated">Last Updated: <strong>April 2026</strong></div>
-          <div class="card-read-time">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-            ~45 min
-          </div>
-        </div>
+        <div class="card-updated">Last Updated: <strong>April 2026</strong></div>
         <div class="card-sections">
           <span class="section-chip">China Controls</span>
           <span class="section-chip">FEOC Policy</span>
@@ -910,21 +845,7 @@
           <span class="card-desc-text">The defining infrastructure investment of the AI era. Covers hyperscaler capital allocation, power procurement strategies, cooling technology, site selection, and the intersection with clean energy and grid infrastructure.</span>
           <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
         </div>
-      <div class="card-pairs">
-        <div class="pairs-label">Pairs well with</div>
-        <div class="pairs-chips">
-          <span class="pairs-chip" onclick="jumpToCard('card-semiconductors-ai-chips')">Semiconductors & AI Chips</span>
-          <span class="pairs-chip" onclick="jumpToCard('card-natural-gas-lng')">Natural Gas & LNG</span>
-          <span class="pairs-chip" onclick="jumpToCard('card-nuclear-energy')">Nuclear Energy</span>
-        </div>
-      </div>
-        <div class="card-meta-row">
-          <div class="card-updated">Last Updated: <strong>April 2026</strong></div>
-          <div class="card-read-time">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-            ~50 min
-          </div>
-        </div>
+        <div class="card-updated">Last Updated: <strong>April 2026</strong></div>
         <div class="card-sections">
           <span class="section-chip">Hyperscalers</span>
           <span class="section-chip">Power Procurement</span>
@@ -955,21 +876,7 @@
           <span class="card-desc-text">The largest demand driver for critical minerals and the centerpiece of global industrial policy competition. Covers OEM strategy, battery technology, FEOC rules, charging infrastructure, and the China competitive threat.</span>
           <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
         </div>
-      <div class="card-pairs">
-        <div class="pairs-label">Pairs well with</div>
-        <div class="pairs-chips">
-          <span class="pairs-chip" onclick="jumpToCard('card-battery-storage')">Battery Storage</span>
-          <span class="pairs-chip" onclick="jumpToCard('card-critical-minerals')">Critical Minerals</span>
-          <span class="pairs-chip" onclick="jumpToCard('card-climatetech-venture-capital')">ClimateTech Venture Capital</span>
-        </div>
-      </div>
-        <div class="card-meta-row">
-          <div class="card-updated">Last Updated: <strong>April 2026</strong></div>
-          <div class="card-read-time">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-            ~50 min
-          </div>
-        </div>
+        <div class="card-updated">Last Updated: <strong>April 2026</strong></div>
         <div class="card-sections">
           <span class="section-chip">OEM Strategy</span>
           <span class="section-chip">Battery Tech</span>
@@ -1000,21 +907,7 @@
           <span class="card-desc-text">VC focused on the energy system stack — from clean firm power and grid software to storage and energy marketplaces. Covers the utility LP model (Energy Impact Partners), corporate VC distinctions, AI-energy convergence, geothermal renaissance, and the OBBBA's selective preservation of energy provisions.</span>
           <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
         </div>
-      <div class="card-pairs">
-        <div class="pairs-label">Pairs well with</div>
-        <div class="pairs-chips">
-          <span class="pairs-chip" onclick="jumpToCard('card-climatetech-venture-capital')">ClimateTech Venture Capital</span>
-          <span class="pairs-chip" onclick="jumpToCard('card-infrastructure-investing')">Infrastructure Investing</span>
-          <span class="pairs-chip" onclick="jumpToCard('card-transmission-grid-infrastructure')">Transmission & Grid Infrastructure</span>
-        </div>
-      </div>
-        <div class="card-meta-row">
-          <div class="card-updated">Last Updated: <strong>May 2026</strong></div>
-          <div class="card-read-time">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-            ~55 min
-          </div>
-        </div>
+        <div class="card-updated">Last Updated: <strong>May 2026</strong></div>
         <div class="card-sections">
           <span class="section-chip">Energy Stack</span>
           <span class="section-chip">Utility LP Model</span>
@@ -1045,21 +938,7 @@
           <span class="card-desc-text">The only renewable that delivers 24/7 baseload power. Covers the EGS commercial breakthrough, Fervo's Cape Station, Google and Meta's hyperscaler procurement, and the DOE's 90 GW potential by 2050.</span>
           <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
         </div>
-      <div class="card-pairs">
-        <div class="pairs-label">Pairs well with</div>
-        <div class="pairs-chips">
-          <span class="pairs-chip" onclick="jumpToCard('card-nuclear-energy')">Nuclear Energy</span>
-          <span class="pairs-chip" onclick="jumpToCard('card-energytech-venture-capital')">EnergyTech Venture Capital</span>
-          <span class="pairs-chip" onclick="jumpToCard('card-data-centers')">Data Centers</span>
-        </div>
-      </div>
-        <div class="card-meta-row">
-          <div class="card-updated">Last Updated: <strong>April 2026</strong></div>
-          <div class="card-read-time">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-            ~45 min
-          </div>
-        </div>
+        <div class="card-updated">Last Updated: <strong>April 2026</strong></div>
         <div class="card-sections">
           <span class="section-chip">EGS Technology</span>
           <span class="section-chip">Value Chain</span>
@@ -1090,21 +969,7 @@
           <span class="card-desc-text">The most hyped and most challenged clean energy technology. Covers the full color taxonomy, IRA 45V additionality rules, green vs. blue hydrogen economics, ammonia as the near-term killer app, and the $2/kg cost target.</span>
           <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
         </div>
-      <div class="card-pairs">
-        <div class="pairs-label">Pairs well with</div>
-        <div class="pairs-chips">
-          <span class="pairs-chip" onclick="jumpToCard('card-carbon-capture-storage')">Carbon Capture & Storage</span>
-          <span class="pairs-chip" onclick="jumpToCard('card-natural-gas-lng')">Natural Gas & LNG</span>
-          <span class="pairs-chip" onclick="jumpToCard('card-climatetech-venture-capital')">ClimateTech Venture Capital</span>
-        </div>
-      </div>
-        <div class="card-meta-row">
-          <div class="card-updated">Last Updated: <strong>May 2026</strong></div>
-          <div class="card-read-time">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-            ~50 min
-          </div>
-        </div>
+        <div class="card-updated">Last Updated: <strong>May 2026</strong></div>
         <div class="card-sections">
           <span class="section-chip">Color Taxonomy</span>
           <span class="section-chip">45V Policy</span>
@@ -1135,21 +1000,7 @@
           <span class="card-desc-text">The $1.6 trillion asset class that underpins the energy transition and AI buildout. Covers fund structure, LP/GP dynamics, the full risk-return spectrum (Core to Opportunistic), key fund managers, project finance mechanics, and career paths.</span>
           <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
         </div>
-      <div class="card-pairs">
-        <div class="pairs-label">Pairs well with</div>
-        <div class="pairs-chips">
-          <span class="pairs-chip" onclick="jumpToCard('card-pe-in-energy-infrastructure')">PE in Energy & Infrastructure</span>
-          <span class="pairs-chip" onclick="jumpToCard('card-energytech-venture-capital')">EnergyTech Venture Capital</span>
-          <span class="pairs-chip" onclick="jumpToCard('card-transmission-grid-infrastructure')">Transmission & Grid Infrastructure</span>
-        </div>
-      </div>
-        <div class="card-meta-row">
-          <div class="card-updated">Last Updated: <strong>May 2026</strong></div>
-          <div class="card-read-time">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-            ~50 min
-          </div>
-        </div>
+        <div class="card-updated">Last Updated: <strong>May 2026</strong></div>
         <div class="card-sections">
           <span class="section-chip">Fund Structure</span>
           <span class="section-chip">LP/GP Dynamics</span>
@@ -1180,21 +1031,7 @@
           <span class="card-desc-text">The most geopolitically contested commodity since crude oil. Covers the Qatar Ras Laffan attack, U.S. record exports (18.4 Bcf/d), Europe's pivot from Russian gas, the Strait of Hormuz disruption, and AI data centers as the new domestic demand driver.</span>
           <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
         </div>
-      <div class="card-pairs">
-        <div class="pairs-label">Pairs well with</div>
-        <div class="pairs-chips">
-          <span class="pairs-chip" onclick="jumpToCard('card-hydrogen-energy')">Hydrogen Energy</span>
-          <span class="pairs-chip" onclick="jumpToCard('card-carbon-capture-storage')">Carbon Capture & Storage</span>
-          <span class="pairs-chip" onclick="jumpToCard('card-pe-in-energy-infrastructure')">PE in Energy & Infrastructure</span>
-        </div>
-      </div>
-        <div class="card-meta-row">
-          <div class="card-updated">Last Updated: <strong>May 2026</strong></div>
-          <div class="card-read-time">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-            ~50 min
-          </div>
-        </div>
+        <div class="card-updated">Last Updated: <strong>May 2026</strong></div>
         <div class="card-sections">
           <span class="section-chip">LNG Value Chain</span>
           <span class="section-chip">Henry Hub / JKM</span>
@@ -1225,21 +1062,7 @@
           <span class="card-desc-text">The original firm zero-carbon power source, now experiencing a policy and investment renaissance. Covers SMR technology, hyperscaler procurement, the fleet restart debate, and uranium supply chains.</span>
           <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
         </div>
-      <div class="card-pairs">
-        <div class="pairs-label">Pairs well with</div>
-        <div class="pairs-chips">
-          <span class="pairs-chip" onclick="jumpToCard('card-data-centers')">Data Centers</span>
-          <span class="pairs-chip" onclick="jumpToCard('card-energytech-venture-capital')">EnergyTech Venture Capital</span>
-          <span class="pairs-chip" onclick="jumpToCard('card-pe-in-energy-infrastructure')">PE in Energy & Infrastructure</span>
-        </div>
-      </div>
-        <div class="card-meta-row">
-          <div class="card-updated">Last Updated: <strong>April 2026</strong></div>
-          <div class="card-read-time">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-            ~50 min
-          </div>
-        </div>
+        <div class="card-updated">Last Updated: <strong>April 2026</strong></div>
         <div class="card-sections">
           <span class="section-chip">SMR Technology</span>
           <span class="section-chip">Fleet Restart</span>
@@ -1270,21 +1093,7 @@
           <span class="card-desc-text">The most capital-intensive renewable — turbines taller than the Eiffel Tower planted in the ocean. Covers floating wind technology, the Jones Act bottleneck, Ørsted's recovery, Europe's record auctions, and the U.S. policy disruption.</span>
           <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
         </div>
-      <div class="card-pairs">
-        <div class="pairs-label">Pairs well with</div>
-        <div class="pairs-chips">
-          <span class="pairs-chip" onclick="jumpToCard('card-transmission-grid-infrastructure')">Transmission & Grid Infrastructure</span>
-          <span class="pairs-chip" onclick="jumpToCard('card-climatetech-venture-capital')">ClimateTech Venture Capital</span>
-          <span class="pairs-chip" onclick="jumpToCard('card-pe-in-energy-infrastructure')">PE in Energy & Infrastructure</span>
-        </div>
-      </div>
-        <div class="card-meta-row">
-          <div class="card-updated">Last Updated: <strong>May 2026</strong></div>
-          <div class="card-read-time">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-            ~50 min
-          </div>
-        </div>
+        <div class="card-updated">Last Updated: <strong>May 2026</strong></div>
         <div class="card-sections">
           <span class="section-chip">Floating Wind</span>
           <span class="section-chip">Value Chain</span>
@@ -1315,21 +1124,7 @@
           <span class="card-desc-text">The lowest-cost source of new electricity in most markets. Covers the IRA's capital stack transformation, federal permitting headwinds, AI data center PPAs, and the interconnection bottleneck.</span>
           <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
         </div>
-      <div class="card-pairs">
-        <div class="pairs-label">Pairs well with</div>
-        <div class="pairs-chips">
-          <span class="pairs-chip" onclick="jumpToCard('card-offshore-wind-energy')">Offshore Wind Energy</span>
-          <span class="pairs-chip" onclick="jumpToCard('card-transmission-grid-infrastructure')">Transmission & Grid Infrastructure</span>
-          <span class="pairs-chip" onclick="jumpToCard('card-battery-storage')">Battery Storage</span>
-        </div>
-      </div>
-        <div class="card-meta-row">
-          <div class="card-updated">Last Updated: <strong>April 2026</strong></div>
-          <div class="card-read-time">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-            ~45 min
-          </div>
-        </div>
+        <div class="card-updated">Last Updated: <strong>April 2026</strong></div>
         <div class="card-sections">
           <span class="section-chip">History</span>
           <span class="section-chip">Value Chain</span>
@@ -1360,21 +1155,7 @@
           <span class="card-desc-text">How the three PE strategies — Infrastructure PE, Energy Buyout PE, and Mega-Fund — operate across the energy stack. Covers LBO mechanics, tax equity and credit transfer structures, the capital stack toolkit, Blackstone's BYOP data center model, and the OBBBA's Section 163(j) EBITDA reversion.</span>
           <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
         </div>
-      <div class="card-pairs">
-        <div class="pairs-label">Pairs well with</div>
-        <div class="pairs-chips">
-          <span class="pairs-chip" onclick="jumpToCard('card-infrastructure-investing')">Infrastructure Investing</span>
-          <span class="pairs-chip" onclick="jumpToCard('card-energytech-venture-capital')">EnergyTech Venture Capital</span>
-          <span class="pairs-chip" onclick="jumpToCard('card-natural-gas-lng')">Natural Gas & LNG</span>
-        </div>
-      </div>
-        <div class="card-meta-row">
-          <div class="card-updated">Last Updated: <strong>May 2026</strong></div>
-          <div class="card-read-time">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-            ~55 min
-          </div>
-        </div>
+        <div class="card-updated">Last Updated: <strong>May 2026</strong></div>
         <div class="card-sections">
           <span class="section-chip">LBO Mechanics</span>
           <span class="section-chip">Tax Equity</span>
@@ -1405,21 +1186,7 @@
           <span class="card-desc-text">The foundational physical layer of the AI economy. Covers NVIDIA's 5× revenue surge, TSMC's 72% market monopoly, ASML's EUV chokehold, the U.S.-China chip war, HBM memory bottlenecks, the CHIPS Act, and the custom ASIC threat to NVIDIA's dominance.</span>
           <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
         </div>
-      <div class="card-pairs">
-        <div class="pairs-label">Pairs well with</div>
-        <div class="pairs-chips">
-          <span class="pairs-chip" onclick="jumpToCard('card-data-centers')">Data Centers</span>
-          <span class="pairs-chip" onclick="jumpToCard('card-critical-minerals')">Critical Minerals</span>
-          <span class="pairs-chip" onclick="jumpToCard('card-energytech-venture-capital')">EnergyTech Venture Capital</span>
-        </div>
-      </div>
-        <div class="card-meta-row">
-          <div class="card-updated">Last Updated: <strong>May 2026</strong></div>
-          <div class="card-read-time">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-            ~50 min
-          </div>
-        </div>
+        <div class="card-updated">Last Updated: <strong>May 2026</strong></div>
         <div class="card-sections">
           <span class="section-chip">Value Chain</span>
           <span class="section-chip">NVIDIA / TSMC</span>
@@ -1450,21 +1217,7 @@
           <span class="card-desc-text">The world's fastest-growing electricity source. Covers the IRA's manufacturing renaissance, the One Big Beautiful Bill's policy reversal, tariff escalation, and AI data center demand as the next tailwind.</span>
           <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
         </div>
-      <div class="card-pairs">
-        <div class="pairs-label">Pairs well with</div>
-        <div class="pairs-chips">
-          <span class="pairs-chip" onclick="jumpToCard('card-battery-storage')">Battery Storage</span>
-          <span class="pairs-chip" onclick="jumpToCard('card-onshore-wind-energy')">Onshore Wind Energy</span>
-          <span class="pairs-chip" onclick="jumpToCard('card-climatetech-venture-capital')">ClimateTech Venture Capital</span>
-        </div>
-      </div>
-        <div class="card-meta-row">
-          <div class="card-updated">Last Updated: <strong>April 2026</strong></div>
-          <div class="card-read-time">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-            ~45 min
-          </div>
-        </div>
+        <div class="card-updated">Last Updated: <strong>April 2026</strong></div>
         <div class="card-sections">
           <span class="section-chip">History</span>
           <span class="section-chip">Value Chain</span>
@@ -1495,21 +1248,7 @@
           <span class="card-desc-text">The most underappreciated bottleneck in the energy transition. Covers the 2,000+ GW interconnection queue, $470B in global grid investment, FERC Orders 2023 and 1920, HVDC technology, the transformer shortage, and grid-enhancing technologies.</span>
           <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
         </div>
-      <div class="card-pairs">
-        <div class="pairs-label">Pairs well with</div>
-        <div class="pairs-chips">
-          <span class="pairs-chip" onclick="jumpToCard('card-data-centers')">Data Centers</span>
-          <span class="pairs-chip" onclick="jumpToCard('card-battery-storage')">Battery Storage</span>
-          <span class="pairs-chip" onclick="jumpToCard('card-pe-in-energy-infrastructure')">PE in Energy & Infrastructure</span>
-        </div>
-      </div>
-        <div class="card-meta-row">
-          <div class="card-updated">Last Updated: <strong>May 2026</strong></div>
-          <div class="card-read-time">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-            ~50 min
-          </div>
-        </div>
+        <div class="card-updated">Last Updated: <strong>May 2026</strong></div>
         <div class="card-sections">
           <span class="section-chip">Interconnection</span>
           <span class="section-chip">HVDC</span>
@@ -1547,7 +1286,7 @@
 </footer>
 
 <script>
-  let activeFilters = new Set(); // empty = show all
+  let activeFilters = new Set();
   let currentSort = 'alpha';
   const TOTAL = 18;
 
@@ -1556,6 +1295,7 @@
     infrastructure:'🏗️ Infrastructure', decarbonization:'🏭 Decarbonization', finance:'📊 Finance'
   };
 
+  // ── Search & Filter ─────────────────────────────────────────────────────────
   function applyFilters() {
     const q = document.getElementById('searchInput').value.toLowerCase().trim();
     const cards = document.querySelectorAll('.primer-card');
@@ -1563,7 +1303,7 @@
     cards.forEach(card => {
       const title   = (card.querySelector('.card-title')?.textContent || '').toLowerCase();
       const dataTit = (card.dataset.title || '').toLowerCase();
-      const chips   = Array.from(card.querySelectorAll('.section-chip')).map(c=>c.textContent.toLowerCase()).join(' ');
+      const chips   = Array.from(card.querySelectorAll('.section-chip')).map(c => c.textContent.toLowerCase()).join(' ');
       const desc    = (card.querySelector('.card-desc-text')?.textContent || '').toLowerCase();
       const matchSearch = !q || title.includes(q) || dataTit.includes(q) || chips.includes(q) || desc.includes(q);
       const matchFilter = activeFilters.size === 0 || activeFilters.has(card.dataset.category);
@@ -1571,35 +1311,46 @@
       card.classList.toggle('hidden', !visible);
       if (visible) shown++;
     });
-    document.getElementById('countLabel').textContent = shown === TOTAL ? TOTAL + ' documents' : shown + ' of ' + TOTAL;
+    document.getElementById('countLabel').textContent =
+      shown === TOTAL ? TOTAL + ' documents' : shown + ' of ' + TOTAL;
     document.querySelector('.no-results').style.display = shown === 0 ? 'block' : 'none';
     renderPills();
   }
 
+  // ── Multi-select filter ─────────────────────────────────────────────────────
   function toggleFilter(cat, el) {
     if (cat === 'all') {
-      // Clear all filters
       activeFilters.clear();
-      document.querySelectorAll('.dropdown-item').forEach(i => i.classList.remove('selected'));
-      el.classList.add('selected');
     } else {
-      // Deselect "All Primers"
-      document.querySelector('[data-cat="all"]').classList.remove('selected');
       if (activeFilters.has(cat)) {
         activeFilters.delete(cat);
-        el.classList.remove('selected');
       } else {
         activeFilters.add(cat);
-        el.classList.add('selected');
-      }
-      // If nothing selected, re-select All
-      if (activeFilters.size === 0) {
-        document.querySelector('[data-cat="all"]').classList.add('selected');
       }
     }
-    // Update button label
-    const btn = document.getElementById('filterBtn');
+    syncDropdownUI();
+    applyFilters();
+  }
+
+  function removeFilter(cat) {
+    activeFilters.delete(cat);
+    syncDropdownUI();
+    applyFilters();
+  }
+
+  function syncDropdownUI() {
+    // Checkmarks
+    document.querySelectorAll('.dropdown-item').forEach(item => {
+      const cat = item.dataset.cat;
+      if (cat === 'all') {
+        item.classList.toggle('selected', activeFilters.size === 0);
+      } else {
+        item.classList.toggle('selected', activeFilters.has(cat));
+      }
+    });
+    // Button label
     const lbl = document.getElementById('filterLabel');
+    const btn = document.getElementById('filterBtn');
     if (activeFilters.size === 0) {
       lbl.textContent = 'Filter';
       btn.classList.remove('active');
@@ -1610,27 +1361,11 @@
       lbl.textContent = activeFilters.size + ' filters';
       btn.classList.add('active');
     }
-    applyFilters();
-  }
-
-  function removeFilter(cat) {
-    activeFilters.delete(cat);
-    const el = document.querySelector('[data-cat="' + cat + '"]');
-    if (el) el.classList.remove('selected');
-    if (activeFilters.size === 0) {
-      document.querySelector('[data-cat="all"]').classList.add('selected');
-      document.getElementById('filterLabel').textContent = 'Filter';
-      document.getElementById('filterBtn').classList.remove('active');
-    } else if (activeFilters.size === 1) {
-      document.getElementById('filterLabel').textContent = labels[[...activeFilters][0]];
-    } else {
-      document.getElementById('filterLabel').textContent = activeFilters.size + ' filters';
-    }
-    applyFilters();
   }
 
   function renderPills() {
     const container = document.getElementById('activeFilterPills');
+    if (!container) return;
     container.innerHTML = '';
     activeFilters.forEach(cat => {
       const pill = document.createElement('span');
@@ -1641,26 +1376,30 @@
   }
 
   function toggleDropdown() {
-    const dd = document.getElementById('dropdown');
+    const dd  = document.getElementById('dropdown');
     const btn = document.getElementById('filterBtn');
-    const ch = document.getElementById('chevron');
+    const ch  = document.getElementById('chevron');
     const open = dd.classList.toggle('open');
-    btn.classList.toggle('active', open || activeFilters.size > 0);
     ch.classList.toggle('open', open);
+    // Keep active style if filters selected
+    btn.classList.toggle('active', open || activeFilters.size > 0);
   }
 
   document.addEventListener('click', e => {
     if (!e.target.closest('.filter-wrap') && !e.target.closest('#activeFilterPills')) {
       document.getElementById('dropdown').classList.remove('open');
       document.getElementById('chevron').classList.remove('open');
+      if (activeFilters.size === 0) document.getElementById('filterBtn').classList.remove('active');
     }
   });
 
+  // ── Sort toggle ─────────────────────────────────────────────────────────────
   function toggleSort() {
     currentSort = currentSort === 'alpha' ? 'updated' : 'alpha';
-    const btn = document.getElementById('sortBtn');
+    const btn   = document.getElementById('sortBtn');
     const label = document.getElementById('sortLabel');
-    const icon = document.getElementById('sortIcon');
+    const icon  = document.getElementById('sortIcon');
+
     if (currentSort === 'updated') {
       label.textContent = 'Recent';
       btn.classList.add('active');
@@ -1670,69 +1409,79 @@
       btn.classList.remove('active');
       icon.innerHTML = '<line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="14" y2="12"/><line x1="4" y1="18" x2="9" y2="18"/>';
     }
-    const grid = document.getElementById('primerGrid');
+
+    const grid  = document.getElementById('primerGrid');
     const cards = Array.from(grid.querySelectorAll('.primer-card'));
-    const mo = {January:1,February:2,March:3,April:4,May:5,June:6,July:7,August:8,September:9,October:10,November:11,December:12};
+    const mo = {
+      January:1,February:2,March:3,April:4,May:5,June:6,
+      July:7,August:8,September:9,October:10,November:11,December:12
+    };
+
     cards.sort((a, b) => {
       if (currentSort === 'alpha') {
-        return (a.querySelector('.card-title')?.textContent.trim()||'').localeCompare(b.querySelector('.card-title')?.textContent.trim()||'');
+        const ta = a.querySelector('.card-title')?.textContent.trim() || '';
+        const tb = b.querySelector('.card-title')?.textContent.trim() || '';
+        return ta.localeCompare(tb);
       } else {
         const parse = card => {
           const txt = card.querySelector('.card-updated strong')?.textContent || '';
           const [month, year] = txt.split(' ');
-          return (parseInt(year)||0)*100 + (mo[month]||0);
+          return (parseInt(year) || 0) * 100 + (mo[month] || 0);
         };
         return parse(b) - parse(a);
       }
     });
+
     cards.forEach(c => grid.appendChild(c));
   }
 
+  // ── Read more toggle ────────────────────────────────────────────────────────
   function toggleDesc(btn) {
     const el = btn.previousElementSibling;
     const expanded = el.classList.toggle('expanded');
     btn.textContent = expanded ? 'Show less' : 'Show more';
   }
 
+  // ── Anchor / copy link ──────────────────────────────────────────────────────
   function copyAnchor(e, cardId) {
     e.preventDefault();
     const url = window.location.origin + window.location.pathname + '#' + cardId;
-    navigator.clipboard.writeText(url).then(() => showToast('Link copied!')).catch(() => showToast('Link: #' + cardId));
-    document.getElementById(cardId)?.scrollIntoView({behavior:'smooth', block:'start'});
+    navigator.clipboard.writeText(url)
+      .then(() => showToast('Link copied!'))
+      .catch(() => showToast('Link: #' + cardId));
+    document.getElementById(cardId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
   function showToast(msg) {
-    let t = document.querySelector('.copy-toast');
+    const t = document.querySelector('.copy-toast');
     t.textContent = msg;
     t.classList.add('show');
     setTimeout(() => t.classList.remove('show'), 2000);
   }
 
+  // ── Jump to card (used by pairs chips) ─────────────────────────────────────
   function jumpToCard(cardId) {
     activeFilters.clear();
-    document.querySelectorAll('.dropdown-item').forEach(i => i.classList.remove('selected'));
-    document.querySelector('[data-cat="all"]').classList.add('selected');
-    document.getElementById('filterLabel').textContent = 'Filter';
-    document.getElementById('filterBtn').classList.remove('active');
-    document.getElementById('activeFilterPills').innerHTML = '';
+    syncDropdownUI();
     document.getElementById('searchInput').value = '';
     applyFilters();
     const el = document.getElementById(cardId);
     if (el) {
       setTimeout(() => {
-        el.scrollIntoView({behavior:'smooth', block:'start'});
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
         el.style.outline = '2px solid var(--accent)';
         el.style.outlineOffset = '3px';
-        setTimeout(() => { el.style.outline=''; el.style.outlineOffset=''; }, 1800);
+        setTimeout(() => { el.style.outline = ''; el.style.outlineOffset = ''; }, 1800);
       }, 50);
     }
   }
 
+  // ── On load ─────────────────────────────────────────────────────────────────
   window.addEventListener('load', () => {
-    document.querySelector('[data-cat="all"]').classList.add('selected');
+    syncDropdownUI(); // initialise "All Primers" as selected
     if (location.hash) {
       const el = document.querySelector(location.hash);
-      if (el) setTimeout(() => el.scrollIntoView({behavior:'smooth', block:'start'}), 200);
+      if (el) setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 200);
     }
   });
 </script>
