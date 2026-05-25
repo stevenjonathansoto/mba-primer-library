@@ -656,7 +656,7 @@
         <span id="filterLabel">Filter</span>
         <svg class="chevron" id="chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
       </button>
-      <div id="activeFilterPills" style="display:flex;gap:6px;flex-wrap:wrap;"></div>
+      <div id="activeFilterPills" style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;"></div>
       <div class="dropdown" id="dropdown">
         <div class="dropdown-item" data-cat="all" onclick="toggleFilter('all', this)">
           All Primers
@@ -746,6 +746,7 @@
       <div class="card-body">
       <div class="card-tags">
         <span class="card-tag">🏭 Decarbonization</span>
+        <span class="card-tag">🏗️ Infrastructure</span>
       </div>
         <h3 class="card-title">Carbon Capture & Storage</h3>
         <div class="card-desc">
@@ -777,6 +778,7 @@
       <div class="card-body">
       <div class="card-tags">
         <span class="card-tag">📊 Finance</span>
+        <span class="card-tag">⚡ Energy</span>
       </div>
         <h3 class="card-title">ClimateTech Venture Capital</h3>
         <div class="card-desc">
@@ -839,6 +841,7 @@
       <div class="card-body">
       <div class="card-tags">
         <span class="card-tag">🏗️ Infrastructure</span>
+        <span class="card-tag">⚡ Energy</span>
       </div>
         <h3 class="card-title">Data Centers</h3>
         <div class="card-desc">
@@ -901,6 +904,7 @@
       <div class="card-body">
       <div class="card-tags">
         <span class="card-tag">📊 Finance</span>
+        <span class="card-tag">⚡ Energy</span>
       </div>
         <h3 class="card-title">EnergyTech Venture Capital</h3>
         <div class="card-desc">
@@ -994,6 +998,7 @@
       <div class="card-body">
       <div class="card-tags">
         <span class="card-tag">📊 Finance</span>
+        <span class="card-tag">🏗️ Infrastructure</span>
       </div>
         <h3 class="card-title">Infrastructure Investing</h3>
         <div class="card-desc">
@@ -1025,6 +1030,7 @@
       <div class="card-body">
       <div class="card-tags">
         <span class="card-tag">🔥 Conventional Energy</span>
+        <span class="card-tag">⚡ Energy</span>
       </div>
         <h3 class="card-title">Natural Gas & LNG</h3>
         <div class="card-desc">
@@ -1149,6 +1155,7 @@
       <div class="card-body">
       <div class="card-tags">
         <span class="card-tag">📊 Finance</span>
+        <span class="card-tag">🏗️ Infrastructure</span>
       </div>
         <h3 class="card-title">Private Equity in Energy & Infrastructure</h3>
         <div class="card-desc">
@@ -1242,6 +1249,7 @@
       <div class="card-body">
       <div class="card-tags">
         <span class="card-tag">🏗️ Infrastructure</span>
+        <span class="card-tag">⚡ Energy</span>
       </div>
         <h3 class="card-title">Transmission & Grid Infrastructure</h3>
         <div class="card-desc">
@@ -1370,7 +1378,7 @@
     activeFilters.forEach(cat => {
       const pill = document.createElement('span');
       pill.className = 'filter-pill';
-      pill.innerHTML = labels[cat] + ' <span class="filter-pill-x" onclick="removeFilter('' + cat + '')">×</span>';
+      pill.innerHTML = labels[cat] + ' <span class="filter-pill-x" onclick="removeFilter(\'' + cat + '\')">&#215;</span>';
       container.appendChild(pill);
     });
   }
