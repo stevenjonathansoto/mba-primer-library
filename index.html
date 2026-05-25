@@ -402,6 +402,8 @@
   .card-sections {
     display: flex; flex-wrap: wrap; gap: 5px;
     margin-bottom: 20px;
+    max-height: 4.2em;
+    overflow: hidden;
   }
 
   .section-chip {
@@ -555,7 +557,20 @@
   .sort-btn svg { width: 13px; height: 13px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; }
 
   /* ── CARD TAGS (multi) ── */
-  .card-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+  .card-tags {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 6px;
+    margin-bottom: 14px;
+    overflow: hidden;
+  }
+  .card-tag {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-shrink: 1;
+    min-width: 0;
+  }
 
   /* ── COLLAPSED DESCRIPTION ── */
   .card-desc { font-size: 13.5px; font-weight: 300; color: var(--muted); line-height: 1.6; margin-bottom: 12px; }
