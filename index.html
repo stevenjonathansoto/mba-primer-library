@@ -682,12 +682,12 @@
           ⚡ Energy
           <svg class="check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
         </div>
-        <div class="dropdown-item" data-cat="materials" onclick="toggleFilter('materials', this)">
-          ⛏️ Materials
-          <svg class="check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-        </div>
         <div class="dropdown-item" data-cat="infrastructure" onclick="toggleFilter('infrastructure', this)">
           🏗️ Infrastructure
+          <svg class="check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="dropdown-item" data-cat="materials" onclick="toggleFilter('materials', this)">
+          ⛏️ Materials
           <svg class="check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
         </div>
         <div class="dropdown-item" data-cat="decarbonization" onclick="toggleFilter('decarbonization', this)">
@@ -696,6 +696,22 @@
         </div>
         <div class="dropdown-item" data-cat="finance" onclick="toggleFilter('finance', this)">
           📊 Finance
+          <svg class="check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="dropdown-item" data-cat="technology" onclick="toggleFilter('technology', this)">
+          💻 Technology
+          <svg class="check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="dropdown-item" data-cat="geopolitics" onclick="toggleFilter('geopolitics', this)">
+          🌏 Geopolitics
+          <svg class="check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="dropdown-item" data-cat="policy" onclick="toggleFilter('policy', this)">
+          🏛️ Policy
+          <svg class="check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="dropdown-item" data-cat="agriculture" onclick="toggleFilter('agriculture', this)">
+          🌾 Agriculture
           <svg class="check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
         </div>
       </div>
@@ -725,10 +741,10 @@
   <div class="no-results">No primers match your search.</div>
 
   <div class="primer-grid" id="primerGrid">
-<div id="card-agribusiness-food-systems" class="primer-card" data-category="materials" data-title="agribusiness food systems agriculture farming commodity trading precision agriculture alternative protein" data-read-time="50">
+<div id="card-agribusiness-food-systems" class="primer-card" data-category="agriculture finance" data-title="agribusiness food systems agriculture farming commodity trading precision agriculture alternative protein" data-read-time="50">
       <div class="card-banner"></div>
       <div class="card-body">
-      <div class="card-tags">
+            <div class="card-tags">
         <span class="card-tag">🌾 Agriculture</span>
         <span class="card-tag">📊 Finance</span>
       </div>
@@ -757,11 +773,11 @@
         </div>
       </div>
     </div>
-<div id="card-ai-power-demand" class="primer-card" data-category="energy" data-title="AI power demand data centers hyperscalers electricity grid NERC BYOP nuclear" data-read-time="55">
+<div id="card-ai-power-demand" class="primer-card" data-category="technology energy" data-title="AI power demand data centers hyperscalers electricity grid NERC BYOP nuclear" data-read-time="55">
       <div class="card-banner"></div>
       <div class="card-body">
-      <div class="card-tags">
-        <span class="card-tag">🤖 Technology</span>
+            <div class="card-tags">
+        <span class="card-tag">💻 Technology</span>
         <span class="card-tag">⚡ Energy</span>
       </div>
         <h3 class="card-title">AI &amp; Power Demand</h3>
@@ -792,8 +808,8 @@
 <div id="card-battery-storage" class="primer-card" data-category="energy" data-title="battery storage bess" data-read-time="45">
       <div class="card-banner"></div>
       <div class="card-body">
-      <div class="card-tags">
-        <span class="card-tag">🔋 Energy Transition</span>
+            <div class="card-tags">
+        <span class="card-tag">⚡ Energy</span>
       </div>
         <h3 class="card-title">Battery Storage</h3>
         <div class="card-desc">
@@ -820,10 +836,10 @@
         </div>
       </div>
     </div>
-<div id="card-carbon-capture-storage" class="primer-card" data-category="decarbonization" data-title="carbon capture CCS CCUS DAC direct air" data-read-time="50">
+<div id="card-carbon-capture-storage" class="primer-card" data-category="decarbonization infrastructure" data-title="carbon capture CCS CCUS DAC direct air" data-read-time="50">
       <div class="card-banner"></div>
       <div class="card-body">
-      <div class="card-tags">
+            <div class="card-tags">
         <span class="card-tag">🏭 Decarbonization</span>
         <span class="card-tag">🏗️ Infrastructure</span>
       </div>
@@ -852,10 +868,10 @@
         </div>
       </div>
     </div>
-<div id="card-china-energy-industrial-policy" class="primer-card" data-category="finance" data-title="china energy industrial policy belt road BRI five year plan solar EV battery" data-read-time="50">
+<div id="card-china-energy-industrial-policy" class="primer-card" data-category="geopolitics energy" data-title="china energy industrial policy belt road BRI five year plan solar EV battery" data-read-time="50">
       <div class="card-banner"></div>
       <div class="card-body">
-      <div class="card-tags">
+            <div class="card-tags">
         <span class="card-tag">🌏 Geopolitics</span>
         <span class="card-tag">⚡ Energy</span>
       </div>
@@ -884,12 +900,12 @@
         </div>
       </div>
     </div>
-<div id="card-climatetech-venture-capital" class="primer-card" data-category="finance" data-title="climatetech venture capital VC cleantech 1.0 2.0 Sightline" data-read-time="55">
+<div id="card-climatetech-venture-capital" class="primer-card" data-category="finance decarbonization" data-title="climatetech venture capital VC cleantech 1.0 2.0 Sightline" data-read-time="55">
       <div class="card-banner"></div>
       <div class="card-body">
-      <div class="card-tags">
+            <div class="card-tags">
         <span class="card-tag">📊 Finance</span>
-        <span class="card-tag">⚡ Energy</span>
+        <span class="card-tag">🏭 Decarbonization</span>
       </div>
         <h3 class="card-title">ClimateTech Venture Capital</h3>
         <div class="card-desc">
@@ -919,8 +935,8 @@
 <div id="card-critical-minerals" class="primer-card" data-category="materials" data-title="critical minerals" data-read-time="45">
       <div class="card-banner"></div>
       <div class="card-body">
-      <div class="card-tags">
-        <span class="card-tag">⛏️ Materials & Supply Chain</span>
+            <div class="card-tags">
+        <span class="card-tag">⛏️ Materials</span>
       </div>
         <h3 class="card-title">Critical Minerals</h3>
         <div class="card-desc">
@@ -947,12 +963,12 @@
         </div>
       </div>
     </div>
-<div id="card-data-centers" class="primer-card" data-category="infrastructure" data-title="data centers ai infrastructure" data-read-time="50">
+<div id="card-data-centers" class="primer-card" data-category="infrastructure technology" data-title="data centers ai infrastructure" data-read-time="50">
       <div class="card-banner"></div>
       <div class="card-body">
-      <div class="card-tags">
+            <div class="card-tags">
         <span class="card-tag">🏗️ Infrastructure</span>
-        <span class="card-tag">⚡ Energy</span>
+        <span class="card-tag">💻 Technology</span>
       </div>
         <h3 class="card-title">Data Centers</h3>
         <div class="card-desc">
@@ -979,11 +995,11 @@
         </div>
       </div>
     </div>
-<div id="card-electric-vehicles" class="primer-card" data-category="energy" data-title="electric vehicles ev" data-read-time="50">
+<div id="card-electric-vehicles" class="primer-card" data-category="decarbonization" data-title="electric vehicles ev" data-read-time="50">
       <div class="card-banner"></div>
       <div class="card-body">
-      <div class="card-tags">
-        <span class="card-tag">🚗 Energy Transition</span>
+            <div class="card-tags">
+        <span class="card-tag">🏭 Decarbonization</span>
       </div>
         <h3 class="card-title">Electric Vehicles</h3>
         <div class="card-desc">
@@ -1010,10 +1026,10 @@
         </div>
       </div>
     </div>
-<div id="card-energytech-venture-capital" class="primer-card" data-category="finance" data-title="energytech venture capital VC grid software AI energy system" data-read-time="55">
+<div id="card-energytech-venture-capital" class="primer-card" data-category="finance energy" data-title="energytech venture capital VC grid software AI energy system" data-read-time="55">
       <div class="card-banner"></div>
       <div class="card-body">
-      <div class="card-tags">
+            <div class="card-tags">
         <span class="card-tag">📊 Finance</span>
         <span class="card-tag">⚡ Energy</span>
       </div>
@@ -1045,8 +1061,8 @@
 <div id="card-geothermal-energy" class="primer-card" data-category="energy" data-title="geothermal energy" data-read-time="45">
       <div class="card-banner"></div>
       <div class="card-body">
-      <div class="card-tags">
-        <span class="card-tag">🌋 Energy Transition</span>
+            <div class="card-tags">
+        <span class="card-tag">⚡ Energy</span>
       </div>
         <h3 class="card-title">Geothermal Energy</h3>
         <div class="card-desc">
@@ -1073,10 +1089,10 @@
         </div>
       </div>
     </div>
-<div id="card-grid-software-vpp" class="primer-card" data-category="energy" data-title="grid software virtual power plants VPP DERMS FERC 2222 demand response AutoGrid" data-read-time="50">
+<div id="card-grid-software-vpp" class="primer-card" data-category="technology energy" data-title="grid software virtual power plants VPP DERMS FERC 2222 demand response AutoGrid" data-read-time="50">
       <div class="card-banner"></div>
       <div class="card-body">
-      <div class="card-tags">
+            <div class="card-tags">
         <span class="card-tag">💻 Technology</span>
         <span class="card-tag">⚡ Energy</span>
       </div>
@@ -1105,11 +1121,11 @@
         </div>
       </div>
     </div>
-<div id="card-hydrogen-energy" class="primer-card" data-category="energy" data-title="hydrogen green blue grey electrolysis" data-read-time="50">
+<div id="card-hydrogen-energy" class="primer-card" data-category="decarbonization" data-title="hydrogen green blue grey electrolysis" data-read-time="50">
       <div class="card-banner"></div>
       <div class="card-body">
-      <div class="card-tags">
-        <span class="card-tag">⚗️ Energy Transition</span>
+            <div class="card-tags">
+        <span class="card-tag">🏭 Decarbonization</span>
       </div>
         <h3 class="card-title">Hydrogen Energy</h3>
         <div class="card-desc">
@@ -1136,10 +1152,10 @@
         </div>
       </div>
     </div>
-<div id="card-infrastructure-investing" class="primer-card" data-category="finance" data-title="infrastructure investing private equity funds GP LP" data-read-time="50">
+<div id="card-infrastructure-investing" class="primer-card" data-category="finance infrastructure" data-title="infrastructure investing private equity funds GP LP" data-read-time="50">
       <div class="card-banner"></div>
       <div class="card-body">
-      <div class="card-tags">
+            <div class="card-tags">
         <span class="card-tag">📊 Finance</span>
         <span class="card-tag">🏗️ Infrastructure</span>
       </div>
@@ -1171,9 +1187,8 @@
 <div id="card-mining-metals" class="primer-card" data-category="materials" data-title="mining metals copper lithium nickel cobalt rare earth critical minerals" data-read-time="55">
       <div class="card-banner"></div>
       <div class="card-body">
-      <div class="card-tags">
+            <div class="card-tags">
         <span class="card-tag">⛏️ Materials</span>
-        <span class="card-tag">⚡ Energy</span>
       </div>
         <h3 class="card-title">Mining &amp; Metals</h3>
         <div class="card-desc">
@@ -1203,8 +1218,7 @@
 <div id="card-natural-gas-lng" class="primer-card" data-category="energy" data-title="natural gas LNG liquefied exports pipeline" data-read-time="50">
       <div class="card-banner"></div>
       <div class="card-body">
-      <div class="card-tags">
-        <span class="card-tag">🔥 Conventional Energy</span>
+            <div class="card-tags">
         <span class="card-tag">⚡ Energy</span>
       </div>
         <h3 class="card-title">Natural Gas & LNG</h3>
@@ -1235,8 +1249,8 @@
 <div id="card-nuclear-energy" class="primer-card" data-category="energy" data-title="nuclear energy smr" data-read-time="50">
       <div class="card-banner"></div>
       <div class="card-body">
-      <div class="card-tags">
-        <span class="card-tag">☢️ Energy Transition</span>
+            <div class="card-tags">
+        <span class="card-tag">⚡ Energy</span>
       </div>
         <h3 class="card-title">Nuclear Energy</h3>
         <div class="card-desc">
@@ -1266,8 +1280,8 @@
 <div id="card-offshore-wind-energy" class="primer-card" data-category="energy" data-title="offshore wind energy floating" data-read-time="50">
       <div class="card-banner"></div>
       <div class="card-body">
-      <div class="card-tags">
-        <span class="card-tag">🌊 Energy Transition</span>
+            <div class="card-tags">
+        <span class="card-tag">⚡ Energy</span>
       </div>
         <h3 class="card-title">Offshore Wind Energy</h3>
         <div class="card-desc">
@@ -1297,8 +1311,7 @@
 <div id="card-oil-petroleum" class="primer-card" data-category="energy" data-title="oil petroleum crude OPEC shale Permian supermajors upstream" data-read-time="55">
       <div class="card-banner"></div>
       <div class="card-body">
-      <div class="card-tags">
-        <span class="card-tag">🛢️ Conventional Energy</span>
+            <div class="card-tags">
         <span class="card-tag">⚡ Energy</span>
       </div>
         <h3 class="card-title">Oil &amp; Petroleum</h3>
@@ -1329,8 +1342,8 @@
 <div id="card-onshore-wind-energy" class="primer-card" data-category="energy" data-title="onshore wind energy" data-read-time="45">
       <div class="card-banner"></div>
       <div class="card-body">
-      <div class="card-tags">
-        <span class="card-tag">💨 Energy Transition</span>
+            <div class="card-tags">
+        <span class="card-tag">⚡ Energy</span>
       </div>
         <h3 class="card-title">Onshore Wind Energy</h3>
         <div class="card-desc">
@@ -1357,10 +1370,10 @@
         </div>
       </div>
     </div>
-<div id="card-private-equity-in-energy-infrastructure" class="primer-card" data-category="finance" data-title="private equity energy infrastructure PE LBO project finance tax equity" data-read-time="55">
+<div id="card-private-equity-in-energy-infrastructure" class="primer-card" data-category="finance infrastructure" data-title="private equity energy infrastructure PE LBO project finance tax equity" data-read-time="55">
       <div class="card-banner"></div>
       <div class="card-body">
-      <div class="card-tags">
+            <div class="card-tags">
         <span class="card-tag">📊 Finance</span>
         <span class="card-tag">🏗️ Infrastructure</span>
       </div>
@@ -1389,10 +1402,10 @@
         </div>
       </div>
     </div>
-<div id="card-project-finance" class="primer-card" data-category="finance" data-title="project finance DSCR LLCR debt sculpting EPC offtake tax equity DOE LPO infrastructure" data-read-time="55">
+<div id="card-project-finance" class="primer-card" data-category="finance infrastructure" data-title="project finance DSCR LLCR debt sculpting EPC offtake tax equity DOE LPO infrastructure" data-read-time="55">
       <div class="card-banner"></div>
       <div class="card-body">
-      <div class="card-tags">
+            <div class="card-tags">
         <span class="card-tag">📊 Finance</span>
         <span class="card-tag">🏗️ Infrastructure</span>
       </div>
@@ -1421,11 +1434,11 @@
         </div>
       </div>
     </div>
-<div id="card-semiconductors-ai-chips" class="primer-card" data-category="finance" data-title="semiconductors AI chips NVIDIA TSMC ASML chip war" data-read-time="50">
+<div id="card-semiconductors-ai-chips" class="primer-card" data-category="technology" data-title="semiconductors AI chips NVIDIA TSMC ASML chip war" data-read-time="50">
       <div class="card-banner"></div>
       <div class="card-body">
-      <div class="card-tags">
-        <span class="card-tag">📊 Technology</span>
+            <div class="card-tags">
+        <span class="card-tag">💻 Technology</span>
       </div>
         <h3 class="card-title">Semiconductors & AI Chips</h3>
         <div class="card-desc">
@@ -1455,8 +1468,8 @@
 <div id="card-solar-energy" class="primer-card" data-category="energy" data-title="solar energy" data-read-time="45">
       <div class="card-banner"></div>
       <div class="card-body">
-      <div class="card-tags">
-        <span class="card-tag">⚡ Energy Transition</span>
+            <div class="card-tags">
+        <span class="card-tag">⚡ Energy</span>
       </div>
         <h3 class="card-title">Solar Energy</h3>
         <div class="card-desc">
@@ -1483,10 +1496,10 @@
         </div>
       </div>
     </div>
-<div id="card-transmission-grid-infrastructure" class="primer-card" data-category="infrastructure" data-title="transmission grid infrastructure HVDC interconnection" data-read-time="50">
+<div id="card-transmission-grid-infrastructure" class="primer-card" data-category="infrastructure energy" data-title="transmission grid infrastructure HVDC interconnection" data-read-time="50">
       <div class="card-banner"></div>
       <div class="card-body">
-      <div class="card-tags">
+            <div class="card-tags">
         <span class="card-tag">🏗️ Infrastructure</span>
         <span class="card-tag">⚡ Energy</span>
       </div>
@@ -1515,10 +1528,10 @@
         </div>
       </div>
     </div>
-<div id="card-us-energy-policy" class="primer-card" data-category="finance" data-title="US energy policy IRA OBBBA FERC DOE grid interconnection nuclear clean energy" data-read-time="50">
+<div id="card-us-energy-policy" class="primer-card" data-category="policy energy" data-title="US energy policy IRA OBBBA FERC DOE grid interconnection nuclear clean energy" data-read-time="50">
       <div class="card-banner"></div>
       <div class="card-body">
-      <div class="card-tags">
+            <div class="card-tags">
         <span class="card-tag">🏛️ Policy</span>
         <span class="card-tag">⚡ Energy</span>
       </div>
@@ -1550,8 +1563,7 @@
 <div id="card-water-infrastructure" class="primer-card" data-category="infrastructure" data-title="water infrastructure PFAS desalination utilities drinking water wastewater" data-read-time="50">
       <div class="card-banner"></div>
       <div class="card-body">
-      <div class="card-tags">
-        <span class="card-tag">💧 Infrastructure</span>
+            <div class="card-tags">
         <span class="card-tag">🏗️ Infrastructure</span>
       </div>
         <h3 class="card-title">Water Infrastructure</h3>
@@ -1588,7 +1600,8 @@
     <div class="footer-logo">MBA Industry Primer Library</div>
     <div class="footer-divider"></div>
     <p class="footer-text">
-      Created for use by Columbia Business School's Energy &amp; Infrastructure Club. This library is for educational purposes only. All market data sourced from publicly available materials. Not intended as investment advice. This library is created and operated by Steven Soto.
+      Created for use by Columbia Business School's Energy &amp; Infrastructure Club. This library is for educational purposes only. All market data is sourced from publicly available materials.<br>
+      Not intended as investment advice. This library is created and operated by Steven Soto (MBA '27).
     </p>
   </div>
 </footer>
@@ -1599,8 +1612,10 @@
   const TOTAL = 27;
 
   const labels = {
-    energy:'⚡ Energy', materials:'⛏️ Materials',
-    infrastructure:'🏗️ Infrastructure', decarbonization:'🏭 Decarbonization', finance:'📊 Finance'
+    energy:'⚡ Energy', infrastructure:'🏗️ Infrastructure',
+    materials:'⛏️ Materials', decarbonization:'🏭 Decarbonization',
+    finance:'📊 Finance', technology:'💻 Technology',
+    geopolitics:'🌏 Geopolitics', policy:'🏛️ Policy', agriculture:'🌾 Agriculture'
   };
 
   // ── Search & Filter ─────────────────────────────────────────────────────────
@@ -1614,7 +1629,8 @@
       const chips   = Array.from(card.querySelectorAll('.section-chip')).map(c => c.textContent.toLowerCase()).join(' ');
       const desc    = (card.querySelector('.card-desc-text')?.textContent || '').toLowerCase();
       const matchSearch = !q || title.includes(q) || dataTit.includes(q) || chips.includes(q) || desc.includes(q);
-      const matchFilter = activeFilters.size === 0 || activeFilters.has(card.dataset.category);
+      const cardCats = (card.dataset.category || '').split(' ');
+      const matchFilter = activeFilters.size === 0 || cardCats.some(c => activeFilters.has(c));
       const visible = matchSearch && matchFilter;
       card.classList.toggle('hidden', !visible);
       if (visible) shown++;
