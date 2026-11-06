@@ -56,6 +56,7 @@ const AxeBuilder=require('@axe-core/playwright').default;
   if(readerAccessibility.violations.length)throw Error(JSON.stringify(readerAccessibility.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)}))));
   await page.screenshot({path:`work/screenshots/reader-${width}.png`,fullPage:false});
   await page.goto('http://127.0.0.1:8765/learn/water-infrastructure.html');
+  if(await page.locator('#evidence').getAttribute('open')!==null)throw Error('sources should start collapsed');
   for(const mode of ['brief','full','interview']) {
    await page.locator(`#tab-${mode}`).click();
    await page.locator(`#${mode}`).waitFor({state:'visible'});
@@ -67,6 +68,9 @@ const AxeBuilder=require('@axe-core/playwright').default;
   }
   await page.locator('.question summary').first().click();
   if(await page.locator('.question[open]').count()!==1)throw Error('answer reveal failed');
+  await page.locator('.question summary').nth(1).click();
+  await page.waitForFunction(()=>document.querySelectorAll('.question[open]').length===1);
+  if(await page.locator('.question').nth(1).getAttribute('open')===null)throw Error('second answer not opened');
   await page.locator('#tab-full').click();
   await page.locator('#full .claim').first().click();
   await page.locator('.evidence[open]').first().waitFor({state:'visible'});

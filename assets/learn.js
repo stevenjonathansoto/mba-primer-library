@@ -34,11 +34,14 @@
     });
     if (hash.startsWith('source-')) {
       const evidence = document.getElementById(hash);
-      if (evidence) { evidence.open = true; evidence.scrollIntoView(); }
+      if (evidence) { document.getElementById('evidence').open = true; evidence.open = true; evidence.scrollIntoView(); }
     }
     if (hash.startsWith('full-')) document.getElementById(hash)?.scrollIntoView();
   }
   window.addEventListener('hashchange', select);
   window.addEventListener('popstate', select);
+  document.querySelectorAll('.question').forEach(question => question.addEventListener('toggle', () => {
+    if (question.open) document.querySelectorAll('.question').forEach(other => { if (other !== question) other.open = false; });
+  }));
   select();
 })();
