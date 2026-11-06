@@ -61,6 +61,7 @@ def build(folder,output,render=False):
         section.top_margin=section.bottom_margin=Inches(.7); section.left_margin=section.right_margin=Inches(.75)
     for name in ['Title','Heading 1','Heading 2','Heading 3']:
         style=doc.styles[name]; style.font.name='Arial'; style.font.color.rgb=RGBColor.from_string('1B3A6B'); style.font.size=Pt(26 if name=='Title' else 13)
+        for border in style.element.findall('.//'+qn('w:pBdr')): border.getparent().remove(border)
     doc.add_paragraph(research['title'].upper(),'Title')
     doc.add_paragraph('MBA Industry Primer | '+research['category'])
     doc.add_paragraph('Columbia Business School | Verified '+research['last_verified'])
@@ -92,6 +93,7 @@ def build(folder,output,render=False):
         rendered.append('<h2>References</h2>'+''.join('<p>'+html.escape(ref)+'</p>' for ref in references))
         nav=' · '.join(f'<a href="{n}.html">{label}</a>' for n,label in [('summary','Five-minute briefing'),('primer','Full primer'),('interview','Interview preparation')])
         page='<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+html.escape(research['title'])+'</title><link rel="stylesheet" href="../../assets/reader.css"></head><body><header><h1>'+html.escape(research['title'])+'</h1><nav>'+nav+'</nav><p>AI-assisted · Last verified '+html.escape(research['last_verified'])+'</p></header><main>'+''.join(rendered)+'</main></body></html>'
+        page=page.replace('</body>',f'<footer><a href="{research["slug"]}_primer.docx" download>Download Word primer</a> · <a href="https://github.com/stevenjonathansoto/mba-primer-library/issues/new?labels=feedback&amp;title=Feedback%3A%20{research["slug"]}">Report an issue</a></footer></body>')
         (output/f'{name}.html').write_text(page,encoding='utf-8')
     doc.add_heading('References',level=1)
     for ref in references: doc.add_paragraph(ref)
