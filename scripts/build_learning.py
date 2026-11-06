@@ -1,6 +1,5 @@
 """Render reusable static learning pages from source-linked editorial content."""
 import argparse
-import hashlib
 import html
 import json
 import re
@@ -18,7 +17,15 @@ def build(path,word=False):
         return re.sub(r'\[([a-z-]+)\]',citation,html.escape(text))
     def table(rows):
         return '<div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable analysis table"><table>'+''.join('<tr>'+''.join(f'<{"th scope=col" if i==0 else "td"}>{rich(cell)}</{"th" if i==0 else "td"}>' for cell in row)+'</tr>' for i,row in enumerate(rows))+'</table></div>'
-    brief=''.join(f'<section><h3>{html.escape(title)}</h3><p>{rich(body)}</p></section>' for title,body in data['brief'])
+    brief_parts=[]
+    for title,body in data['brief']:
+        if body.startswith('1. '):
+            numbered,tail=body.split('For banking',1)
+            items=re.split(r'\b[1-5]\. ',numbered)[1:]
+            text='<ol>'+''.join('<li>'+rich(item.strip())+'</li>' for item in items)+'</ol><p>'+rich('For banking'+tail)+'</p>'
+        else:text='<p>'+rich(body)+'</p>'
+        brief_parts.append(f'<section><h3>{html.escape(title)}</h3>{text}</section>')
+    brief=''.join(brief_parts)
     full=''.join(f'<section><h3 id="full-{s["id"]}">{html.escape(s["title"])}</h3>'+''.join('<p>'+rich(p)+'</p>' for p in s['paragraphs'])+(table(s['table']) if 'table' in s else '')+'</section>' for s in data['full'])
     toc=''.join(f'<a href="#full-{s["id"]}">{html.escape(s["title"])}</a>' for s in data['full'])
     questions=''.join(f'<details class="question"><summary><span>Q{i:02} </span>{html.escape(q)}</summary><div><p>{rich(a)}</p><p class="followup"><strong>Go deeper:</strong> {html.escape(f)}</p></div></details>' for i,(q,a,f) in enumerate(data['questions'],1))

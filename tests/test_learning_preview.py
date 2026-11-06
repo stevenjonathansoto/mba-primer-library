@@ -11,6 +11,16 @@ class Text(HTMLParser):
     def handle_data(self, text): self.parts.append(text)
 
 class LearningPreviewTests(unittest.TestCase):
+    def test_download_matches_full_primer_source(self):
+        from docx import Document
+        data=json.loads((ROOT/'content/water-infrastructure.json').read_text(encoding='utf-8'))
+        doc=Document(ROOT/'learn/water-infrastructure.docx')
+        paragraphs={p.text for p in doc.paragraphs}
+        for section in data['full']:
+            for paragraph in section['paragraphs']:self.assertIn(paragraph,paragraphs)
+        tables=[[[cell.text for cell in row.cells] for row in table.rows] for table in doc.tables]
+        self.assertEqual(tables,[s['table'] for s in data['full'] if 'table' in s])
+
     def test_content_lengths_and_draft_status(self):
         data=json.loads((ROOT/'content/water-infrastructure.json').read_text(encoding='utf-8'))
         self.assertEqual(data['status'], 'source-reviewed-learning-edition')
