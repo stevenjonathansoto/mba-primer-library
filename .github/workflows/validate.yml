@@ -16,6 +16,8 @@ jobs:
       - run: pip install -r requirements.txt
       - run: python scripts/build_legacy_readers.py
       - run: git diff --exit-code -- read/
+      - run: python scripts/build_learning_preview.py
+      - run: git diff --exit-code -- learn/
       - run: python scripts/check_config.py
       - run: python scripts/sync_intake_links.py --check
       - run: python scripts/check_site.py

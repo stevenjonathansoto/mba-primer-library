@@ -16,7 +16,7 @@ class Links(HTMLParser):
 
 def check():
     pages={}
-    for path in [ROOT/'index.html',*sorted((ROOT/'read').rglob('*.html'))]:
+    for path in [ROOT/'index.html',*sorted((ROOT/'read').rglob('*.html')),*sorted((ROOT/'learn').rglob('*.html'))]:
         parsed=Links(); parsed.feed(path.read_text(encoding='utf-8')); pages[path.resolve()]=parsed
     for path,parsed in pages.items():
         for link in parsed.links:

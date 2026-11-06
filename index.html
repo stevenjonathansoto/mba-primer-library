@@ -650,7 +650,7 @@
   @media(max-width:640px){.search-inner{flex-wrap:wrap}.search-wrap{flex-basis:100%}.section-header{align-items:flex-start;gap:16px;flex-direction:column}.section-header>div{flex-wrap:wrap}.header-eyebrow{align-items:flex-start}.eyebrow-text{line-height:1.7}.card-footer{flex-wrap:wrap}}
   @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
-</head>
+<link rel="stylesheet" href="assets/discovery.css"></head>
 <body>
 <a class="skip-link" href="#main-content">Skip to primers</a>
 
@@ -664,9 +664,9 @@
       <span style="font-size:14px; line-height:1;">⚡</span>
       <span class="eyebrow-text">Columbia Business School · Energy & Infrastructure Club</span>
     </div>
-    <h1 class="header-title">Industry Primer Library</h1>
+    <h1 class="header-title">Energy Library</h1>
     <p class="header-subtitle">
-      Industry primers built to supercharge your recruiting knowledge
+      Understand an industry. Prepare for the conversation.
     </p>
   </div>
 </header>
@@ -744,6 +744,16 @@
 
 <!-- MAIN -->
 <main id="main-content">
+  <section class="learning-feature" aria-labelledby="learning-feature-title">
+    <div><p class="feature-kicker">START HERE</p><h2 id="learning-feature-title">Water Infrastructure</h2><p>A five-minute overview, a full primer, and interview answers.</p><p class="feature-status"></p></div>
+    <div class="feature-actions"><a href="learn/water-infrastructure.html">Start with Water Infrastructure →</a></div>
+  </section>
+  <div class="discovery-controls">
+    <label for="careerFilter">Recruiting interest<select id="careerFilter" onchange="applyFilters()"><option value="">All interests</option><option value="banking">Investment banking</option><option value="pe">Private equity</option><option value="infrastructure">Infrastructure investing</option><option value="vc">Venture capital</option><option value="strategy">Corporate strategy</option></select></label>
+    <label for="formatFilter">Learning format<select id="formatFilter" onchange="applyFilters()"><option value="">All content</option><option value="three">Three-format learning</option><option value="legacy">Original online primers</option><option value="soon">Coming soon</option></select></label>
+    <button class="reset-discovery" onclick="resetDiscovery()">Clear all filters</button>
+  </div>
+  <p class="discovery-note">1 three-format learning edition · 25 original primers · 2 coming soon. Original edition dates are not verification dates. Recruiting filters are editorial topic groupings, not employer recommendations.</p>
   <div class="section-header">
     <h2 class="section-title">Available Primers</h2>
     <div style="display:flex; align-items:center; gap:16px;">
@@ -1578,10 +1588,10 @@
       </div>
         <h3 class="card-title">Water Infrastructure</h3>
         <div class="card-desc">
-          <span class="card-desc-text">The most essential and most underfunded sector in the global economy. Covers the $7T global funding gap, PFAS "forever chemicals" and the $80B+ remediation market, desalination, the American Water Works merger, water rights markets, and why the Hormuz crisis exposed water-energy interdependence in the Gulf.</span>
+          <span class="card-desc-text">Understand regulated utility economics, capital recovery, water technology, and the financing of essential infrastructure. Includes a concise brief, worked financial examples and twelve industry-specific interview answers.</span>
           <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
         </div>
-        <div class="card-updated">Last Updated: <strong>May 2026</strong></div>
+        <div class="card-updated">Last Updated: <strong>November 2026</strong></div>
         <div class="card-sections">
           <span class="section-chip">PFAS Remediation</span>
           <span class="section-chip">Value Chain</span>
@@ -1590,7 +1600,7 @@
           <span class="section-chip">Climate & Scarcity</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/water-infrastructure.html">Read online</a><div class="card-footer">
+        <p class="legacy-status">Learning edition · Sources reviewed November 6, 2026</p><a class="learning-link" href="learn/water-infrastructure.html">Open three-format learning →</a><a href="learn/water-infrastructure.docx" download>Download new edition</a><a class="read-online" href="read/water-infrastructure.html">Read original edition</a><div class="card-footer">
           <a href="water_infrastructure_primer_may2026.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
@@ -1620,7 +1630,7 @@
   let activeFilters = new Set();
   let currentSort = 'alpha';
   const TOTAL = document.querySelectorAll('.primer-card').length;
-  const DOWNLOADS = document.querySelectorAll('.primer-card a[download]').length;
+  const DOWNLOADS = [...document.querySelectorAll('.primer-card')].filter(card => card.querySelector('a[download]')).length;
 
   const labels = {
     energy:'⚡ Energy', infrastructure:'🏗️ Infrastructure',
@@ -1642,7 +1652,14 @@
       const matchSearch = !q || title.includes(q) || dataTit.includes(q) || chips.includes(q) || desc.includes(q);
       const cardCats = (card.dataset.category || '').split(' ');
       const matchFilter = activeFilters.size === 0 || cardCats.some(c => activeFilters.has(c));
-      const visible = matchSearch && matchFilter;
+      const career = document.getElementById('careerFilter').value;
+      const careerCats = {banking:['finance','infrastructure','energy'],pe:['finance','infrastructure'],infrastructure:['infrastructure','energy'],vc:['technology','decarbonization','agriculture'],strategy:['energy','materials','technology','geopolitics','policy','agriculture']};
+      const matchCareer = !career || cardCats.some(c => careerCats[career].includes(c));
+      const format = document.getElementById('formatFilter').value;
+      const isLearning = card.id === 'card-water-infrastructure';
+      const available = !!card.querySelector('a[download]');
+      const matchFormat = !format || (format === 'three' && isLearning) || (format === 'legacy' && available) || (format === 'soon' && !available);
+      const visible = matchSearch && matchFilter && matchCareer && matchFormat;
       card.classList.toggle('hidden', !visible);
       if (visible) shown++;
     });
@@ -1653,6 +1670,12 @@
   }
 
   // ── Multi-select filter ─────────────────────────────────────────────────────
+  function resetDiscovery() {
+    document.getElementById('searchInput').value = '';
+    document.getElementById('careerFilter').value = '';
+    document.getElementById('formatFilter').value = '';
+    activeFilters.clear(); syncDropdownUI(); applyFilters();
+  }
   function toggleFilter(cat, el) {
     if (cat === 'all') {
       activeFilters.clear();
