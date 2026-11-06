@@ -26,11 +26,6 @@ const AxeBuilder=require('@axe-core/playwright').default;
   await page.locator('#searchInput').fill('solar');
   if(!await page.locator('#card-solar-energy').isVisible())throw Error('search failed');
   await page.locator('#searchInput').fill('');
-  await page.locator('#formatFilter').selectOption('three');
-  if(await page.locator('.primer-card:not(.hidden)').count()!==2 || !await page.locator('#card-water-infrastructure').isVisible() || !await page.locator('#card-project-finance').isVisible())throw Error('learning format filter failed');
-  await page.locator('#formatFilter').selectOption('soon');
-  if(await page.locator('.primer-card:not(.hidden)').count()!==2)throw Error('coming soon filter failed');
-  await page.locator('#formatFilter').selectOption('');
   for(const career of ['banking','pe','infrastructure','vc','strategy']) {
    await page.locator('#careerFilter').selectOption(career);
    if(!await page.locator('.primer-card:not(.hidden)').count())throw Error('empty recruiting filter '+career);

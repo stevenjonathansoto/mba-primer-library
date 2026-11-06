@@ -743,7 +743,6 @@
 <main id="main-content">
   <div class="discovery-controls">
     <label for="careerFilter">Recruiting interest<select id="careerFilter" onchange="applyFilters()"><option value="">All interests</option><option value="banking">Investment banking</option><option value="pe">Private equity</option><option value="infrastructure">Infrastructure investing</option><option value="vc">Venture capital</option><option value="strategy">Corporate strategy</option></select></label>
-    <label for="formatFilter">Learning format<select id="formatFilter" onchange="applyFilters()"><option value="">All content</option><option value="three">Three-format learning</option><option value="legacy">Original online primers</option><option value="soon">Coming soon</option></select></label>
     <button class="reset-discovery" onclick="resetDiscovery()">Clear all filters</button>
   </div>
   <div class="section-header">
@@ -1647,11 +1646,7 @@
       const career = document.getElementById('careerFilter').value;
       const careerCats = {banking:['finance','infrastructure','energy'],pe:['finance','infrastructure'],infrastructure:['infrastructure','energy'],vc:['technology','decarbonization','agriculture'],strategy:['energy','materials','technology','geopolitics','policy','agriculture']};
       const matchCareer = !career || cardCats.some(c => careerCats[career].includes(c));
-      const format = document.getElementById('formatFilter').value;
-      const isLearning = !!card.querySelector('.learning-link');
-      const available = !!card.querySelector('a[download]');
-      const matchFormat = !format || (format === 'three' && isLearning) || (format === 'legacy' && available) || (format === 'soon' && !available);
-      const visible = matchSearch && matchFilter && matchCareer && matchFormat;
+      const visible = matchSearch && matchFilter && matchCareer;
       card.classList.toggle('hidden', !visible);
       if (visible) shown++;
     });
@@ -1665,7 +1660,6 @@
   function resetDiscovery() {
     document.getElementById('searchInput').value = '';
     document.getElementById('careerFilter').value = '';
-    document.getElementById('formatFilter').value = '';
     activeFilters.clear(); syncDropdownUI(); applyFilters();
   }
   function toggleFilter(cat, el) {
