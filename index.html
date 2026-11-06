@@ -746,11 +746,10 @@
     <label for="formatFilter">Learning format<select id="formatFilter" onchange="applyFilters()"><option value="">All content</option><option value="three">Three-format learning</option><option value="legacy">Original online primers</option><option value="soon">Coming soon</option></select></label>
     <button class="reset-discovery" onclick="resetDiscovery()">Clear all filters</button>
   </div>
-  <p class="discovery-note">2 three-format learning editions · 25 original primers · 2 coming soon. Original edition dates are not verification dates. Recruiting filters are editorial topic groupings, not employer recommendations.</p>
   <div class="section-header">
     <h2 class="section-title">Available Primers</h2>
     <div style="display:flex; align-items:center; gap:16px;">
-      <span class="section-count" id="countLabel" role="status" aria-live="polite">25 available · 2 coming soon</span>
+      <span id="countLabel" role="status" aria-live="polite" style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap"></span>
       <a href="mailto:ssoto27@gsb.columbia.edu?subject=Primer%20Request&amp;body=Industry%3A%0ASpecific%20focus%3A%0ARecruiting%20relevance%3A%0AAdditional%20context%3A%0A" class="btn-request">
         Request a Primer
       </a>
