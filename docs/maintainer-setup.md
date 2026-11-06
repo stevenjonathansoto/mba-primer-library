@@ -8,9 +8,13 @@ verification, rendered content CI and the controlled benchmark are complete.
 ## Repository protections
 
 1. In Settings → Rules → Rulesets, create an active branch ruleset for main.
-2. Require pull requests and status checks. After the validation workflow has
-   run, select `library-checks`, `browser-checks` and `rendered-documents`. Require branches to be up to date. Block
+2. Require pull requests and status checks. Bootstrap with `library-checks`,
+   which runs in foundation PR #2. Require branches to be up to date. Block
    force pushes and deletion. Apply rules to administrators without bypass.
+   After #2 and #3 merge, require `browser-checks` before merging #4. Require
+   `rendered-documents` before merging #5. The final rule requires all three.
+   Retarget each dependent PR to main after its predecessor merges and rerun
+   checks on the resulting head; never waive a missing check to merge a phase.
 3. In Settings → General → Pull Requests, enable Allow auto-merge. Enable squash
    merge. Never use an immediate merge merely because no checks are reported.
 4. In Settings → Actions → General, allow the checkout/setup-python actions.
