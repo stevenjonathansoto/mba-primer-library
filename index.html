@@ -650,7 +650,7 @@
   @media(max-width:640px){.search-inner{flex-wrap:wrap}.search-wrap{flex-basis:100%}.section-header{align-items:flex-start;gap:16px;flex-direction:column}.section-header>div{flex-wrap:wrap}.header-eyebrow{align-items:flex-start}.eyebrow-text{line-height:1.7}.card-footer{flex-wrap:wrap}}
   @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
-<link rel="stylesheet" href="assets/discovery.css"></head>
+<link rel="stylesheet" href="assets/discovery.css?v=catalog-grid-heading"></head>
 <body>
 <a class="skip-link" href="#main-content">Skip to primers</a>
 
@@ -664,10 +664,7 @@
       <span style="font-size:14px; line-height:1;">⚡</span>
       <span class="eyebrow-text">Columbia Business School · Energy & Infrastructure Club</span>
     </div>
-    <h1 class="header-title">Energy Library</h1>
-    <p class="header-subtitle">
-      Understand an industry. Prepare for the conversation.
-    </p>
+    <h1 class="header-title">Energy &amp; Infrastructure Industry Library</h1>
   </div>
 </header>
 
@@ -690,44 +687,44 @@
       <div id="activeFilterPills" style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;"></div>
       <div class="dropdown" id="dropdown">
         <button type="button" class="dropdown-item" aria-pressed="false" data-cat="all" onclick="toggleFilter('all', this)">
-          All Primers
+          <span class="dropdown-label">All Primers</span>
           <svg class="check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
         </button>
         <div class="dropdown-divider"></div>
         <button type="button" class="dropdown-item" aria-pressed="false" data-cat="energy" onclick="toggleFilter('energy', this)">
-          ⚡ Energy
+          <span class="dropdown-label">⚡&nbsp;Energy</span>
           <svg class="check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
         </button>
         <button type="button" class="dropdown-item" aria-pressed="false" data-cat="infrastructure" onclick="toggleFilter('infrastructure', this)">
-          🏗️ Infrastructure
+          <span class="dropdown-label">🏗️&nbsp;Infrastructure</span>
           <svg class="check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
         </button>
         <button type="button" class="dropdown-item" aria-pressed="false" data-cat="materials" onclick="toggleFilter('materials', this)">
-          ⛏️ Materials
+          <span class="dropdown-label">⛏️&nbsp;Materials</span>
           <svg class="check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
         </button>
         <button type="button" class="dropdown-item" aria-pressed="false" data-cat="decarbonization" onclick="toggleFilter('decarbonization', this)">
-          🏭 Decarbonization
+          <span class="dropdown-label">🏭&nbsp;Decarbonization</span>
           <svg class="check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
         </button>
         <button type="button" class="dropdown-item" aria-pressed="false" data-cat="finance" onclick="toggleFilter('finance', this)">
-          📊 Finance
+          <span class="dropdown-label">📊&nbsp;Finance</span>
           <svg class="check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
         </button>
         <button type="button" class="dropdown-item" aria-pressed="false" data-cat="technology" onclick="toggleFilter('technology', this)">
-          💻 Technology
+          <span class="dropdown-label">💻&nbsp;Technology</span>
           <svg class="check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
         </button>
         <button type="button" class="dropdown-item" aria-pressed="false" data-cat="geopolitics" onclick="toggleFilter('geopolitics', this)">
-          🌏 Geopolitics
+          <span class="dropdown-label">🌏&nbsp;Geopolitics</span>
           <svg class="check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
         </button>
         <button type="button" class="dropdown-item" aria-pressed="false" data-cat="policy" onclick="toggleFilter('policy', this)">
-          🏛️ Policy
+          <span class="dropdown-label">🏛️&nbsp;Policy</span>
           <svg class="check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
         </button>
         <button type="button" class="dropdown-item" aria-pressed="false" data-cat="agriculture" onclick="toggleFilter('agriculture', this)">
-          🌾 Agriculture
+          <span class="dropdown-label">🌾&nbsp;Agriculture</span>
           <svg class="check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
         </button>
       </div>
@@ -744,20 +741,10 @@
 
 <!-- MAIN -->
 <main id="main-content">
-  <section class="learning-feature" aria-labelledby="learning-feature-title">
-    <div><p class="feature-kicker">START HERE</p><h2 id="learning-feature-title">Water Infrastructure</h2><p>A five-minute overview, a full primer, and interview answers.</p><p class="feature-status"></p></div>
-    <div class="feature-actions"><a href="learn/water-infrastructure.html">Start with Water Infrastructure →</a></div>
-  </section>
-  <div class="discovery-controls">
-    <label for="careerFilter">Recruiting interest<select id="careerFilter" onchange="applyFilters()"><option value="">All interests</option><option value="banking">Investment banking</option><option value="pe">Private equity</option><option value="infrastructure">Infrastructure investing</option><option value="vc">Venture capital</option><option value="strategy">Corporate strategy</option></select></label>
-    <label for="formatFilter">Learning format<select id="formatFilter" onchange="applyFilters()"><option value="">All content</option><option value="three">Three-format learning</option><option value="legacy">Original online primers</option><option value="soon">Coming soon</option></select></label>
-    <button class="reset-discovery" onclick="resetDiscovery()">Clear all filters</button>
-  </div>
-  <p class="discovery-note">1 three-format learning edition · 25 original primers · 2 coming soon. Original edition dates are not verification dates. Recruiting filters are editorial topic groupings, not employer recommendations.</p>
   <div class="section-header">
     <h2 class="section-title">Available Primers</h2>
     <div style="display:flex; align-items:center; gap:16px;">
-      <span class="section-count" id="countLabel" role="status" aria-live="polite">25 downloads · 2 coming soon</span>
+      <span id="countLabel" role="status" aria-live="polite" style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap"></span>
       <a href="mailto:ssoto27@gsb.columbia.edu?subject=Primer%20Request&amp;body=Industry%3A%0ASpecific%20focus%3A%0ARecruiting%20relevance%3A%0AAdditional%20context%3A%0A" class="btn-request">
         Request a Primer
       </a>
@@ -774,7 +761,7 @@
         <span class="card-tag">🌾 Agriculture</span>
         <span class="card-tag">📊 Finance</span>
       </div>
-        <h3 class="card-title">Agribusiness &amp; Food Systems</h3>
+        <h3 class="card-title"><a class="read-online card-open" href="read/agribusiness-food-systems.html">Agribusiness &amp; Food Systems</a></h3>
         <div class="card-desc">
           <span class="card-desc-text">The world’s largest industry by employment, undergoing its fastest technology transformation since the Green Revolution. Covers the ABCD commodity traders, precision agriculture, alternative proteins, AgTech VC, the food system value chain, climate &amp; food, and vertical farming’s rationalization.</span>
           <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
@@ -788,7 +775,7 @@
           <span class="section-chip">Food &amp; Climate</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/agribusiness-food-systems.html">Read online</a><div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><div class="card-footer">
           <a href="agribusiness_food_systems_primer_may2026.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
@@ -806,7 +793,7 @@
         <span class="card-tag">💻 Technology</span>
         <span class="card-tag">⚡ Energy</span>
       </div>
-        <h3 class="card-title">AI &amp; Power Demand</h3>
+        <h3 class="card-title"><a class="read-online card-open" href="read/ai-power-demand.html">AI &amp; Power Demand</a></h3>
         <div class="card-desc">
           <span class="card-desc-text">The defining investment convergence of the late 2020s. Covers NERC's 11.6% load revision, $355B hyperscaler capex, PJM's $329/MW-day capacity price, Blackstone's BYOP model, Big Tech nuclear PPAs (TMI, Meta 6.6GW, Google Kairos), AI as grid optimizer, and supply mix across gas, nuclear, solar, and geothermal.</span>
           <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
@@ -820,7 +807,7 @@
           <span class="section-chip">AI as Optimizer</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/ai-power-demand.html">Read online</a><div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><div class="card-footer">
           <a href="ai_power_demand_industry_primer_may2026.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
@@ -837,7 +824,7 @@
             <div class="card-tags">
         <span class="card-tag">⚡ Energy</span>
       </div>
-        <h3 class="card-title">Battery Storage</h3>
+        <h3 class="card-title"><a class="read-online card-open" href="read/battery-storage.html">Battery Storage</a></h3>
         <div class="card-desc">
           <span class="card-desc-text">The connective tissue of the clean energy grid. Covers lithium-ion and long-duration technology, IRA incentives, the co-location boom with solar and wind, and grid services revenue models.</span>
           <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
@@ -851,7 +838,7 @@
           <span class="section-chip">Key Players</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/battery-storage.html">Read online</a><div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><div class="card-footer">
           <a href="battery_storage_industry_primer.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
@@ -869,7 +856,7 @@
         <span class="card-tag">🏭 Decarbonization</span>
         <span class="card-tag">🏗️ Infrastructure</span>
       </div>
-        <h3 class="card-title">Carbon Capture & Storage</h3>
+        <h3 class="card-title"><a class="read-online card-open" href="read/carbon-capture-storage.html">Carbon Capture & Storage</a></h3>
         <div class="card-desc">
           <span class="card-desc-text">The technology the IEA says makes net-zero "virtually impossible" without. Covers point-source CCS, direct air capture (DAC), the IRA's 45Q credit, Oxy's Stratos plant, ExxonMobil's Houston hub, and the CO₂ pipeline bottleneck.</span>
           <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
@@ -883,7 +870,7 @@
           <span class="section-chip">Carbon Markets</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/carbon-capture-storage.html">Read online</a><div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><div class="card-footer">
           <a href="carbon_capture_industry_primer_may2026.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
@@ -901,7 +888,7 @@
         <span class="card-tag">🌏 Geopolitics</span>
         <span class="card-tag">⚡ Energy</span>
       </div>
-        <h3 class="card-title">China Energy &amp; Industrial Policy</h3>
+        <h3 class="card-title"><a class="read-online card-open" href="read/china-energy-industrial-policy.html">China Energy &amp; Industrial Policy</a></h3>
         <div class="card-desc">
           <span class="card-desc-text">The world's most consequential clean energy story and geopolitical competition simultaneously. Covers Five-Year Plans, the "New Three" export industries (EVs, solar, batteries), Belt and Road Initiative, the U.S.-China tech war, overcapacity dynamics, and what the 15th FYP (2026–2030) signals for global energy markets.</span>
           <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
@@ -915,7 +902,7 @@
           <span class="section-chip">Solar Overcapacity</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/china-energy-industrial-policy.html">Read online</a><div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><div class="card-footer">
           <a href="china_energy_industrial_policy_primer_may2026.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
@@ -933,7 +920,7 @@
         <span class="card-tag">📊 Finance</span>
         <span class="card-tag">🏭 Decarbonization</span>
       </div>
-        <h3 class="card-title">ClimateTech Venture Capital</h3>
+        <h3 class="card-title"><a class="read-online card-open" href="read/climatetech-venture-capital.html">ClimateTech Venture Capital</a></h3>
         <div class="card-desc">
           <span class="card-desc-text">The broadest investment category of the 21st century. Covers Cleantech 1.0's collapse and 2.0's structural reinvention, Sightline's six-vertical taxonomy, FOAK financing methodology, the OBBBA policy reversal, and key funds from Breakthrough Energy to Lowercarbon Capital.</span>
           <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
@@ -947,7 +934,7 @@
           <span class="section-chip">Key Funds</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/climatetech-venture-capital.html">Read online</a><div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><div class="card-footer">
           <a href="climatetech_vc_industry_primer_may2026.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
@@ -964,7 +951,7 @@
             <div class="card-tags">
         <span class="card-tag">⛏️ Materials</span>
       </div>
-        <h3 class="card-title">Critical Minerals</h3>
+        <h3 class="card-title"><a class="read-online card-open" href="read/critical-minerals.html">Critical Minerals</a></h3>
         <div class="card-desc">
           <span class="card-desc-text">The physical foundation of the energy transition, AI, and defense. Covers China's 2025 export control escalation, FEOC restrictions, lithium's 80% price collapse, and the battery recycling opportunity.</span>
           <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
@@ -978,7 +965,7 @@
           <span class="section-chip">Geopolitics</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/critical-minerals.html">Read online</a><div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><div class="card-footer">
           <a href="critical_minerals_industry_primer.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
@@ -996,7 +983,7 @@
         <span class="card-tag">🏗️ Infrastructure</span>
         <span class="card-tag">💻 Technology</span>
       </div>
-        <h3 class="card-title">Data Centers</h3>
+        <h3 class="card-title"><a class="read-online card-open" href="read/data-centers.html">Data Centers</a></h3>
         <div class="card-desc">
           <span class="card-desc-text">The defining infrastructure investment of the AI era. Covers hyperscaler capital allocation, power procurement strategies, cooling technology, site selection, and the intersection with clean energy and grid infrastructure.</span>
           <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
@@ -1010,7 +997,7 @@
           <span class="section-chip">Grid Impact</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/data-centers.html">Read online</a><div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><div class="card-footer">
           <a href="data_centers_industry_primer.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
@@ -1027,7 +1014,7 @@
             <div class="card-tags">
         <span class="card-tag">🏭 Decarbonization</span>
       </div>
-        <h3 class="card-title">Electric Vehicles</h3>
+        <h3 class="card-title"><a class="read-online card-open" href="read/electric-vehicles.html">Electric Vehicles</a></h3>
         <div class="card-desc">
           <span class="card-desc-text">The largest demand driver for critical minerals and the centerpiece of global industrial policy competition. Covers OEM strategy, battery technology, FEOC rules, charging infrastructure, and the China competitive threat.</span>
           <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
@@ -1041,7 +1028,7 @@
           <span class="section-chip">China Competition</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/electric-vehicles.html">Read online</a><div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><div class="card-footer">
           <a href="electric_vehicles_industry_primer.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
@@ -1059,7 +1046,7 @@
         <span class="card-tag">📊 Finance</span>
         <span class="card-tag">⚡ Energy</span>
       </div>
-        <h3 class="card-title">EnergyTech Venture Capital</h3>
+        <h3 class="card-title"><a class="read-online card-open" href="read/energytech-venture-capital.html">EnergyTech Venture Capital</a></h3>
         <div class="card-desc">
           <span class="card-desc-text">VC focused on the energy system stack — from clean firm power and grid software to storage and energy marketplaces. Covers the utility LP model (Energy Impact Partners), corporate VC distinctions, AI-energy convergence, geothermal renaissance, and the OBBBA's selective preservation of energy provisions.</span>
           <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
@@ -1073,7 +1060,7 @@
           <span class="section-chip">Grid Services</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/energytech-venture-capital.html">Read online</a><div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><div class="card-footer">
           <a href="energytech_vc_industry_primer_may2026.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
@@ -1090,7 +1077,7 @@
             <div class="card-tags">
         <span class="card-tag">⚡ Energy</span>
       </div>
-        <h3 class="card-title">Geothermal Energy</h3>
+        <h3 class="card-title"><a class="read-online card-open" href="read/geothermal-energy.html">Geothermal Energy</a></h3>
         <div class="card-desc">
           <span class="card-desc-text">The only renewable that delivers 24/7 baseload power. Covers the EGS commercial breakthrough, Fervo's Cape Station, Google and Meta's hyperscaler procurement, and the DOE's 90 GW potential by 2050.</span>
           <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
@@ -1104,7 +1091,7 @@
           <span class="section-chip">Geography</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/geothermal-energy.html">Read online</a><div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><div class="card-footer">
           <a href="geothermal_energy_industry_primer.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
@@ -1122,7 +1109,7 @@
         <span class="card-tag">💻 Technology</span>
         <span class="card-tag">⚡ Energy</span>
       </div>
-        <h3 class="card-title">Grid Software &amp; Virtual Power Plants</h3>
+        <h3 class="card-title"><a class="read-online card-open" href="read/grid-software-vpp.html">Grid Software &amp; Virtual Power Plants</a></h3>
         <div class="card-desc">
           <span class="card-desc-text">The intelligence layer of the 21st century grid. Covers FERC Order 2222 (the landmark DER aggregation rule), California's 42 GW VPP, the full grid software stack (DERMS, ADMS, VPP aggregation), AutoGrid/Voltus/Leap/Next Kraftwerke, V2G, AI forecasting, and the $13.56B market by 2030.</span>
           <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
@@ -1136,7 +1123,7 @@
           <span class="section-chip">V2G</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/grid-software-vpp.html">Read online</a><div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><div class="card-footer">
           <a href="grid_software_vpp_primer_may2026.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
@@ -1153,7 +1140,7 @@
             <div class="card-tags">
         <span class="card-tag">🏭 Decarbonization</span>
       </div>
-        <h3 class="card-title">Hydrogen Energy</h3>
+        <h3 class="card-title"><a class="read-online card-open" href="read/hydrogen-energy.html">Hydrogen Energy</a></h3>
         <div class="card-desc">
           <span class="card-desc-text">The most hyped and most challenged clean energy technology. Covers the full color taxonomy, IRA 45V additionality rules, green vs. blue hydrogen economics, ammonia as the near-term killer app, and the $2/kg cost target.</span>
           <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
@@ -1167,7 +1154,7 @@
           <span class="section-chip">H2 Hubs</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/hydrogen-energy.html">Read online</a><div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><div class="card-footer">
           <a href="hydrogen_energy_industry_primer_may2026.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
@@ -1213,7 +1200,7 @@
             <div class="card-tags">
         <span class="card-tag">⛏️ Materials</span>
       </div>
-        <h3 class="card-title">Mining &amp; Metals</h3>
+        <h3 class="card-title"><a class="read-online card-open" href="read/mining-metals.html">Mining &amp; Metals</a></h3>
         <div class="card-desc">
           <span class="card-desc-text">The physical foundation of the energy transition. Covers copper, lithium, nickel, cobalt, and rare earths — the full value chain from exploration to end-use, streaming and royalty finance, China’s refining dominance, permitting crisis, key majors (BHP, Rio, Glencore), and the 2025 M&A cycle including BHP–Anglo American and Rio–Arcadium.</span>
           <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
@@ -1227,7 +1214,7 @@
           <span class="section-chip">China Processing</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/mining-metals.html">Read online</a><div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><div class="card-footer">
           <a href="mining_metals_industry_primer_may2026.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
@@ -1244,7 +1231,7 @@
             <div class="card-tags">
         <span class="card-tag">⚡ Energy</span>
       </div>
-        <h3 class="card-title">Natural Gas & LNG</h3>
+        <h3 class="card-title"><a class="read-online card-open" href="read/natural-gas-lng.html">Natural Gas & LNG</a></h3>
         <div class="card-desc">
           <span class="card-desc-text">The most geopolitically contested commodity since crude oil. Covers the Qatar Ras Laffan attack, U.S. record exports (18.4 Bcf/d), Europe's pivot from Russian gas, the Strait of Hormuz disruption, and AI data centers as the new domestic demand driver.</span>
           <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
@@ -1258,7 +1245,7 @@
           <span class="section-chip">Project Finance</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/natural-gas-lng.html">Read online</a><div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><div class="card-footer">
           <a href="natural_gas_lng_industry_primer.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
@@ -1275,7 +1262,7 @@
             <div class="card-tags">
         <span class="card-tag">⚡ Energy</span>
       </div>
-        <h3 class="card-title">Nuclear Energy</h3>
+        <h3 class="card-title"><a class="read-online card-open" href="read/nuclear-energy.html">Nuclear Energy</a></h3>
         <div class="card-desc">
           <span class="card-desc-text">The original firm zero-carbon power source, now experiencing a policy and investment renaissance. Covers SMR technology, hyperscaler procurement, the fleet restart debate, and uranium supply chains.</span>
           <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
@@ -1289,7 +1276,7 @@
           <span class="section-chip">Key Players</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/nuclear-energy.html">Read online</a><div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><div class="card-footer">
           <a href="nuclear_energy_industry_primer.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
@@ -1306,7 +1293,7 @@
             <div class="card-tags">
         <span class="card-tag">⚡ Energy</span>
       </div>
-        <h3 class="card-title">Offshore Wind Energy</h3>
+        <h3 class="card-title"><a class="read-online card-open" href="read/offshore-wind-energy.html">Offshore Wind Energy</a></h3>
         <div class="card-desc">
           <span class="card-desc-text">The most capital-intensive renewable — turbines taller than the Eiffel Tower planted in the ocean. Covers floating wind technology, the Jones Act bottleneck, Ørsted's recovery, Europe's record auctions, and the U.S. policy disruption.</span>
           <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
@@ -1320,7 +1307,7 @@
           <span class="section-chip">Key Players</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/offshore-wind-energy.html">Read online</a><div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><div class="card-footer">
           <a href="offshore_wind_industry_primer_may2026.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
@@ -1337,7 +1324,7 @@
             <div class="card-tags">
         <span class="card-tag">⚡ Energy</span>
       </div>
-        <h3 class="card-title">Oil &amp; Petroleum</h3>
+        <h3 class="card-title"><a class="read-online card-open" href="read/oil-petroleum.html">Oil &amp; Petroleum</a></h3>
         <div class="card-desc">
           <span class="card-desc-text">The world's most important and most contested commodity. Covers the full history from Spindletop to shale, OPEC+ cartel mechanics, the Permian Basin's dominance, supermajor capital allocation strategies, the Strait of Hormuz crisis (2026, $117/b Brent), oil price drivers, stranded asset risk, and upstream PE and trading careers.</span>
           <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
@@ -1351,7 +1338,7 @@
           <span class="section-chip">Price Drivers</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/oil-petroleum.html">Read online</a><div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><div class="card-footer">
           <a href="oil_petroleum_industry_primer_may2026.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
@@ -1368,7 +1355,7 @@
             <div class="card-tags">
         <span class="card-tag">⚡ Energy</span>
       </div>
-        <h3 class="card-title">Onshore Wind Energy</h3>
+        <h3 class="card-title"><a class="read-online card-open" href="read/onshore-wind-energy.html">Onshore Wind Energy</a></h3>
         <div class="card-desc">
           <span class="card-desc-text">The lowest-cost source of new electricity in most markets. Covers the IRA's capital stack transformation, federal permitting headwinds, AI data center PPAs, and the interconnection bottleneck.</span>
           <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
@@ -1382,7 +1369,7 @@
           <span class="section-chip">Trump EO</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/onshore-wind-energy.html">Read online</a><div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><div class="card-footer">
           <a href="onshore_wind_industry_primer_final.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
@@ -1400,7 +1387,7 @@
         <span class="card-tag">📊 Finance</span>
         <span class="card-tag">🏗️ Infrastructure</span>
       </div>
-        <h3 class="card-title">Private Equity in Energy & Infrastructure</h3>
+        <h3 class="card-title"><a class="read-online card-open" href="read/private-equity-in-energy-infrastructure.html">Private Equity in Energy & Infrastructure</a></h3>
         <div class="card-desc">
           <span class="card-desc-text">How the three PE strategies — Infrastructure PE, Energy Buyout PE, and Mega-Fund — operate across the energy stack. Covers LBO mechanics, tax equity and credit transfer structures, the capital stack toolkit, Blackstone's BYOP data center model, and the OBBBA's Section 163(j) EBITDA reversion.</span>
           <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
@@ -1414,7 +1401,7 @@
           <span class="section-chip">OBBBA Impact</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/private-equity-in-energy-infrastructure.html">Read online</a><div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><div class="card-footer">
           <a href="pe_energy_infrastructure_primer_may2026.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
@@ -1432,7 +1419,7 @@
         <span class="card-tag">📊 Finance</span>
         <span class="card-tag">🏗️ Infrastructure</span>
       </div>
-        <h3 class="card-title">Project Finance</h3>
+        <h3 class="card-title"><a class="learning-link card-open" href="learn/project-finance.html">Project Finance</a></h3>
         <div class="card-desc">
           <span class="card-desc-text">The foundational financing structure for every major energy and infrastructure asset. Covers DSCR, LLCR, and PLCR; debt sculpting mechanics; the capital structure waterfall (senior, mezz, tax equity, equity); EPC/O&M/offtake contract architecture; lead arranger banks; DOE LPO; and the $1.17T global PF market in 2025.</span>
           <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
@@ -1446,7 +1433,7 @@
           <span class="section-chip">DOE LPO</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/project-finance.html">Read online</a><div class="card-footer">
+        <p class="legacy-status">Sources reviewed November 6, 2026</p><a href="learn/project-finance.docx" download hidden>Download new edition</a><a hidden class="read-online" href="read/project-finance.html">Read original edition</a><div class="card-footer">
           <a href="project_finance_primer_may2026.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
@@ -1491,7 +1478,7 @@
             <div class="card-tags">
         <span class="card-tag">⚡ Energy</span>
       </div>
-        <h3 class="card-title">Solar Energy</h3>
+        <h3 class="card-title"><a class="read-online card-open" href="read/solar-energy.html">Solar Energy</a></h3>
         <div class="card-desc">
           <span class="card-desc-text">The world's fastest-growing electricity source. Covers the IRA's manufacturing renaissance, the One Big Beautiful Bill's policy reversal, tariff escalation, and AI data center demand as the next tailwind.</span>
           <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
@@ -1505,7 +1492,7 @@
           <span class="section-chip">Trends</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/solar-energy.html">Read online</a><div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><div class="card-footer">
           <a href="solar_energy_industry_primer.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
@@ -1523,7 +1510,7 @@
         <span class="card-tag">🏗️ Infrastructure</span>
         <span class="card-tag">⚡ Energy</span>
       </div>
-        <h3 class="card-title">Transmission & Grid Infrastructure</h3>
+        <h3 class="card-title"><a class="read-online card-open" href="read/transmission-grid-infrastructure.html">Transmission & Grid Infrastructure</a></h3>
         <div class="card-desc">
           <span class="card-desc-text">The most underappreciated bottleneck in the energy transition. Covers the 2,000+ GW interconnection queue, $470B in global grid investment, FERC Orders 2023 and 1920, HVDC technology, the transformer shortage, and grid-enhancing technologies.</span>
           <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
@@ -1537,7 +1524,7 @@
           <span class="section-chip">Transformers</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/transmission-grid-infrastructure.html">Read online</a><div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><div class="card-footer">
           <a href="transmission_grid_industry_primer_may2026.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
@@ -1555,7 +1542,7 @@
         <span class="card-tag">🏛️ Policy</span>
         <span class="card-tag">⚡ Energy</span>
       </div>
-        <h3 class="card-title">U.S. Energy Policy</h3>
+        <h3 class="card-title"><a class="read-online card-open" href="read/us-energy-policy.html">U.S. Energy Policy</a></h3>
         <div class="card-desc">
           <span class="card-desc-text">The most rapidly shifting policy environment in the American economy. Covers the IRA-to-OBBBA sequence ($369B enacted, $496B reversed), FERC institutional framework, ISO/RTO market structure, the 2,600 GW interconnection crisis, AI power demand surge, and state vs. federal policy interplay.</span>
           <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
@@ -1569,7 +1556,7 @@
           <span class="section-chip">State Policy</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/us-energy-policy.html">Read online</a><div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><div class="card-footer">
           <a href="us_energy_policy_primer_may2026.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
@@ -1586,7 +1573,7 @@
             <div class="card-tags">
         <span class="card-tag">🏗️ Infrastructure</span>
       </div>
-        <h3 class="card-title">Water Infrastructure</h3>
+        <h3 class="card-title"><a class="learning-link card-open" href="learn/water-infrastructure.html">Water Infrastructure</a></h3>
         <div class="card-desc">
           <span class="card-desc-text">Understand regulated utility economics, capital recovery, water technology, and the financing of essential infrastructure. Includes a concise brief, worked financial examples and twelve industry-specific interview answers.</span>
           <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
@@ -1600,7 +1587,7 @@
           <span class="section-chip">Climate & Scarcity</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <p class="legacy-status">Learning edition · Sources reviewed November 6, 2026</p><a class="learning-link" href="learn/water-infrastructure.html">Open three-format learning →</a><a href="learn/water-infrastructure.docx" download>Download new edition</a><a class="read-online" href="read/water-infrastructure.html">Read original edition</a><div class="card-footer">
+        <p class="legacy-status">Sources reviewed November 6, 2026</p><a href="learn/water-infrastructure.docx" download hidden>Download new edition</a><a hidden class="read-online" href="read/water-infrastructure.html">Read original edition</a><div class="card-footer">
           <a href="water_infrastructure_primer_may2026.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
@@ -1617,11 +1604,11 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
-    <div class="footer-logo">MBA Industry Primer Library</div>
+    <div class="footer-logo">Energy &amp; Infrastructure Industry Library</div>
     <div class="footer-divider"></div>
     <p class="footer-text">
       Created for use by Columbia Business School's Energy &amp; Infrastructure Club. This library is for educational purposes only. All market data is sourced from publicly available materials.<br>
-      Not intended as investment advice. This library is created and operated by Steven Soto (MBA '27).
+      This library is created and operated by Steven Soto (MBA '27).
     </p>
   </div>
 </footer>
@@ -1652,30 +1639,17 @@
       const matchSearch = !q || title.includes(q) || dataTit.includes(q) || chips.includes(q) || desc.includes(q);
       const cardCats = (card.dataset.category || '').split(' ');
       const matchFilter = activeFilters.size === 0 || cardCats.some(c => activeFilters.has(c));
-      const career = document.getElementById('careerFilter').value;
-      const careerCats = {banking:['finance','infrastructure','energy'],pe:['finance','infrastructure'],infrastructure:['infrastructure','energy'],vc:['technology','decarbonization','agriculture'],strategy:['energy','materials','technology','geopolitics','policy','agriculture']};
-      const matchCareer = !career || cardCats.some(c => careerCats[career].includes(c));
-      const format = document.getElementById('formatFilter').value;
-      const isLearning = card.id === 'card-water-infrastructure';
-      const available = !!card.querySelector('a[download]');
-      const matchFormat = !format || (format === 'three' && isLearning) || (format === 'legacy' && available) || (format === 'soon' && !available);
-      const visible = matchSearch && matchFilter && matchCareer && matchFormat;
+      const visible = matchSearch && matchFilter;
       card.classList.toggle('hidden', !visible);
       if (visible) shown++;
     });
     document.getElementById('countLabel').textContent =
-      shown === TOTAL ? DOWNLOADS + ' downloads · ' + (TOTAL - DOWNLOADS) + ' coming soon' : shown + ' of ' + TOTAL;
+      shown === TOTAL ? DOWNLOADS + ' available · ' + (TOTAL - DOWNLOADS) + ' coming soon' : shown + ' of ' + TOTAL;
     document.querySelector('.no-results').style.display = shown === 0 ? 'block' : 'none';
     renderPills();
   }
 
   // ── Multi-select filter ─────────────────────────────────────────────────────
-  function resetDiscovery() {
-    document.getElementById('searchInput').value = '';
-    document.getElementById('careerFilter').value = '';
-    document.getElementById('formatFilter').value = '';
-    activeFilters.clear(); syncDropdownUI(); applyFilters();
-  }
   function toggleFilter(cat, el) {
     if (cat === 'all') {
       activeFilters.clear();

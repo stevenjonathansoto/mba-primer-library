@@ -40,6 +40,8 @@ def build_word(data,path):
     from docx.oxml import OxmlElement
     from docx.oxml.ns import qn
     doc=Document()
+    for section in doc.sections:
+        section.page_width=Inches(8.5);section.page_height=Inches(11)
     normal=doc.styles['Normal'];normal.font.name='Arial';normal.font.size=Pt(11)
     normal.paragraph_format.space_after=Pt(7)
     for section in doc.sections:
@@ -48,8 +50,9 @@ def build_word(data,path):
     for name in ['Title','Heading 1','Heading 2']:
         style=doc.styles[name];style.font.name='Arial';style.font.size=Pt(26 if name=='Title' else 13);style.font.color.rgb=RGBColor.from_string('1B3A6B')
         for border in style.element.findall('.//'+qn('w:pBdr')):border.getparent().remove(border)
-    doc.add_paragraph('Water Infrastructure','Title')
-    doc.add_paragraph('MBA Industry Primer | Infrastructure and Utilities')
+    doc.styles['Title'].font.color.rgb=RGBColor(0,0,0)
+    doc.add_paragraph(data['title'],'Title')
+    doc.add_paragraph('MBA Industry Primer | '+data.get('category','Infrastructure and Utilities'))
     doc.add_paragraph('Columbia Business School | Sources reviewed '+data['reviewed'])
     doc.add_paragraph(data['scope'])
     for s in data['full']:
@@ -59,8 +62,18 @@ def build_word(data,path):
             t=doc.add_table(rows=0,cols=len(s['table'][0]));t.style='Table Grid'
             for i,row in enumerate(s['table']):
                 cells=t.add_row().cells
+                no_split=OxmlElement('w:cantSplit');t.rows[-1]._tr.get_or_add_trPr().append(no_split)
+                for cell in cells:
+                    for side in ['top','left','bottom','right']:
+                        borders=cell._tc.get_or_add_tcPr().find(qn('w:tcBorders'))
+                        if borders is None:
+                            borders=OxmlElement('w:tcBorders');cell._tc.get_or_add_tcPr().append(borders)
+                        edge=OxmlElement('w:'+side);edge.set(qn('w:val'),'single');edge.set(qn('w:sz'),'4');edge.set(qn('w:color'),'D9D9D9');borders.append(edge)
+                    if i>0 and i%2==0:
+                        shade=OxmlElement('w:shd');shade.set(qn('w:fill'),'F5F5F5');cell._tc.get_or_add_tcPr().append(shade)
                 for cell,value in zip(cells,row):
                     cell.text=value
+                    for paragraph in cell.paragraphs:paragraph.paragraph_format.space_after=Pt(3)
                     if i==0:
                         shade=OxmlElement('w:shd');shade.set(qn('w:fill'),'1B3A6B');cell._tc.get_or_add_tcPr().append(shade)
                         for run in cell.paragraphs[0].runs:run.font.color.rgb=RGBColor(255,255,255);run.bold=True

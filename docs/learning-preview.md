@@ -45,3 +45,13 @@ construction funding, customer payments and the debt-coverage visual. Detailed
 rate-base and payback calculations remain in the full primer. Interview
 questions are grouped into industry basics, business economics and investment
 judgment, each with a direct answer before the supporting reasoning.
+
+## Project Finance edition
+Project Finance now uses the same three-format reader. Its 700–900 word brief
+and full primer share a hypothetical $100m solar project. Semantic HTML figures
+show capital providers, the operating cash bridge and residual risk. Twelve
+interview answers use the same assumptions. Six World Bank PPPRC pages were
+reviewed on November 6, 2026; publication dates are not stated on the pages.
+Historical market ratios and benchmark-rate examples are deliberately excluded.
+Original downloads and readers remain unchanged. Catalog format availability
+is detected from learning links rather than one hard-coded card id.

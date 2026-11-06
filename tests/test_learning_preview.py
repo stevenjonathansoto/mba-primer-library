@@ -43,6 +43,6 @@ class LearningPreviewTests(unittest.TestCase):
         self.assertEqual(len(ids),len(set(ids)))
         for target in re.findall(r'href="#([^"]+)"',page): self.assertIn(target,ids)
         self.assertIn('Sources reviewed 2026-11-06', page)
-        self.assertIn('../read/water-infrastructure.html',page)
+        self.assertNotIn('../read/water-infrastructure.html',page)
 
 if __name__ == '__main__': unittest.main()
