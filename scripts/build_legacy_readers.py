@@ -48,7 +48,7 @@ def build():
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{title} | MBA Energy Library</title><link rel="stylesheet" href="../assets/reader.css"></head>
 <body data-document="../{entry['downloads'][0]}"><a class="skip" href="#content">Skip to primer</a><header><nav><a href="../index.html#{entry['id']}">← Library</a> <a href="../{entry['downloads'][0]}" download>Download original Word</a></nav><p>Columbia Business School · Energy &amp; Infrastructure Club</p><h1>{title}</h1><p class="status">Legacy edition · Not independently reverified</p><p>This is an automated reading copy of the original document, dated {html.escape(entry['updated'].replace('Last Updated:','').strip())}. Its claims, forecasts and references have not passed the new verification standard. Original figures and wording are retained; consult current primary sources before relying on dated information.</p><p>AI-assisted site implementation. Last verified: not yet verified. <a href="https://github.com/stevenjonathansoto/mba-primer-library/issues/new?labels=feedback&amp;title=Feedback%3A%20{slug}">Report an issue</a></p><p id="figure-status" role="status"></p></header>
 <main id="content">{''.join(blocks)}</main><footer><h2>Related industries</h2><p>{links}</p><p>Educational material, not investment advice.</p></footer><script src="../assets/reader.js" defer></script></body></html>'''
-        (out/f'{slug}.html').write_text(page,encoding='utf-8')
+        (out/f'{slug}.html').write_text(page,encoding='utf-8',newline='\r\n')
     print('Built 25 legacy reading copies; no documents reverified or overwritten')
 
 if __name__=='__main__': build()
