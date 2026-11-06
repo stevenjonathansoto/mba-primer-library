@@ -7,8 +7,14 @@ const AxeBuilder=require('@axe-core/playwright').default;
  const page=await context.newPage(); const errors=[];
  page.on('pageerror',e=>errors.push(e.message));
  fs.mkdirSync('work/screenshots',{recursive:true});
+ const baselineResponse=await page.request.get('https://raw.githubusercontent.com/stevenjonathansoto/mba-primer-library/6eb8642c88ff9ede1f92c0c0fab6c54bc905c5a5/index.html');
+ if(!baselineResponse.ok())throw Error('Cannot retrieve audited before screenshot baseline');
+ const baseline=await baselineResponse.text();
  for(const width of [1440,375]){
   await page.setViewportSize({width,height:900});
+  await page.setContent(baseline);
+  await page.evaluate(async()=>{await document.fonts.ready; await Promise.all(document.getAnimations().map(a=>a.finished));});
+  await page.screenshot({path:`work/screenshots/before-${width}.png`,fullPage:false});
   await page.goto('http://127.0.0.1:8765/');
   await page.evaluate(async()=>{await document.fonts.ready; await Promise.all(document.getAnimations().map(a=>a.finished));});
   await page.screenshot({path:`work/screenshots/library-${width}.png`,fullPage:false});
