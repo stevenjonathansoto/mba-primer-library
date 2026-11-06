@@ -23,8 +23,9 @@ identify sections due for review; paid refresh and autonomous publishing remain
 disabled. Homepage recruiting filters are editorial category groupings, not
 employer recommendations. No quizzes, accounts or personalized features added.
 ## Reading-first revision
-The user explicitly superseded the 600–900-word brief target: the brief now
-prioritizes fast absorption, using a short overview, two concise lists and one
-worked example. Sources and archival context are collapsed at the foot of the
-reader; the full primer and Word content are unchanged. Brand decoration and
-extra header links were removed. Interview answers open one at a time.
+Briefs target approximately five minutes (700–1,100 words), per the user's
+latest direction. Use short labeled sections, practical examples and clear
+spacing rather than dense continuous prose. Sources and archival context stay
+collapsed; full-primer and Word content are unchanged. Interview answers open
+one at a time. The Water brief expands the existing source-backed economics
+and hypothetical examples without introducing new market claims.

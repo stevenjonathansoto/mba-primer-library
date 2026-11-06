@@ -25,8 +25,8 @@ class LearningPreviewTests(unittest.TestCase):
         data=json.loads((ROOT/'content/water-infrastructure.json').read_text(encoding='utf-8'))
         self.assertEqual(data['status'], 'source-reviewed-learning-edition')
         words=sum(len(p.split()) for _,p in data['brief'])
-        # The user explicitly replaced the long briefing with a concise overview.
-        self.assertTrue(100 <= words <= 300, words)
+        # A five-minute brief retains short sections and substantial context.
+        self.assertTrue(700 <= words <= 1100, words)
         self.assertTrue(10 <= len(data['questions']) <= 15)
         self.assertTrue(all(len(answer.split()) >= 30 for _,answer,_ in data['questions']))
 
