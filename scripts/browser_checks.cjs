@@ -58,6 +58,7 @@ const AxeBuilder=require('@axe-core/playwright').default;
   await page.goto('http://127.0.0.1:8765/learn/water-infrastructure.html');
   for(const mode of ['brief','full','interview']) {
    await page.locator(`#tab-${mode}`).click();
+   await page.locator(`#${mode}`).waitFor({state:'visible'});
    if(!await page.locator(`#${mode}`).isVisible())throw Error('learning tab failed '+mode);
    if(await page.locator('.format-panel:visible').count()!==1)throw Error('multiple visible learning panels');
    if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth))throw Error('learning overflow '+mode);
@@ -68,6 +69,7 @@ const AxeBuilder=require('@axe-core/playwright').default;
   if(await page.locator('.question[open]').count()!==1)throw Error('answer reveal failed');
   await page.locator('#tab-full').click();
   await page.locator('#full .claim').first().click();
+  await page.locator('.evidence[open]').first().waitFor({state:'visible'});
   if(!await page.locator('.evidence[open]').count() || !await page.locator('#full').isVisible())throw Error('source drilldown lost reading context');
   await page.locator('#tab-interview').focus();
   await page.keyboard.press('Home');

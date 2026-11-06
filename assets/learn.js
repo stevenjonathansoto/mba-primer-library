@@ -8,6 +8,11 @@
     tab.setAttribute('aria-controls', panels[i].id);
     panels[i].setAttribute('role', 'tabpanel');
     panels[i].tabIndex = 0;
+    tab.addEventListener('click', event => {
+      event.preventDefault();
+      history.pushState(null, '', tab.getAttribute('href'));
+      select();
+    });
     tab.addEventListener('keydown', event => {
       let next;
       if (event.key === 'ArrowRight') next = (i + 1) % tabs.length;
@@ -34,5 +39,6 @@
     if (hash.startsWith('full-')) document.getElementById(hash)?.scrollIntoView();
   }
   window.addEventListener('hashchange', select);
+  window.addEventListener('popstate', select);
   select();
 })();
