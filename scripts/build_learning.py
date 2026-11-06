@@ -62,6 +62,7 @@ def build_word(data,path):
             t=doc.add_table(rows=0,cols=len(s['table'][0]));t.style='Table Grid'
             for i,row in enumerate(s['table']):
                 cells=t.add_row().cells
+                no_split=OxmlElement('w:cantSplit');t.rows[-1]._tr.get_or_add_trPr().append(no_split)
                 for cell in cells:
                     for side in ['top','left','bottom','right']:
                         borders=cell._tc.get_or_add_tcPr().find(qn('w:tcBorders'))
@@ -72,6 +73,7 @@ def build_word(data,path):
                         shade=OxmlElement('w:shd');shade.set(qn('w:fill'),'F5F5F5');cell._tc.get_or_add_tcPr().append(shade)
                 for cell,value in zip(cells,row):
                     cell.text=value
+                    for paragraph in cell.paragraphs:paragraph.paragraph_format.space_after=Pt(3)
                     if i==0:
                         shade=OxmlElement('w:shd');shade.set(qn('w:fill'),'1B3A6B');cell._tc.get_or_add_tcPr().append(shade)
                         for run in cell.paragraphs[0].runs:run.font.color.rgb=RGBColor(255,255,255);run.bold=True
