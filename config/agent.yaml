@@ -1,0 +1,19 @@
+{
+  "allowed_requesters": ["stevenjonathansoto"],
+  "public_requests_enabled": false,
+  "maintainer_email": "ssoto27@gsb.columbia.edu",
+  "daily_request_cap": 3,
+  "monthly_budget_usd": 20,
+  "max_cost_per_primer_usd": 5,
+  "scheduled_refresh_enabled": false,
+  "refresh_primers_per_month": 1,
+  "paid_generation_enabled": false,
+  "benchmark_approved": false,
+  "models": {},
+  "pricing": {},
+  "limits": {"max_retries": 1, "max_tool_calls": 8, "max_output_tokens": 12000},
+  "budget": {"currency": "USD", "reserve_maximum": true, "fail_closed": true},
+  "validation": {"max_pages": 10, "minimum_body_points": 11, "require_evidence": true},
+  "refresh": {"review_after_days": 90, "preserve_stable_sections": true},
+  "notifications": {"request_label": "primer-request", "feedback_label": "feedback", "failure_label": "needs-human"}
+}

@@ -1,5 +1,23 @@
 # AGENTS.md
 
+## Updated MVP direction (2026-11-05; takes precedence below)
+
+Follow `docs/mvp-architecture.md` and `config/agent.yaml`. The older guidance
+below is historical where it conflicts. New full primers target 7–9 rendered
+pages, maximum 10 including references, body text at least 11pt. Quick briefs
+are approximately 600–900 words; interview modules contain 10–15 answers.
+All formats share claim-level source evidence. No word-count fidelity rule
+applies to migrations. Preserve original downloads until audited replacements
+pass rendered checks. Legacy content must not be called verified.
+
+Only authorized requesters may initiate paid runs. Public requests and paid
+scheduled refresh start disabled. Feedback never triggers generation. Reserve
+budget durably before paid calls and reconcile measured costs. Unknown costs
+block execution. Passing PRs may auto-merge only with required checks enforced;
+never push source changes directly to main. Missing primers stay Coming Soon
+until the normal pipeline is operational.
+
+
 Standing instructions for coding agents (Codex and others) working in this
 repo. Read this first, then the brief for whichever workstream you were asked
 to do.

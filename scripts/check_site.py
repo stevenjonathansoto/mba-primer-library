@@ -45,6 +45,7 @@ class CardParser(HTMLParser):
             if tag == "div" and "primer-card" in classes:
                 self._card = {
                     "id": a.get("id"),
+                    "status": a.get("data-status", "legacy"),
                     "category": a.get("data-category"),
                     "keywords": a.get("data-title"),
                     "read_time": a.get("data-read-time"),
@@ -91,6 +92,8 @@ def main() -> int:
     allowed = set(re.findall(r"toggleFilter\('([^']+)'", html)) - {"all"}
     failures = []
 
+    if not cards:
+        failures.append("no primer cards found")
     seen_ids = {}
     linked = set()
     for i, c in enumerate(cards, 1):
@@ -121,7 +124,11 @@ def main() -> int:
                     f"{label}: category '{token}' is not a filter option ({', '.join(sorted(allowed))})"
                 )
 
-        if not c["downloads"]:
+        if c["status"] not in {"legacy", "validated", "coming-soon"}:
+            failures.append(f"{label}: unknown status")
+        if c["status"] == "coming-soon" and c["downloads"]:
+            failures.append(f"{label}: coming-soon card must not have downloads")
+        if not c["downloads"] and c["status"] != "coming-soon":
             failures.append(f"{label}: no download link")
         for href in c["downloads"]:
             linked.add(href)

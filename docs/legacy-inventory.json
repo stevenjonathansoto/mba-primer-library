@@ -1,0 +1,588 @@
+[
+  {
+    "id": "card-agribusiness-food-systems",
+    "category": "agriculture finance",
+    "keywords": "agribusiness food systems agriculture farming commodity trading precision agriculture alternative protein",
+    "read_time": "50",
+    "title": "Agribusiness & Food Systems",
+    "updated": "Last Updated: May 2026",
+    "downloads": [
+      "agribusiness_food_systems_primer_may2026.docx"
+    ],
+    "status": "legacy",
+    "files": [
+      {
+        "path": "agribusiness_food_systems_primer_may2026.docx",
+        "exists": true,
+        "sha256": "7963aca1d51fcf3d03d785a21a4ec42be3b1c31f377885c36464bc1c7798f79e",
+        "words": 5766,
+        "tables": 6,
+        "images": 4
+      }
+    ]
+  },
+  {
+    "id": "card-ai-power-demand",
+    "category": "technology energy",
+    "keywords": "AI power demand data centers hyperscalers electricity grid NERC BYOP nuclear",
+    "read_time": "55",
+    "title": "AI & Power Demand",
+    "updated": "Last Updated: May 2026",
+    "downloads": [
+      "ai_power_demand_industry_primer_may2026.docx"
+    ],
+    "status": "legacy",
+    "files": [
+      {
+        "path": "ai_power_demand_industry_primer_may2026.docx",
+        "exists": true,
+        "sha256": "b44d887ce634007271db65bcdcc5c70a9ff20db9d5ba2e9f41ba5af812c8f8ee",
+        "words": 6658,
+        "tables": 4,
+        "images": 4
+      }
+    ]
+  },
+  {
+    "id": "card-battery-storage",
+    "category": "energy",
+    "keywords": "battery storage bess",
+    "read_time": "45",
+    "title": "Battery Storage",
+    "updated": "Last Updated: April 2026",
+    "downloads": [
+      "battery_storage_industry_primer.docx"
+    ],
+    "status": "legacy",
+    "files": [
+      {
+        "path": "battery_storage_industry_primer.docx",
+        "exists": true,
+        "sha256": "801b0426f78ca277162c5ef530cec0efa2ce1de2f4fca444ae08b52640f4cd7d",
+        "words": 4220,
+        "tables": 6,
+        "images": 4
+      }
+    ]
+  },
+  {
+    "id": "card-carbon-capture-storage",
+    "category": "decarbonization infrastructure",
+    "keywords": "carbon capture CCS CCUS DAC direct air",
+    "read_time": "50",
+    "title": "Carbon Capture & Storage",
+    "updated": "Last Updated: May 2026",
+    "downloads": [
+      "carbon_capture_industry_primer_may2026.docx"
+    ],
+    "status": "legacy",
+    "files": [
+      {
+        "path": "carbon_capture_industry_primer_may2026.docx",
+        "exists": true,
+        "sha256": "953338de6af8f6e8243295327822f448a0f83ce730000b8b810255075609ff92",
+        "words": 5431,
+        "tables": 6,
+        "images": 4
+      }
+    ]
+  },
+  {
+    "id": "card-china-energy-industrial-policy",
+    "category": "geopolitics energy",
+    "keywords": "china energy industrial policy belt road BRI five year plan solar EV battery",
+    "read_time": "50",
+    "title": "China Energy & Industrial Policy",
+    "updated": "Last Updated: May 2026",
+    "downloads": [
+      "china_energy_industrial_policy_primer_may2026.docx"
+    ],
+    "status": "legacy",
+    "files": [
+      {
+        "path": "china_energy_industrial_policy_primer_may2026.docx",
+        "exists": true,
+        "sha256": "e488b4a8f491f194a0be9d391d8fabf030b2f8ff65b9d4dc5fcf8728a3bbdb7f",
+        "words": 5344,
+        "tables": 3,
+        "images": 4
+      }
+    ]
+  },
+  {
+    "id": "card-climatetech-venture-capital",
+    "category": "finance decarbonization",
+    "keywords": "climatetech venture capital VC cleantech 1.0 2.0 Sightline",
+    "read_time": "55",
+    "title": "ClimateTech Venture Capital",
+    "updated": "Last Updated: May 2026",
+    "downloads": [
+      "climatetech_vc_industry_primer_may2026.docx"
+    ],
+    "status": "legacy",
+    "files": [
+      {
+        "path": "climatetech_vc_industry_primer_may2026.docx",
+        "exists": true,
+        "sha256": "71ca214c0c656955fed6459aafdb095b9fc6cbe7c62bbd654c69229eb072c409",
+        "words": 6260,
+        "tables": 5,
+        "images": 4
+      }
+    ]
+  },
+  {
+    "id": "card-critical-minerals",
+    "category": "materials",
+    "keywords": "critical minerals",
+    "read_time": "45",
+    "title": "Critical Minerals",
+    "updated": "Last Updated: April 2026",
+    "downloads": [
+      "critical_minerals_industry_primer.docx"
+    ],
+    "status": "legacy",
+    "files": [
+      {
+        "path": "critical_minerals_industry_primer.docx",
+        "exists": true,
+        "sha256": "21c7af3a0efee1ba03cfd211401cd1c95c450a736c67e19992504c139584ae33",
+        "words": 5382,
+        "tables": 6,
+        "images": 4
+      }
+    ]
+  },
+  {
+    "id": "card-data-centers",
+    "category": "infrastructure technology",
+    "keywords": "data centers ai infrastructure",
+    "read_time": "50",
+    "title": "Data Centers",
+    "updated": "Last Updated: April 2026",
+    "downloads": [
+      "data_centers_industry_primer.docx"
+    ],
+    "status": "legacy",
+    "files": [
+      {
+        "path": "data_centers_industry_primer.docx",
+        "exists": true,
+        "sha256": "731f2a1f47009f066921985a2f7ec70171aea0fecd7264794123b504f83f65e4",
+        "words": 5205,
+        "tables": 6,
+        "images": 4
+      }
+    ]
+  },
+  {
+    "id": "card-electric-vehicles",
+    "category": "decarbonization",
+    "keywords": "electric vehicles ev",
+    "read_time": "50",
+    "title": "Electric Vehicles",
+    "updated": "Last Updated: April 2026",
+    "downloads": [
+      "electric_vehicles_industry_primer.docx"
+    ],
+    "status": "legacy",
+    "files": [
+      {
+        "path": "electric_vehicles_industry_primer.docx",
+        "exists": true,
+        "sha256": "24f23d812a295db7d70556c0812efddc80936529e0789fc6b099d820eb045d9f",
+        "words": 5641,
+        "tables": 6,
+        "images": 4
+      }
+    ]
+  },
+  {
+    "id": "card-energytech-venture-capital",
+    "category": "finance energy",
+    "keywords": "energytech venture capital VC grid software AI energy system",
+    "read_time": "55",
+    "title": "EnergyTech Venture Capital",
+    "updated": "Last Updated: May 2026",
+    "downloads": [
+      "energytech_vc_industry_primer_may2026.docx"
+    ],
+    "status": "legacy",
+    "files": [
+      {
+        "path": "energytech_vc_industry_primer_may2026.docx",
+        "exists": true,
+        "sha256": "80dea0f9e18db934b9b20a742564fc60adba6f99fe69e196902587734f5190bf",
+        "words": 6655,
+        "tables": 6,
+        "images": 4
+      }
+    ]
+  },
+  {
+    "id": "card-geothermal-energy",
+    "category": "energy",
+    "keywords": "geothermal energy",
+    "read_time": "45",
+    "title": "Geothermal Energy",
+    "updated": "Last Updated: April 2026",
+    "downloads": [
+      "geothermal_energy_industry_primer.docx"
+    ],
+    "status": "legacy",
+    "files": [
+      {
+        "path": "geothermal_energy_industry_primer.docx",
+        "exists": true,
+        "sha256": "755388848c3ca334f35cddc575e33e0d169dafe5c1c400ed5ef166fcf9aaf1c3",
+        "words": 4943,
+        "tables": 6,
+        "images": 4
+      }
+    ]
+  },
+  {
+    "id": "card-grid-software-vpp",
+    "category": "technology energy",
+    "keywords": "grid software virtual power plants VPP DERMS FERC 2222 demand response AutoGrid",
+    "read_time": "50",
+    "title": "Grid Software & Virtual Power Plants",
+    "updated": "Last Updated: May 2026",
+    "downloads": [
+      "grid_software_vpp_primer_may2026.docx"
+    ],
+    "status": "legacy",
+    "files": [
+      {
+        "path": "grid_software_vpp_primer_may2026.docx",
+        "exists": true,
+        "sha256": "cdb960a7bbf79fdbc4573237cfbcb9b6ab9cfd0ae00b62f2cc92928bfdc71274",
+        "words": 6493,
+        "tables": 5,
+        "images": 4
+      }
+    ]
+  },
+  {
+    "id": "card-hydrogen-energy",
+    "category": "decarbonization",
+    "keywords": "hydrogen green blue grey electrolysis",
+    "read_time": "50",
+    "title": "Hydrogen Energy",
+    "updated": "Last Updated: May 2026",
+    "downloads": [
+      "hydrogen_energy_industry_primer_may2026.docx"
+    ],
+    "status": "legacy",
+    "files": [
+      {
+        "path": "hydrogen_energy_industry_primer_may2026.docx",
+        "exists": true,
+        "sha256": "b1cf24955451c94c9106d15dde804457a1f438a1499d192b19e51a1129f7fafc",
+        "words": 5316,
+        "tables": 6,
+        "images": 4
+      }
+    ]
+  },
+  {
+    "id": "card-infrastructure-investing",
+    "category": "finance infrastructure",
+    "keywords": "infrastructure investing private equity funds GP LP",
+    "read_time": "50",
+    "title": "Infrastructure Investing",
+    "updated": "Last Updated: May 2026",
+    "downloads": [
+      "infrastructure_investing_industry_primer_may2026.docx"
+    ],
+    "status": "coming-soon",
+    "files": [
+      {
+        "path": "infrastructure_investing_industry_primer_may2026.docx",
+        "exists": false
+      }
+    ]
+  },
+  {
+    "id": "card-mining-metals",
+    "category": "materials",
+    "keywords": "mining metals copper lithium nickel cobalt rare earth critical minerals",
+    "read_time": "55",
+    "title": "Mining & Metals",
+    "updated": "Last Updated: May 2026",
+    "downloads": [
+      "mining_metals_industry_primer_may2026.docx"
+    ],
+    "status": "legacy",
+    "files": [
+      {
+        "path": "mining_metals_industry_primer_may2026.docx",
+        "exists": true,
+        "sha256": "742ef8ed06cbbe22b95e3210c9b6b9ffa226525ca05f4e90095de24df27801f9",
+        "words": 5802,
+        "tables": 6,
+        "images": 4
+      }
+    ]
+  },
+  {
+    "id": "card-natural-gas-lng",
+    "category": "energy",
+    "keywords": "natural gas LNG liquefied exports pipeline",
+    "read_time": "50",
+    "title": "Natural Gas & LNG",
+    "updated": "Last Updated: May 2026",
+    "downloads": [
+      "natural_gas_lng_industry_primer.docx"
+    ],
+    "status": "legacy",
+    "files": [
+      {
+        "path": "natural_gas_lng_industry_primer.docx",
+        "exists": true,
+        "sha256": "369e44bd788c911e6862e0b41fcb29481a955311cca6c6cee07f45ae1dfd8d35",
+        "words": 5986,
+        "tables": 6,
+        "images": 4
+      }
+    ]
+  },
+  {
+    "id": "card-nuclear-energy",
+    "category": "energy",
+    "keywords": "nuclear energy smr",
+    "read_time": "50",
+    "title": "Nuclear Energy",
+    "updated": "Last Updated: April 2026",
+    "downloads": [
+      "nuclear_energy_industry_primer.docx"
+    ],
+    "status": "legacy",
+    "files": [
+      {
+        "path": "nuclear_energy_industry_primer.docx",
+        "exists": true,
+        "sha256": "02684860f3a6c441f9e42058040f69f9af63802da6b09f282df224aedac3f4fe",
+        "words": 5542,
+        "tables": 6,
+        "images": 4
+      }
+    ]
+  },
+  {
+    "id": "card-offshore-wind-energy",
+    "category": "energy",
+    "keywords": "offshore wind energy floating",
+    "read_time": "50",
+    "title": "Offshore Wind Energy",
+    "updated": "Last Updated: May 2026",
+    "downloads": [
+      "offshore_wind_industry_primer_may2026.docx"
+    ],
+    "status": "legacy",
+    "files": [
+      {
+        "path": "offshore_wind_industry_primer_may2026.docx",
+        "exists": true,
+        "sha256": "765b60e0bc44f7556d74f428b8f96fe625099945bb11157cc7bd58abc246d0dd",
+        "words": 5336,
+        "tables": 6,
+        "images": 4
+      }
+    ]
+  },
+  {
+    "id": "card-oil-petroleum",
+    "category": "energy",
+    "keywords": "oil petroleum crude OPEC shale Permian supermajors upstream",
+    "read_time": "55",
+    "title": "Oil & Petroleum",
+    "updated": "Last Updated: May 2026",
+    "downloads": [
+      "oil_petroleum_industry_primer_may2026.docx"
+    ],
+    "status": "legacy",
+    "files": [
+      {
+        "path": "oil_petroleum_industry_primer_may2026.docx",
+        "exists": true,
+        "sha256": "a43db47c2704e96a3b3b7e144fa5d4e7f451de08aaadab477b46b546aaaa5095",
+        "words": 6974,
+        "tables": 6,
+        "images": 4
+      }
+    ]
+  },
+  {
+    "id": "card-onshore-wind-energy",
+    "category": "energy",
+    "keywords": "onshore wind energy",
+    "read_time": "45",
+    "title": "Onshore Wind Energy",
+    "updated": "Last Updated: April 2026",
+    "downloads": [
+      "onshore_wind_industry_primer_final.docx"
+    ],
+    "status": "legacy",
+    "files": [
+      {
+        "path": "onshore_wind_industry_primer_final.docx",
+        "exists": true,
+        "sha256": "fe07528261c9c1a553043415e0f9d00921d9c0d69a7abb584b5c9bd9c94675ac",
+        "words": 4322,
+        "tables": 6,
+        "images": 4
+      }
+    ]
+  },
+  {
+    "id": "card-private-equity-in-energy-infrastructure",
+    "category": "finance infrastructure",
+    "keywords": "private equity energy infrastructure PE LBO project finance tax equity",
+    "read_time": "55",
+    "title": "Private Equity in Energy & Infrastructure",
+    "updated": "Last Updated: May 2026",
+    "downloads": [
+      "pe_energy_infrastructure_primer_may2026.docx"
+    ],
+    "status": "legacy",
+    "files": [
+      {
+        "path": "pe_energy_infrastructure_primer_may2026.docx",
+        "exists": true,
+        "sha256": "c74dd11ac744c20ade2bfd4776d6b86d206e808ed5bbb874bf4ee5e62bc49fbb",
+        "words": 6405,
+        "tables": 6,
+        "images": 4
+      }
+    ]
+  },
+  {
+    "id": "card-project-finance",
+    "category": "finance infrastructure",
+    "keywords": "project finance DSCR LLCR debt sculpting EPC offtake tax equity DOE LPO infrastructure",
+    "read_time": "55",
+    "title": "Project Finance",
+    "updated": "Last Updated: May 2026",
+    "downloads": [
+      "project_finance_primer_may2026.docx"
+    ],
+    "status": "legacy",
+    "files": [
+      {
+        "path": "project_finance_primer_may2026.docx",
+        "exists": true,
+        "sha256": "c70200e48be2d1d7136d67db3b93ce4ff46ca5be156a6ef3ea5c91f14472e274",
+        "words": 6581,
+        "tables": 7,
+        "images": 4
+      }
+    ]
+  },
+  {
+    "id": "card-semiconductors-ai-chips",
+    "category": "technology",
+    "keywords": "semiconductors AI chips NVIDIA TSMC ASML chip war",
+    "read_time": "50",
+    "title": "Semiconductors & AI Chips",
+    "updated": "Last Updated: May 2026",
+    "downloads": [
+      "semiconductors_ai_chips_industry_primer_may2026.docx"
+    ],
+    "status": "coming-soon",
+    "files": [
+      {
+        "path": "semiconductors_ai_chips_industry_primer_may2026.docx",
+        "exists": false
+      }
+    ]
+  },
+  {
+    "id": "card-solar-energy",
+    "category": "energy",
+    "keywords": "solar energy",
+    "read_time": "45",
+    "title": "Solar Energy",
+    "updated": "Last Updated: April 2026",
+    "downloads": [
+      "solar_energy_industry_primer.docx"
+    ],
+    "status": "legacy",
+    "files": [
+      {
+        "path": "solar_energy_industry_primer.docx",
+        "exists": true,
+        "sha256": "389e9bc8221d47529573d0510e795faad8188dfd58caa1752232a80b1fc84c51",
+        "words": 4810,
+        "tables": 7,
+        "images": 4
+      }
+    ]
+  },
+  {
+    "id": "card-transmission-grid-infrastructure",
+    "category": "infrastructure energy",
+    "keywords": "transmission grid infrastructure HVDC interconnection",
+    "read_time": "50",
+    "title": "Transmission & Grid Infrastructure",
+    "updated": "Last Updated: May 2026",
+    "downloads": [
+      "transmission_grid_industry_primer_may2026.docx"
+    ],
+    "status": "legacy",
+    "files": [
+      {
+        "path": "transmission_grid_industry_primer_may2026.docx",
+        "exists": true,
+        "sha256": "2d346337d0cde232a8b23aa1aef347c3ab10786f1bbe482ed012061290041217",
+        "words": 5765,
+        "tables": 6,
+        "images": 4
+      }
+    ]
+  },
+  {
+    "id": "card-us-energy-policy",
+    "category": "policy energy",
+    "keywords": "US energy policy IRA OBBBA FERC DOE grid interconnection nuclear clean energy",
+    "read_time": "50",
+    "title": "U.S. Energy Policy",
+    "updated": "Last Updated: May 2026",
+    "downloads": [
+      "us_energy_policy_primer_may2026.docx"
+    ],
+    "status": "legacy",
+    "files": [
+      {
+        "path": "us_energy_policy_primer_may2026.docx",
+        "exists": true,
+        "sha256": "e5482b8f6db5d09b373115777999b84382e91a842c296d432540cb55305ec86b",
+        "words": 5777,
+        "tables": 4,
+        "images": 4
+      }
+    ]
+  },
+  {
+    "id": "card-water-infrastructure",
+    "category": "infrastructure",
+    "keywords": "water infrastructure PFAS desalination utilities drinking water wastewater",
+    "read_time": "50",
+    "title": "Water Infrastructure",
+    "updated": "Last Updated: May 2026",
+    "downloads": [
+      "water_infrastructure_primer_may2026.docx"
+    ],
+    "status": "legacy",
+    "files": [
+      {
+        "path": "water_infrastructure_primer_may2026.docx",
+        "exists": true,
+        "sha256": "9f32fd2a0f0b6eddcd05c858417de1c69eb453448c64d917a997f447628c7c21",
+        "words": 6275,
+        "tables": 5,
+        "images": 4
+      }
+    ]
+  }
+]
