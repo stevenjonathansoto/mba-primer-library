@@ -18,3 +18,10 @@
 .cash-row>p{font-size:.85rem;margin:7px 0 0}.cash-flow{margin:18px 0;background:#fff}
 @media(max-width:600px){.water-flow{grid-template-columns:1fr;gap:24px}.water-flow li{padding:12px 16px}.water-flow li:not(:last-child)::after{content:'↓';right:auto;left:23px;top:auto;bottom:-24px}.cash-track{font-size:.72rem}.learning-visual{padding:18px 0}.cash-label{font-size:.8rem}}
 @media print{.learning-visual,.cash-track{-webkit-print-color-adjust:exact;print-color-adjust:exact}.water-flow{grid-template-columns:repeat(4,1fr)}.water-flow li:not(:last-child)::after{content:'→';right:-21px;left:auto;top:22px;bottom:auto}}
+
+/* One shared text measure throughout the brief; no reserved sidebar. */
+#brief{max-width:740px}.brief-layout{display:block}.brief-depth{margin-top:30px}
+.brief-depth .example{margin:16px 0 20px;display:grid;grid-template-columns:1fr 1fr;column-gap:28px;padding:20px 24px}
+.brief-depth .example h2{grid-column:1/-1}.brief-depth .example-label{margin:0;grid-column:1}.brief-depth .example-number{grid-column:1;margin:4px 0 0}
+.brief-depth .formula{grid-column:2;grid-row:2/4;border:0;padding:0;margin:0}.brief-depth .example-caption{grid-column:1/-1;margin-top:14px}
+@media(max-width:600px){.brief-depth .example{display:block;padding:20px}.brief-depth .formula{margin-top:14px}.brief-depth .example-number{margin-bottom:12px}}
