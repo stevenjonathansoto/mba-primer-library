@@ -1,0 +1,17 @@
+name: Library feedback
+description: Report a correction, source concern or usability issue. Never triggers paid generation.
+labels: [feedback]
+body:
+  - type: input
+    id: primer
+    attributes:
+      label: Primer or page URL
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: What needs attention?
+      description: Include a primary source URL if reporting a factual correction.
+    validations:
+      required: true

@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Request a primer
+    url: mailto:ssoto27@gsb.columbia.edu?subject=Primer%20request
+    about: Email the maintainer with the industry, focus, recruiting relevance and optional context.
