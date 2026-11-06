@@ -3,7 +3,8 @@ const fs=require('fs');
 const AxeBuilder=require('@axe-core/playwright').default;
 (async()=>{
  const browser=await chromium.launch({headless:true,...(process.env.BROWSER_CHANNEL?{channel:process.env.BROWSER_CHANNEL}:{})});
- const page=await browser.newPage(); const errors=[];
+ const context=await browser.newContext();
+ const page=await context.newPage(); const errors=[];
  page.on('pageerror',e=>errors.push(e.message));
  fs.mkdirSync('work/screenshots',{recursive:true});
  for(const width of [1440,375]){
