@@ -41,8 +41,20 @@ def validate(folder):
         refs=set(re.findall(r'\[claim:([a-z0-9-]+)\]',content))
         require(bool(refs) and refs<=ids,f'{name}: missing/unknown claim references')
         require('## References' in content,f'{name}: references section required')
+        headings=' '.join(re.findall(r'^#{1,3}\s+(.+)$',content,re.M)).lower()
+        if name=='primer':
+            for topic in ('executive','value chain','market','economics','financ','policy','recruiting'):
+                require(topic in headings,f'primer: missing required topic heading ({topic})')
+        if name=='summary':
+            for topic in ('overview','value chain','business model','financial','market','trend','recruiting'):
+                require(topic in headings,f'summary: missing required topic heading ({topic})')
         if name=='summary': require(600<=len(content.split())<=900,'brief must contain 600–900 words')
-        if name=='interview': require(10<=len(re.findall(r'^### Q\d+',content,re.M))<=15,'interview requires 10–15 questions')
+        if name=='interview':
+            require(10<=len(re.findall(r'^### Q\d+',content,re.M))<=15,'interview requires 10–15 questions')
+            for topic in ('concept','debate','networking','misconception'):
+                require(topic in headings,f'interview: missing required topic heading ({topic})')
+            answers=re.split(r'^### Q\d+[^\n]*\n',content,flags=re.M)[1:]
+            require(all(len(re.split(r'^## ',a,flags=re.M)[0].split())>=30 for a in answers),'interview answers need substantive explanations')
     return research
 
 if __name__=='__main__':
