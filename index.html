@@ -731,7 +731,7 @@
   <div class="section-header">
     <h2 class="section-title">Available Primers</h2>
     <div style="display:flex; align-items:center; gap:16px;">
-      <span class="section-count" id="countLabel">27 documents</span>
+      <span class="section-count" id="countLabel">25 downloads · 2 coming soon</span>
       <a href="mailto:ssoto27@gsb.columbia.edu?subject=Primer%20Request&body=Hi%20Steven%2C%0A%0AI%27d%20like%20to%20request%20a%20primer%20on%3A%0A%0A[Industry%20name]%0A%0AThanks!" class="btn-request">
         Request a Primer
       </a>
@@ -1152,7 +1152,7 @@
         </div>
       </div>
     </div>
-<div id="card-infrastructure-investing" class="primer-card" data-category="finance infrastructure" data-title="infrastructure investing private equity funds GP LP" data-read-time="50">
+<div id="card-infrastructure-investing" class="primer-card coming-soon" data-status="coming-soon" data-category="finance infrastructure" data-title="infrastructure investing private equity funds GP LP" data-read-time="50">
       <div class="card-banner"></div>
       <div class="card-body">
             <div class="card-tags">
@@ -1174,10 +1174,7 @@
           <span class="section-chip">Interview Starters</span>
         </div>
         <div class="card-footer">
-          <a href="infrastructure_investing_industry_primer_may2026.docx" download class="btn-download">
-            <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Download
-          </a>
+          <span class="coming-badge">Coming Soon</span>
           <a href="#card-infrastructure-investing" class="btn-anchor" onclick="copyAnchor(event, 'card-infrastructure-investing')" title="Copy link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
@@ -1434,7 +1431,7 @@
         </div>
       </div>
     </div>
-<div id="card-semiconductors-ai-chips" class="primer-card" data-category="technology" data-title="semiconductors AI chips NVIDIA TSMC ASML chip war" data-read-time="50">
+<div id="card-semiconductors-ai-chips" class="primer-card coming-soon" data-status="coming-soon" data-category="technology" data-title="semiconductors AI chips NVIDIA TSMC ASML chip war" data-read-time="50">
       <div class="card-banner"></div>
       <div class="card-body">
             <div class="card-tags">
@@ -1455,10 +1452,7 @@
           <span class="section-chip">Interview Starters</span>
         </div>
         <div class="card-footer">
-          <a href="semiconductors_ai_chips_industry_primer_may2026.docx" download class="btn-download">
-            <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Download
-          </a>
+          <span class="coming-badge">Coming Soon</span>
           <a href="#card-semiconductors-ai-chips" class="btn-anchor" onclick="copyAnchor(event, 'card-semiconductors-ai-chips')" title="Copy link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
@@ -1609,7 +1603,8 @@
 <script>
   let activeFilters = new Set();
   let currentSort = 'alpha';
-  const TOTAL = 27;
+  const TOTAL = document.querySelectorAll('.primer-card').length;
+  const DOWNLOADS = document.querySelectorAll('.primer-card a[download]').length;
 
   const labels = {
     energy:'⚡ Energy', infrastructure:'🏗️ Infrastructure',
@@ -1636,7 +1631,7 @@
       if (visible) shown++;
     });
     document.getElementById('countLabel').textContent =
-      shown === TOTAL ? TOTAL + ' documents' : shown + ' of ' + TOTAL;
+      shown === TOTAL ? DOWNLOADS + ' downloads · ' + (TOTAL - DOWNLOADS) + ' coming soon' : shown + ' of ' + TOTAL;
     document.querySelector('.no-results').style.display = shown === 0 ? 'block' : 'none';
     renderPills();
   }
@@ -1802,6 +1797,7 @@
 
   // ── On load ─────────────────────────────────────────────────────────────────
   window.addEventListener('load', () => {
+    applyFilters();
     syncDropdownUI(); // initialise "All Primers" as selected
     if (location.hash) {
       const el = document.querySelector(location.hash);
