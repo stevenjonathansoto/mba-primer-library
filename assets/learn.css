@@ -25,3 +25,5 @@
 .brief-depth .example h2{grid-column:1/-1}.brief-depth .example-label{margin:0;grid-column:1}.brief-depth .example-number{grid-column:1;margin:4px 0 0}
 .brief-depth .formula{grid-column:2;grid-row:2/4;border:0;padding:0;margin:0}.brief-depth .example-caption{grid-column:1/-1;margin-top:14px}
 @media(max-width:600px){.brief-depth .example{display:block;padding:20px}.brief-depth .formula{margin-top:14px}.brief-depth .example-number{margin-bottom:12px}}
+
+.question-group{margin-top:30px}.question-group h3{font-size:1rem;color:#253b34;margin:0 0 12px}.question .answer-lead{font-weight:600;color:#253b34;margin-top:0}.question>div{padding-left:0}

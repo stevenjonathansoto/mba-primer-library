@@ -91,31 +91,31 @@
   "brief": [
     [
       "The industry",
-      "Water businesses deliver clean water, treat wastewater, or supply the equipment and services that keep those systems running. Start with one question: who pays for the service, and how reliably does that payment cover its cost? Essential demand creates a need for infrastructure; it does not automatically create an attractive investment."
+      "Water infrastructure connects a physical service to a payment system. Water is collected, treated, delivered to customers, and collected again as wastewater. Different businesses own the assets, operate them, or supply the equipment. Understanding who provides the service and who pays for it is the starting point for understanding the industry."
     ],
     [
-      "Utilities, projects, and suppliers earn revenue differently",
-      "Utilities — examine the assets on which the business is allowed to earn a return, the process for setting customer bills, and the financing plan. A regulatory decision specifies terms for a particular utility and jurisdiction; an allowed return is not a sector-wide promise. [rate-case] | Contracted projects — read the payment terms before forecasting revenue. Payment might depend on availability, output, or another condition. Identify who bears construction risk, operating risk, and the risk that the customer does not pay. The contract determines which risks sit with the investor. | Equipment and services — test why a customer would buy the product, how long installation takes, and what support it requires. A useful technology can still be a difficult business if winning orders takes time or implementation consumes the margin. Look at customer value and supplier profitability separately."
+      "Utilities sell a service; suppliers sell the tools to deliver it",
+      "Utilities — a utility provides water service through a network of assets. In a regulated utility model, customer bills support operating costs and approved capital investment under the applicable rate-setting process. The regulator’s decision helps determine what investment can earn a return and on what terms. This makes the recovery of spending central to the business. [rate-case] | Contracted projects — a plant can instead earn payments under an agreement with a buyer. The agreement may pay for keeping the plant available, for the volume delivered, or for another measure of performance. Those differences matter: a plant can be ready to operate without receiving the same payment under every contract. The buyer and the payment terms define the revenue relationship. | Equipment and service suppliers — these businesses sell the pumps, treatment equipment, installation, or support that asset owners need. Their customer is the organization buying the solution. Their economics depend on the selling price, cost of delivery, and ongoing service obligations. A supplier can benefit from a plant upgrade without owning the plant or collecting its customers’ water bills."
     ],
     [
-      "Capital recovery, financing, and execution risk",
-      "Capital recovery — distinguish spending money, receiving approval to recover it, and actually earning cash. A construction delay or a gap before recovery can create a financing need even when the eventual project economics look sound. Model the timing explicitly instead of assuming every dollar invested immediately produces revenue. | Funding — compare the cost of debt with the cash available to repay it. EPA frames infrastructure financing around cost recovery, debt management, and affordability. A plan that works for investors must also consider the effect on customers and the ability to fund ongoing service. [funding] | Execution — test whether construction costs, operating costs, and service performance match the plan. Specify what happens if costs rise or delivery slips: who pays, which cash flows change, and how much financial headroom remains? A downside case is more useful when it identifies the mechanism behind the loss."
+      "A plant upgrade creates different jobs for each business",
+      "The project — imagine a utility upgrading a treatment plant. This is a hypothetical example, not a real project or forecast. The utility plans the service improvement and the investment. A contractor builds the upgrade. Equipment suppliers provide the components, and an operator runs the plant. These roles explain why the same project can create several different business opportunities. | The service — the purpose of treatment is to prepare water for use. Common treatment stages include settling, filtration, and disinfection; the exact process depends on the water and required output. [treatment] Better equipment is useful only if it delivers the required performance in the operating system. A successful installation and a profitable supplier are related outcomes, but they are not the same thing."
     ],
     [
-      "Allowed utility return versus investor return",
-      "Allowed equity return — the example isolates the annual equity return component in a simplified utility model. Rate base means the asset value eligible to earn the modeled return. With $100 million of rate base, a 50% equity share, and a 10% allowed equity return, that component is $5 million per year. These are hypothetical inputs. | Investor cash flows — this is neither total revenue nor the return an investor earns on a purchase. Operating expenses, depreciation, taxes, debt costs, capital spending, and timing all need separate treatment. To estimate an acquisition return, project actual equity cash flows and compare them with the price paid. Paying more for the same cash flows lowers the expected return."
+      "Construction spending comes before the cash that repays it",
+      "During construction — the upgrade requires money before it can deliver its intended benefit. Borrowing and equity can bridge that timing gap, but both have a cost. For a regulated utility, the terms and timing of approved recovery matter: completing an asset does not by itself establish when its spending begins earning a return. A delay can therefore increase funding needs even if the eventual service is unchanged. | Once operating — customer payments support the service and its financial obligations. Revenue is not all available to investors: operating expenses and financing payments absorb cash, and further investment may be needed. EPA describes cost recovery, debt management, and affordability as connected financing concerns. [funding] Raising enough money to maintain service must be considered alongside what customers can afford to pay."
     ],
     [
-      "How higher costs reduce debt coverage",
-      "Debt service coverage — debt service coverage ratio, or DSCR, divides cash available for debt service by scheduled debt payments. The diagram shows how an operating problem reaches lenders even when the payment itself does not change. The cushion is cash above that payment, not necessarily cash free to distribute to shareholders. | Loan terms and reserves — whether lower coverage creates a covenant breach depends on the actual loan agreement; this example assumes no required threshold. Check the financing terms, available reserves, and ability to absorb further cost increases. A positive cushion alone does not establish that an investment is attractive."
+      "Higher operating costs leave less cash for debt payments",
+      "The plant’s cash cushion — suppose the upgraded plant has $12 million a year available for debt payments of $8 million. The graphic shows what happens if operating costs increase by $2 million with no offsetting revenue. The service may continue, but the financial cushion becomes smaller. This is the brief’s one financial example; all inputs are hypothetical. | What coverage tells you — debt service coverage compares available cash with scheduled debt payments. It describes headroom, not the return earned by an investor. Whether a lower ratio breaches a loan condition depends on the agreement. Cash above the debt payment may still be needed for reserves or other obligations before anything can be distributed to shareholders."
     ],
     [
-      "Leak reduction: savings and payback",
-      "Avoided costs — EPA identifies efficiency as a way to reduce pumping and treatment costs and defer supply expansion. Translate that into a specific customer outcome: a lower bill for energy, less spending on capacity, or another measurable improvement. Avoid counting the same benefit twice. [efficiency] | Net savings and payback — a hypothetical $2 million leak-management project saving $0.4 million annually but requiring $0.1 million in annual support produces $0.3 million of net savings. Simple payback is about 6.7 years. That shortcut ignores discounting and asset life; test whether the savings persist and whether implementation works before treating the result as an investment case."
+      "A useful upgrade still has to justify its cost",
+      "For the customer — the plant upgrade might reduce operating expense, improve performance, or avoid another investment. Those benefits need to be compared with installation and ongoing support costs. EPA identifies efficiency as a way to reduce pumping and treatment costs and the need for supply expansion. [efficiency] The value comes from a specific improvement, rather than from the technology label alone. | For the investor — a reliable plant can still be an unattractive purchase if its price is too high for the cash it will generate. The service need, the business’s revenue, and the investor’s return are three different things. The same distinction applies to a supplier: strong demand for an upgrade does not establish that the supplier can deliver it profitably."
     ],
     [
-      "Essential demand does not guarantee investor returns",
-      "Separate the need for water infrastructure from the revenue it can earn and the return an investor can receive. For a coffee chat, choose one business model and explain its customer, payment mechanism, and biggest cash-flow risk. Then ask what most often goes wrong in execution. That gives you a useful conversation grounded in economics rather than a list of industry buzzwords."
+      "Water investment depends on how service becomes cash",
+      "The plant example connects the industry: a customer needs a service, a utility or project earns payment for providing it, and contractors and suppliers help deliver it. Construction timing, operating performance, and financing determine how much cash remains. In a conversation, explain which business you mean before discussing its prospects. That makes it easier to distinguish a growing need for infrastructure from an attractive business or investment."
     ]
   ],
   "full": [
@@ -313,5 +313,48 @@
     "Where does your team see the largest gap between a water investment thesis and execution?",
     "Which operating metric tells you most about the quality of a system?",
     "What do candidates most often misunderstand about capital recovery or customer adoption?"
+  ],
+  "question_groups": [
+    {
+      "title": "Industry basics",
+      "questions": [
+        0,
+        7,
+        9,
+        11
+      ]
+    },
+    {
+      "title": "Business economics",
+      "questions": [
+        1,
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "title": "Investment judgment",
+      "questions": [
+        2,
+        4,
+        8,
+        10
+      ]
+    }
+  ],
+  "question_takeaways": [
+    "Water utilities, contracted assets, and suppliers have different customers and payment mechanisms.",
+    "The equity return component equals eligible rate base multiplied by the equity share and allowed return.",
+    "Allowed ROE is a regulatory input; investment IRR reflects the purchase price and actual cash flows.",
+    "Debt service coverage is available cash divided by scheduled debt payments.",
+    "The payment mechanism and allocation of operating risks determine the contract’s economics.",
+    "Lower-cost financing can reduce the burden, but it does not eliminate the cost of the infrastructure.",
+    "Compare net customer savings with the investment cost, then test whether those savings persist.",
+    "Technical performance does not guarantee repeat sales or profitable delivery.",
+    "Consolidation creates value only if operating improvements outweigh acquisition and integration costs.",
+    "Distinguish a proposed deadline change from a final requirement, and date the claim.",
+    "Essential demand does not guarantee attractive investor returns.",
+    "Ask which part of the investment thesis is hardest to validate, then explore a concrete example."
   ]
 }

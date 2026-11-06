@@ -37,3 +37,11 @@ interaction, reflow for phones, and retain labels in print. Cash bars share
 one scale; patterns and labels supplement color. The accompanying prose
 explains interpretation rather than repeating each plotted number. Full
 primer and Word content remain aligned with their existing source material.
+
+## Teaching sequence
+The brief explains the service and three business models before introducing
+investment economics. One hypothetical treatment-plant upgrade connects roles,
+construction funding, customer payments and the debt-coverage visual. Detailed
+rate-base and payback calculations remain in the full primer. Interview
+questions are grouped into industry basics, business economics and investment
+judgment, each with a direct answer before the supporting reasoning.

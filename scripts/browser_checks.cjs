@@ -68,6 +68,8 @@ const AxeBuilder=require('@axe-core/playwright').default;
   }
   await page.locator('.question summary').first().click();
   if(await page.locator('.question[open]').count()!==1)throw Error('answer reveal failed');
+  if(await page.locator('.question-group').count()!==3)throw Error('interview topic groups missing');
+  await page.screenshot({path:`work/screenshots/interview-${width}.png`,fullPage:false});
   await page.locator('.question summary').nth(1).click();
   await page.waitForFunction(()=>document.querySelectorAll('.question[open]').length===1);
   if(await page.locator('.question').nth(1).getAttribute('open')===null)throw Error('second answer not opened');
