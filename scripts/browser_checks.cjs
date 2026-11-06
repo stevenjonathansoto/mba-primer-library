@@ -80,6 +80,12 @@ const AxeBuilder=require('@axe-core/playwright').default;
   if(await page.locator('#tab-brief').getAttribute('aria-selected')!=='true')throw Error('tab keyboard navigation failed');
   await page.goto('http://127.0.0.1:8765/learn/water-infrastructure.html');
   await page.screenshot({path:`work/screenshots/learning-${width}.png`,fullPage:false});
+  for(const figure of ['value-chain','cash-flow']) {
+   await page.locator('.'+figure).screenshot({path:`work/screenshots/${figure}-${width}.png`});
+  }
+  await page.emulateMedia({media:'print'});
+  if(!await page.locator('.value-chain').isVisible() || !await page.locator('.cash-flow').isVisible())throw Error('print lost figures');
+  await page.emulateMedia({media:'screen'});
  }
  await browser.close();
  if(errors.length)throw Error(errors.join('\n'));

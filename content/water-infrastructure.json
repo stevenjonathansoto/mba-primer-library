@@ -107,7 +107,7 @@
     ],
     [
       "Follow the cash through a downside case",
-      "Start with debt coverage — suppose a project has $12 million of cash available for debt service and $8 million of annual debt payments. Its debt service coverage ratio, or DSCR, is 1.50 times: divide available cash by the payment. This hypothetical measures the cushion above the scheduled debt payment. | Change one assumption — if operating costs rise by $2 million without any offset, available cash falls to $10 million and coverage drops to 1.25 times. The arithmetic shows how an operating problem reaches lenders. Whether that creates a covenant breach depends on the actual loan agreement; the example does not assume a required threshold."
+      "Read the coverage ratio — debt service coverage ratio, or DSCR, divides cash available for debt service by scheduled debt payments. The diagram shows how an operating problem reaches lenders even when the payment itself does not change. The cushion is cash above that payment, not necessarily cash free to distribute to shareholders. | Ask what happens next — whether lower coverage creates a covenant breach depends on the actual loan agreement; this example assumes no required threshold. Check the financing terms, available reserves, and ability to absorb further cost increases. A positive cushion alone does not establish that an investment is attractive."
     ],
     [
       "Turn a technology story into a business case",

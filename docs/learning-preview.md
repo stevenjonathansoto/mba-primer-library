@@ -29,3 +29,11 @@ spacing rather than dense continuous prose. Sources and archival context stay
 collapsed; full-primer and Word content are unchanged. Interview answers open
 one at a time. The Water brief expands the existing source-backed economics
 and hypothetical examples without introducing new market claims.
+
+## Explanatory visuals
+The Water brief uses a simplified service-chain diagram and a hypothetical
+debt-coverage comparison. Both use semantic HTML with visible text, require no
+interaction, reflow for phones, and retain labels in print. Cash bars share
+one scale; patterns and labels supplement color. The accompanying prose
+explains interpretation rather than repeating each plotted number. Full
+primer and Word content remain aligned with their existing source material.
