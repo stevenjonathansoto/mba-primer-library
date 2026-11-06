@@ -650,7 +650,7 @@
   @media(max-width:640px){.search-inner{flex-wrap:wrap}.search-wrap{flex-basis:100%}.section-header{align-items:flex-start;gap:16px;flex-direction:column}.section-header>div{flex-wrap:wrap}.header-eyebrow{align-items:flex-start}.eyebrow-text{line-height:1.7}.card-footer{flex-wrap:wrap}}
   @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
-<link rel="stylesheet" href="assets/discovery.css?v=compact-catalog-footer"></head>
+<link rel="stylesheet" href="assets/discovery.css?v=compact-catalog-controls"></head>
 <body>
 <a class="skip-link" href="#main-content">Skip to primers</a>
 
@@ -741,10 +741,6 @@
 
 <!-- MAIN -->
 <main id="main-content">
-  <div class="discovery-controls">
-    <label for="careerFilter">Recruiting interest<select id="careerFilter" onchange="applyFilters()"><option value="">All interests</option><option value="banking">Investment banking</option><option value="pe">Private equity</option><option value="infrastructure">Infrastructure investing</option><option value="vc">Venture capital</option><option value="strategy">Corporate strategy</option></select></label>
-    <button class="reset-discovery" onclick="resetDiscovery()">Clear all filters</button>
-  </div>
   <div class="section-header">
     <h2 class="section-title">Available Primers</h2>
     <div style="display:flex; align-items:center; gap:16px;">
@@ -1643,10 +1639,7 @@
       const matchSearch = !q || title.includes(q) || dataTit.includes(q) || chips.includes(q) || desc.includes(q);
       const cardCats = (card.dataset.category || '').split(' ');
       const matchFilter = activeFilters.size === 0 || cardCats.some(c => activeFilters.has(c));
-      const career = document.getElementById('careerFilter').value;
-      const careerCats = {banking:['finance','infrastructure','energy'],pe:['finance','infrastructure'],infrastructure:['infrastructure','energy'],vc:['technology','decarbonization','agriculture'],strategy:['energy','materials','technology','geopolitics','policy','agriculture']};
-      const matchCareer = !career || cardCats.some(c => careerCats[career].includes(c));
-      const visible = matchSearch && matchFilter && matchCareer;
+      const visible = matchSearch && matchFilter;
       card.classList.toggle('hidden', !visible);
       if (visible) shown++;
     });
@@ -1657,11 +1650,6 @@
   }
 
   // ── Multi-select filter ─────────────────────────────────────────────────────
-  function resetDiscovery() {
-    document.getElementById('searchInput').value = '';
-    document.getElementById('careerFilter').value = '';
-    activeFilters.clear(); syncDropdownUI(); applyFilters();
-  }
   function toggleFilter(cat, el) {
     if (cat === 'all') {
       activeFilters.clear();

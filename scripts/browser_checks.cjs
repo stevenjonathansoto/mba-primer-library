@@ -26,12 +26,6 @@ const AxeBuilder=require('@axe-core/playwright').default;
   await page.locator('#searchInput').fill('solar');
   if(!await page.locator('#card-solar-energy').isVisible())throw Error('search failed');
   await page.locator('#searchInput').fill('');
-  for(const career of ['banking','pe','infrastructure','vc','strategy']) {
-   await page.locator('#careerFilter').selectOption(career);
-   if(!await page.locator('.primer-card:not(.hidden)').count())throw Error('empty recruiting filter '+career);
-  }
-  await page.locator('.reset-discovery').click();
-  if(await page.locator('.primer-card:not(.hidden)').count()!==27)throw Error('filter reset failed');
   await page.locator('#filterBtn').click();
   for(const category of ['energy','infrastructure','materials','decarbonization','finance','technology','geopolitics','policy','agriculture']){
    await page.locator(`[data-cat="${category}"]`).click();
