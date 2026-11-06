@@ -306,7 +306,7 @@
     display: flex;
     flex-direction: column;
     transition: transform 0.2s, box-shadow 0.2s;
-    animation: fadeUp 0.4s ease both;
+    animation: none;
   }
 
   /* hidden = completely gone */
@@ -491,7 +491,7 @@
     display: inline-flex; align-items: center; gap: 6px;
     background: #f3f4f6;
     border: 1px solid #e5e7eb;
-    color: var(--muted);
+    color: #4b5563;
     font-family: 'DM Mono', monospace;
     font-size: 10px;
     letter-spacing: 0.12em;
@@ -634,9 +634,25 @@
   }
   .card-updated strong { color: var(--navy); font-weight: 600; }
 
+
+  .skip-link {position:absolute;left:-9999px;z-index:999;background:white;padding:12px;}
+  .skip-link:focus {left:12px;top:12px;}
+  :focus-visible {outline:3px solid #185fa5;outline-offset:3px;}
+  .search-strip :focus-visible {outline-color:#e8b84b;}
+  .dropdown-item {width:100%;border:0;background:white;font:inherit;text-align:left;min-height:44px;}
+  button,.btn-anchor,.btn-request {min-height:44px;}
+  .btn-anchor {min-width:44px;}
+  .legacy-status {font-size:12px;color:#745500;margin:8px 0;}
+  .read-online {color:var(--navy);font-weight:600;padding:12px 0;display:block;}
+  .footer-text {color:#b9d9eb;}
+  .search-wrap input::placeholder {color:#c7d3e5;}
+  .primer-card.coming-soon {opacity:1;}
+  @media(max-width:640px){.search-inner{flex-wrap:wrap}.search-wrap{flex-basis:100%}.section-header{align-items:flex-start;gap:16px;flex-direction:column}.section-header>div{flex-wrap:wrap}.header-eyebrow{align-items:flex-start}.eyebrow-text{line-height:1.7}.card-footer{flex-wrap:wrap}}
+  @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to primers</a>
 
 <!-- HEADER -->
 <header>
@@ -662,58 +678,58 @@
     <!-- search box -->
     <div class="search-wrap">
       <svg class="search-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>
-      <input type="text" id="searchInput" placeholder="Search primers..." oninput="applyFilters()" />
+      <input aria-label="Search industries, topics and recruiting concepts" type="search" id="searchInput" placeholder="Search primers..." oninput="applyFilters()" />
     </div>
 
     <!-- filter dropdown -->
     <div class="filter-wrap">
-      <button class="filter-btn" id="filterBtn" onclick="toggleDropdown()">
+      <button class="filter-btn" id="filterBtn" aria-expanded="false" aria-controls="dropdown" onclick="toggleDropdown()">
         <span id="filterLabel">Filter</span>
         <svg class="chevron" id="chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
       </button>
       <div id="activeFilterPills" style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;"></div>
       <div class="dropdown" id="dropdown">
-        <div class="dropdown-item" data-cat="all" onclick="toggleFilter('all', this)">
+        <button type="button" class="dropdown-item" aria-pressed="false" data-cat="all" onclick="toggleFilter('all', this)">
           All Primers
           <svg class="check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-        </div>
+        </button>
         <div class="dropdown-divider"></div>
-        <div class="dropdown-item" data-cat="energy" onclick="toggleFilter('energy', this)">
+        <button type="button" class="dropdown-item" aria-pressed="false" data-cat="energy" onclick="toggleFilter('energy', this)">
           ⚡ Energy
           <svg class="check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-        </div>
-        <div class="dropdown-item" data-cat="infrastructure" onclick="toggleFilter('infrastructure', this)">
+        </button>
+        <button type="button" class="dropdown-item" aria-pressed="false" data-cat="infrastructure" onclick="toggleFilter('infrastructure', this)">
           🏗️ Infrastructure
           <svg class="check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-        </div>
-        <div class="dropdown-item" data-cat="materials" onclick="toggleFilter('materials', this)">
+        </button>
+        <button type="button" class="dropdown-item" aria-pressed="false" data-cat="materials" onclick="toggleFilter('materials', this)">
           ⛏️ Materials
           <svg class="check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-        </div>
-        <div class="dropdown-item" data-cat="decarbonization" onclick="toggleFilter('decarbonization', this)">
+        </button>
+        <button type="button" class="dropdown-item" aria-pressed="false" data-cat="decarbonization" onclick="toggleFilter('decarbonization', this)">
           🏭 Decarbonization
           <svg class="check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-        </div>
-        <div class="dropdown-item" data-cat="finance" onclick="toggleFilter('finance', this)">
+        </button>
+        <button type="button" class="dropdown-item" aria-pressed="false" data-cat="finance" onclick="toggleFilter('finance', this)">
           📊 Finance
           <svg class="check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-        </div>
-        <div class="dropdown-item" data-cat="technology" onclick="toggleFilter('technology', this)">
+        </button>
+        <button type="button" class="dropdown-item" aria-pressed="false" data-cat="technology" onclick="toggleFilter('technology', this)">
           💻 Technology
           <svg class="check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-        </div>
-        <div class="dropdown-item" data-cat="geopolitics" onclick="toggleFilter('geopolitics', this)">
+        </button>
+        <button type="button" class="dropdown-item" aria-pressed="false" data-cat="geopolitics" onclick="toggleFilter('geopolitics', this)">
           🌏 Geopolitics
           <svg class="check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-        </div>
-        <div class="dropdown-item" data-cat="policy" onclick="toggleFilter('policy', this)">
+        </button>
+        <button type="button" class="dropdown-item" aria-pressed="false" data-cat="policy" onclick="toggleFilter('policy', this)">
           🏛️ Policy
           <svg class="check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-        </div>
-        <div class="dropdown-item" data-cat="agriculture" onclick="toggleFilter('agriculture', this)">
+        </button>
+        <button type="button" class="dropdown-item" aria-pressed="false" data-cat="agriculture" onclick="toggleFilter('agriculture', this)">
           🌾 Agriculture
           <svg class="check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-        </div>
+        </button>
       </div>
     </div>
 
@@ -727,12 +743,12 @@
 </nav>
 
 <!-- MAIN -->
-<main>
+<main id="main-content">
   <div class="section-header">
     <h2 class="section-title">Available Primers</h2>
     <div style="display:flex; align-items:center; gap:16px;">
-      <span class="section-count" id="countLabel">25 downloads · 2 coming soon</span>
-      <a href="mailto:ssoto27@gsb.columbia.edu?subject=Primer%20Request&body=Hi%20Steven%2C%0A%0AI%27d%20like%20to%20request%20a%20primer%20on%3A%0A%0A[Industry%20name]%0A%0AThanks!" class="btn-request">
+      <span class="section-count" id="countLabel" role="status" aria-live="polite">25 downloads · 2 coming soon</span>
+      <a href="mailto:ssoto27@gsb.columbia.edu?subject=Primer%20Request&amp;body=Industry%3A%0ASpecific%20focus%3A%0ARecruiting%20relevance%3A%0AAdditional%20context%3A%0A" class="btn-request">
         Request a Primer
       </a>
     </div>
@@ -751,7 +767,7 @@
         <h3 class="card-title">Agribusiness &amp; Food Systems</h3>
         <div class="card-desc">
           <span class="card-desc-text">The world’s largest industry by employment, undergoing its fastest technology transformation since the Green Revolution. Covers the ABCD commodity traders, precision agriculture, alternative proteins, AgTech VC, the food system value chain, climate &amp; food, and vertical farming’s rationalization.</span>
-          <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
+          <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
         </div>
         <div class="card-updated">Last Updated: <strong>May 2026</strong></div>
         <div class="card-sections">
@@ -762,12 +778,12 @@
           <span class="section-chip">Food &amp; Climate</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/agribusiness-food-systems.html">Read online</a><div class="card-footer">
           <a href="agribusiness_food_systems_primer_may2026.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-agribusiness-food-systems" class="btn-anchor" onclick="copyAnchor(event, 'card-agribusiness-food-systems')" title="Copy link">
+          <a href="#card-agribusiness-food-systems" class="btn-anchor" onclick="copyAnchor(event, 'card-agribusiness-food-systems')" title="Copy link" aria-label="Copy primer link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -783,7 +799,7 @@
         <h3 class="card-title">AI &amp; Power Demand</h3>
         <div class="card-desc">
           <span class="card-desc-text">The defining investment convergence of the late 2020s. Covers NERC's 11.6% load revision, $355B hyperscaler capex, PJM's $329/MW-day capacity price, Blackstone's BYOP model, Big Tech nuclear PPAs (TMI, Meta 6.6GW, Google Kairos), AI as grid optimizer, and supply mix across gas, nuclear, solar, and geothermal.</span>
-          <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
+          <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
         </div>
         <div class="card-updated">Last Updated: <strong>May 2026</strong></div>
         <div class="card-sections">
@@ -794,12 +810,12 @@
           <span class="section-chip">AI as Optimizer</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/ai-power-demand.html">Read online</a><div class="card-footer">
           <a href="ai_power_demand_industry_primer_may2026.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-ai-power-demand" class="btn-anchor" onclick="copyAnchor(event, 'card-ai-power-demand')" title="Copy link">
+          <a href="#card-ai-power-demand" class="btn-anchor" onclick="copyAnchor(event, 'card-ai-power-demand')" title="Copy link" aria-label="Copy primer link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -814,7 +830,7 @@
         <h3 class="card-title">Battery Storage</h3>
         <div class="card-desc">
           <span class="card-desc-text">The connective tissue of the clean energy grid. Covers lithium-ion and long-duration technology, IRA incentives, the co-location boom with solar and wind, and grid services revenue models.</span>
-          <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
+          <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
         </div>
         <div class="card-updated">Last Updated: <strong>April 2026</strong></div>
         <div class="card-sections">
@@ -825,12 +841,12 @@
           <span class="section-chip">Key Players</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/battery-storage.html">Read online</a><div class="card-footer">
           <a href="battery_storage_industry_primer.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-battery-storage" class="btn-anchor" onclick="copyAnchor(event, 'card-battery-storage')" title="Copy link">
+          <a href="#card-battery-storage" class="btn-anchor" onclick="copyAnchor(event, 'card-battery-storage')" title="Copy link" aria-label="Copy primer link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -846,7 +862,7 @@
         <h3 class="card-title">Carbon Capture & Storage</h3>
         <div class="card-desc">
           <span class="card-desc-text">The technology the IEA says makes net-zero "virtually impossible" without. Covers point-source CCS, direct air capture (DAC), the IRA's 45Q credit, Oxy's Stratos plant, ExxonMobil's Houston hub, and the CO₂ pipeline bottleneck.</span>
-          <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
+          <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
         </div>
         <div class="card-updated">Last Updated: <strong>May 2026</strong></div>
         <div class="card-sections">
@@ -857,12 +873,12 @@
           <span class="section-chip">Carbon Markets</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/carbon-capture-storage.html">Read online</a><div class="card-footer">
           <a href="carbon_capture_industry_primer_may2026.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-carbon-capture-storage" class="btn-anchor" onclick="copyAnchor(event, 'card-carbon-capture-storage')" title="Copy link">
+          <a href="#card-carbon-capture-storage" class="btn-anchor" onclick="copyAnchor(event, 'card-carbon-capture-storage')" title="Copy link" aria-label="Copy primer link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -878,7 +894,7 @@
         <h3 class="card-title">China Energy &amp; Industrial Policy</h3>
         <div class="card-desc">
           <span class="card-desc-text">The world's most consequential clean energy story and geopolitical competition simultaneously. Covers Five-Year Plans, the "New Three" export industries (EVs, solar, batteries), Belt and Road Initiative, the U.S.-China tech war, overcapacity dynamics, and what the 15th FYP (2026–2030) signals for global energy markets.</span>
-          <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
+          <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
         </div>
         <div class="card-updated">Last Updated: <strong>May 2026</strong></div>
         <div class="card-sections">
@@ -889,12 +905,12 @@
           <span class="section-chip">Solar Overcapacity</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/china-energy-industrial-policy.html">Read online</a><div class="card-footer">
           <a href="china_energy_industrial_policy_primer_may2026.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-china-energy-industrial-policy" class="btn-anchor" onclick="copyAnchor(event, 'card-china-energy-industrial-policy')" title="Copy link">
+          <a href="#card-china-energy-industrial-policy" class="btn-anchor" onclick="copyAnchor(event, 'card-china-energy-industrial-policy')" title="Copy link" aria-label="Copy primer link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -910,7 +926,7 @@
         <h3 class="card-title">ClimateTech Venture Capital</h3>
         <div class="card-desc">
           <span class="card-desc-text">The broadest investment category of the 21st century. Covers Cleantech 1.0's collapse and 2.0's structural reinvention, Sightline's six-vertical taxonomy, FOAK financing methodology, the OBBBA policy reversal, and key funds from Breakthrough Energy to Lowercarbon Capital.</span>
-          <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
+          <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
         </div>
         <div class="card-updated">Last Updated: <strong>May 2026</strong></div>
         <div class="card-sections">
@@ -921,12 +937,12 @@
           <span class="section-chip">Key Funds</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/climatetech-venture-capital.html">Read online</a><div class="card-footer">
           <a href="climatetech_vc_industry_primer_may2026.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-climatetech-venture-capital" class="btn-anchor" onclick="copyAnchor(event, 'card-climatetech-venture-capital')" title="Copy link">
+          <a href="#card-climatetech-venture-capital" class="btn-anchor" onclick="copyAnchor(event, 'card-climatetech-venture-capital')" title="Copy link" aria-label="Copy primer link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -941,7 +957,7 @@
         <h3 class="card-title">Critical Minerals</h3>
         <div class="card-desc">
           <span class="card-desc-text">The physical foundation of the energy transition, AI, and defense. Covers China's 2025 export control escalation, FEOC restrictions, lithium's 80% price collapse, and the battery recycling opportunity.</span>
-          <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
+          <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
         </div>
         <div class="card-updated">Last Updated: <strong>April 2026</strong></div>
         <div class="card-sections">
@@ -952,12 +968,12 @@
           <span class="section-chip">Geopolitics</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/critical-minerals.html">Read online</a><div class="card-footer">
           <a href="critical_minerals_industry_primer.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-critical-minerals" class="btn-anchor" onclick="copyAnchor(event, 'card-critical-minerals')" title="Copy link">
+          <a href="#card-critical-minerals" class="btn-anchor" onclick="copyAnchor(event, 'card-critical-minerals')" title="Copy link" aria-label="Copy primer link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -973,7 +989,7 @@
         <h3 class="card-title">Data Centers</h3>
         <div class="card-desc">
           <span class="card-desc-text">The defining infrastructure investment of the AI era. Covers hyperscaler capital allocation, power procurement strategies, cooling technology, site selection, and the intersection with clean energy and grid infrastructure.</span>
-          <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
+          <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
         </div>
         <div class="card-updated">Last Updated: <strong>April 2026</strong></div>
         <div class="card-sections">
@@ -984,12 +1000,12 @@
           <span class="section-chip">Grid Impact</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/data-centers.html">Read online</a><div class="card-footer">
           <a href="data_centers_industry_primer.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-data-centers" class="btn-anchor" onclick="copyAnchor(event, 'card-data-centers')" title="Copy link">
+          <a href="#card-data-centers" class="btn-anchor" onclick="copyAnchor(event, 'card-data-centers')" title="Copy link" aria-label="Copy primer link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -1004,7 +1020,7 @@
         <h3 class="card-title">Electric Vehicles</h3>
         <div class="card-desc">
           <span class="card-desc-text">The largest demand driver for critical minerals and the centerpiece of global industrial policy competition. Covers OEM strategy, battery technology, FEOC rules, charging infrastructure, and the China competitive threat.</span>
-          <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
+          <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
         </div>
         <div class="card-updated">Last Updated: <strong>April 2026</strong></div>
         <div class="card-sections">
@@ -1015,12 +1031,12 @@
           <span class="section-chip">China Competition</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/electric-vehicles.html">Read online</a><div class="card-footer">
           <a href="electric_vehicles_industry_primer.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-electric-vehicles" class="btn-anchor" onclick="copyAnchor(event, 'card-electric-vehicles')" title="Copy link">
+          <a href="#card-electric-vehicles" class="btn-anchor" onclick="copyAnchor(event, 'card-electric-vehicles')" title="Copy link" aria-label="Copy primer link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -1036,7 +1052,7 @@
         <h3 class="card-title">EnergyTech Venture Capital</h3>
         <div class="card-desc">
           <span class="card-desc-text">VC focused on the energy system stack — from clean firm power and grid software to storage and energy marketplaces. Covers the utility LP model (Energy Impact Partners), corporate VC distinctions, AI-energy convergence, geothermal renaissance, and the OBBBA's selective preservation of energy provisions.</span>
-          <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
+          <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
         </div>
         <div class="card-updated">Last Updated: <strong>May 2026</strong></div>
         <div class="card-sections">
@@ -1047,12 +1063,12 @@
           <span class="section-chip">Grid Services</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/energytech-venture-capital.html">Read online</a><div class="card-footer">
           <a href="energytech_vc_industry_primer_may2026.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-energytech-venture-capital" class="btn-anchor" onclick="copyAnchor(event, 'card-energytech-venture-capital')" title="Copy link">
+          <a href="#card-energytech-venture-capital" class="btn-anchor" onclick="copyAnchor(event, 'card-energytech-venture-capital')" title="Copy link" aria-label="Copy primer link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -1067,7 +1083,7 @@
         <h3 class="card-title">Geothermal Energy</h3>
         <div class="card-desc">
           <span class="card-desc-text">The only renewable that delivers 24/7 baseload power. Covers the EGS commercial breakthrough, Fervo's Cape Station, Google and Meta's hyperscaler procurement, and the DOE's 90 GW potential by 2050.</span>
-          <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
+          <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
         </div>
         <div class="card-updated">Last Updated: <strong>April 2026</strong></div>
         <div class="card-sections">
@@ -1078,12 +1094,12 @@
           <span class="section-chip">Geography</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/geothermal-energy.html">Read online</a><div class="card-footer">
           <a href="geothermal_energy_industry_primer.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-geothermal-energy" class="btn-anchor" onclick="copyAnchor(event, 'card-geothermal-energy')" title="Copy link">
+          <a href="#card-geothermal-energy" class="btn-anchor" onclick="copyAnchor(event, 'card-geothermal-energy')" title="Copy link" aria-label="Copy primer link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -1099,7 +1115,7 @@
         <h3 class="card-title">Grid Software &amp; Virtual Power Plants</h3>
         <div class="card-desc">
           <span class="card-desc-text">The intelligence layer of the 21st century grid. Covers FERC Order 2222 (the landmark DER aggregation rule), California's 42 GW VPP, the full grid software stack (DERMS, ADMS, VPP aggregation), AutoGrid/Voltus/Leap/Next Kraftwerke, V2G, AI forecasting, and the $13.56B market by 2030.</span>
-          <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
+          <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
         </div>
         <div class="card-updated">Last Updated: <strong>May 2026</strong></div>
         <div class="card-sections">
@@ -1110,12 +1126,12 @@
           <span class="section-chip">V2G</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/grid-software-vpp.html">Read online</a><div class="card-footer">
           <a href="grid_software_vpp_primer_may2026.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-grid-software-vpp" class="btn-anchor" onclick="copyAnchor(event, 'card-grid-software-vpp')" title="Copy link">
+          <a href="#card-grid-software-vpp" class="btn-anchor" onclick="copyAnchor(event, 'card-grid-software-vpp')" title="Copy link" aria-label="Copy primer link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -1130,7 +1146,7 @@
         <h3 class="card-title">Hydrogen Energy</h3>
         <div class="card-desc">
           <span class="card-desc-text">The most hyped and most challenged clean energy technology. Covers the full color taxonomy, IRA 45V additionality rules, green vs. blue hydrogen economics, ammonia as the near-term killer app, and the $2/kg cost target.</span>
-          <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
+          <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
         </div>
         <div class="card-updated">Last Updated: <strong>May 2026</strong></div>
         <div class="card-sections">
@@ -1141,12 +1157,12 @@
           <span class="section-chip">H2 Hubs</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/hydrogen-energy.html">Read online</a><div class="card-footer">
           <a href="hydrogen_energy_industry_primer_may2026.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-hydrogen-energy" class="btn-anchor" onclick="copyAnchor(event, 'card-hydrogen-energy')" title="Copy link">
+          <a href="#card-hydrogen-energy" class="btn-anchor" onclick="copyAnchor(event, 'card-hydrogen-energy')" title="Copy link" aria-label="Copy primer link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -1162,7 +1178,7 @@
         <h3 class="card-title">Infrastructure Investing</h3>
         <div class="card-desc">
           <span class="card-desc-text">The $1.6 trillion asset class that underpins the energy transition and AI buildout. Covers fund structure, LP/GP dynamics, the full risk-return spectrum (Core to Opportunistic), key fund managers, project finance mechanics, and career paths.</span>
-          <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
+          <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
         </div>
         <div class="card-updated">Last Updated: <strong>May 2026</strong></div>
         <div class="card-sections">
@@ -1175,7 +1191,7 @@
         </div>
         <div class="card-footer">
           <span class="coming-badge">Coming Soon</span>
-          <a href="#card-infrastructure-investing" class="btn-anchor" onclick="copyAnchor(event, 'card-infrastructure-investing')" title="Copy link">
+          <a href="#card-infrastructure-investing" class="btn-anchor" onclick="copyAnchor(event, 'card-infrastructure-investing')" title="Copy link" aria-label="Copy primer link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -1190,7 +1206,7 @@
         <h3 class="card-title">Mining &amp; Metals</h3>
         <div class="card-desc">
           <span class="card-desc-text">The physical foundation of the energy transition. Covers copper, lithium, nickel, cobalt, and rare earths — the full value chain from exploration to end-use, streaming and royalty finance, China’s refining dominance, permitting crisis, key majors (BHP, Rio, Glencore), and the 2025 M&A cycle including BHP–Anglo American and Rio–Arcadium.</span>
-          <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
+          <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
         </div>
         <div class="card-updated">Last Updated: <strong>May 2026</strong></div>
         <div class="card-sections">
@@ -1201,12 +1217,12 @@
           <span class="section-chip">China Processing</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/mining-metals.html">Read online</a><div class="card-footer">
           <a href="mining_metals_industry_primer_may2026.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-mining-metals" class="btn-anchor" onclick="copyAnchor(event, 'card-mining-metals')" title="Copy link">
+          <a href="#card-mining-metals" class="btn-anchor" onclick="copyAnchor(event, 'card-mining-metals')" title="Copy link" aria-label="Copy primer link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -1221,7 +1237,7 @@
         <h3 class="card-title">Natural Gas & LNG</h3>
         <div class="card-desc">
           <span class="card-desc-text">The most geopolitically contested commodity since crude oil. Covers the Qatar Ras Laffan attack, U.S. record exports (18.4 Bcf/d), Europe's pivot from Russian gas, the Strait of Hormuz disruption, and AI data centers as the new domestic demand driver.</span>
-          <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
+          <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
         </div>
         <div class="card-updated">Last Updated: <strong>May 2026</strong></div>
         <div class="card-sections">
@@ -1232,12 +1248,12 @@
           <span class="section-chip">Project Finance</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/natural-gas-lng.html">Read online</a><div class="card-footer">
           <a href="natural_gas_lng_industry_primer.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-natural-gas-lng" class="btn-anchor" onclick="copyAnchor(event, 'card-natural-gas-lng')" title="Copy link">
+          <a href="#card-natural-gas-lng" class="btn-anchor" onclick="copyAnchor(event, 'card-natural-gas-lng')" title="Copy link" aria-label="Copy primer link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -1252,7 +1268,7 @@
         <h3 class="card-title">Nuclear Energy</h3>
         <div class="card-desc">
           <span class="card-desc-text">The original firm zero-carbon power source, now experiencing a policy and investment renaissance. Covers SMR technology, hyperscaler procurement, the fleet restart debate, and uranium supply chains.</span>
-          <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
+          <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
         </div>
         <div class="card-updated">Last Updated: <strong>April 2026</strong></div>
         <div class="card-sections">
@@ -1263,12 +1279,12 @@
           <span class="section-chip">Key Players</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/nuclear-energy.html">Read online</a><div class="card-footer">
           <a href="nuclear_energy_industry_primer.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-nuclear-energy" class="btn-anchor" onclick="copyAnchor(event, 'card-nuclear-energy')" title="Copy link">
+          <a href="#card-nuclear-energy" class="btn-anchor" onclick="copyAnchor(event, 'card-nuclear-energy')" title="Copy link" aria-label="Copy primer link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -1283,7 +1299,7 @@
         <h3 class="card-title">Offshore Wind Energy</h3>
         <div class="card-desc">
           <span class="card-desc-text">The most capital-intensive renewable — turbines taller than the Eiffel Tower planted in the ocean. Covers floating wind technology, the Jones Act bottleneck, Ørsted's recovery, Europe's record auctions, and the U.S. policy disruption.</span>
-          <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
+          <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
         </div>
         <div class="card-updated">Last Updated: <strong>May 2026</strong></div>
         <div class="card-sections">
@@ -1294,12 +1310,12 @@
           <span class="section-chip">Key Players</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/offshore-wind-energy.html">Read online</a><div class="card-footer">
           <a href="offshore_wind_industry_primer_may2026.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-offshore-wind-energy" class="btn-anchor" onclick="copyAnchor(event, 'card-offshore-wind-energy')" title="Copy link">
+          <a href="#card-offshore-wind-energy" class="btn-anchor" onclick="copyAnchor(event, 'card-offshore-wind-energy')" title="Copy link" aria-label="Copy primer link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -1314,7 +1330,7 @@
         <h3 class="card-title">Oil &amp; Petroleum</h3>
         <div class="card-desc">
           <span class="card-desc-text">The world's most important and most contested commodity. Covers the full history from Spindletop to shale, OPEC+ cartel mechanics, the Permian Basin's dominance, supermajor capital allocation strategies, the Strait of Hormuz crisis (2026, $117/b Brent), oil price drivers, stranded asset risk, and upstream PE and trading careers.</span>
-          <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
+          <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
         </div>
         <div class="card-updated">Last Updated: <strong>May 2026</strong></div>
         <div class="card-sections">
@@ -1325,12 +1341,12 @@
           <span class="section-chip">Price Drivers</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/oil-petroleum.html">Read online</a><div class="card-footer">
           <a href="oil_petroleum_industry_primer_may2026.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-oil-petroleum" class="btn-anchor" onclick="copyAnchor(event, 'card-oil-petroleum')" title="Copy link">
+          <a href="#card-oil-petroleum" class="btn-anchor" onclick="copyAnchor(event, 'card-oil-petroleum')" title="Copy link" aria-label="Copy primer link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -1345,7 +1361,7 @@
         <h3 class="card-title">Onshore Wind Energy</h3>
         <div class="card-desc">
           <span class="card-desc-text">The lowest-cost source of new electricity in most markets. Covers the IRA's capital stack transformation, federal permitting headwinds, AI data center PPAs, and the interconnection bottleneck.</span>
-          <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
+          <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
         </div>
         <div class="card-updated">Last Updated: <strong>April 2026</strong></div>
         <div class="card-sections">
@@ -1356,12 +1372,12 @@
           <span class="section-chip">Trump EO</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/onshore-wind-energy.html">Read online</a><div class="card-footer">
           <a href="onshore_wind_industry_primer_final.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-onshore-wind-energy" class="btn-anchor" onclick="copyAnchor(event, 'card-onshore-wind-energy')" title="Copy link">
+          <a href="#card-onshore-wind-energy" class="btn-anchor" onclick="copyAnchor(event, 'card-onshore-wind-energy')" title="Copy link" aria-label="Copy primer link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -1377,7 +1393,7 @@
         <h3 class="card-title">Private Equity in Energy & Infrastructure</h3>
         <div class="card-desc">
           <span class="card-desc-text">How the three PE strategies — Infrastructure PE, Energy Buyout PE, and Mega-Fund — operate across the energy stack. Covers LBO mechanics, tax equity and credit transfer structures, the capital stack toolkit, Blackstone's BYOP data center model, and the OBBBA's Section 163(j) EBITDA reversion.</span>
-          <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
+          <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
         </div>
         <div class="card-updated">Last Updated: <strong>May 2026</strong></div>
         <div class="card-sections">
@@ -1388,12 +1404,12 @@
           <span class="section-chip">OBBBA Impact</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/private-equity-in-energy-infrastructure.html">Read online</a><div class="card-footer">
           <a href="pe_energy_infrastructure_primer_may2026.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-private-equity-in-energy-infrastructure" class="btn-anchor" onclick="copyAnchor(event, 'card-private-equity-in-energy-infrastructure')" title="Copy link">
+          <a href="#card-private-equity-in-energy-infrastructure" class="btn-anchor" onclick="copyAnchor(event, 'card-private-equity-in-energy-infrastructure')" title="Copy link" aria-label="Copy primer link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -1409,7 +1425,7 @@
         <h3 class="card-title">Project Finance</h3>
         <div class="card-desc">
           <span class="card-desc-text">The foundational financing structure for every major energy and infrastructure asset. Covers DSCR, LLCR, and PLCR; debt sculpting mechanics; the capital structure waterfall (senior, mezz, tax equity, equity); EPC/O&M/offtake contract architecture; lead arranger banks; DOE LPO; and the $1.17T global PF market in 2025.</span>
-          <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
+          <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
         </div>
         <div class="card-updated">Last Updated: <strong>May 2026</strong></div>
         <div class="card-sections">
@@ -1420,12 +1436,12 @@
           <span class="section-chip">DOE LPO</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/project-finance.html">Read online</a><div class="card-footer">
           <a href="project_finance_primer_may2026.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-project-finance" class="btn-anchor" onclick="copyAnchor(event, 'card-project-finance')" title="Copy link">
+          <a href="#card-project-finance" class="btn-anchor" onclick="copyAnchor(event, 'card-project-finance')" title="Copy link" aria-label="Copy primer link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -1440,7 +1456,7 @@
         <h3 class="card-title">Semiconductors & AI Chips</h3>
         <div class="card-desc">
           <span class="card-desc-text">The foundational physical layer of the AI economy. Covers NVIDIA's 5× revenue surge, TSMC's 72% market monopoly, ASML's EUV chokehold, the U.S.-China chip war, HBM memory bottlenecks, the CHIPS Act, and the custom ASIC threat to NVIDIA's dominance.</span>
-          <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
+          <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
         </div>
         <div class="card-updated">Last Updated: <strong>May 2026</strong></div>
         <div class="card-sections">
@@ -1453,7 +1469,7 @@
         </div>
         <div class="card-footer">
           <span class="coming-badge">Coming Soon</span>
-          <a href="#card-semiconductors-ai-chips" class="btn-anchor" onclick="copyAnchor(event, 'card-semiconductors-ai-chips')" title="Copy link">
+          <a href="#card-semiconductors-ai-chips" class="btn-anchor" onclick="copyAnchor(event, 'card-semiconductors-ai-chips')" title="Copy link" aria-label="Copy primer link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -1468,7 +1484,7 @@
         <h3 class="card-title">Solar Energy</h3>
         <div class="card-desc">
           <span class="card-desc-text">The world's fastest-growing electricity source. Covers the IRA's manufacturing renaissance, the One Big Beautiful Bill's policy reversal, tariff escalation, and AI data center demand as the next tailwind.</span>
-          <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
+          <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
         </div>
         <div class="card-updated">Last Updated: <strong>April 2026</strong></div>
         <div class="card-sections">
@@ -1479,12 +1495,12 @@
           <span class="section-chip">Trends</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/solar-energy.html">Read online</a><div class="card-footer">
           <a href="solar_energy_industry_primer.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-solar-energy" class="btn-anchor" onclick="copyAnchor(event, 'card-solar-energy')" title="Copy link">
+          <a href="#card-solar-energy" class="btn-anchor" onclick="copyAnchor(event, 'card-solar-energy')" title="Copy link" aria-label="Copy primer link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -1500,7 +1516,7 @@
         <h3 class="card-title">Transmission & Grid Infrastructure</h3>
         <div class="card-desc">
           <span class="card-desc-text">The most underappreciated bottleneck in the energy transition. Covers the 2,000+ GW interconnection queue, $470B in global grid investment, FERC Orders 2023 and 1920, HVDC technology, the transformer shortage, and grid-enhancing technologies.</span>
-          <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
+          <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
         </div>
         <div class="card-updated">Last Updated: <strong>May 2026</strong></div>
         <div class="card-sections">
@@ -1511,12 +1527,12 @@
           <span class="section-chip">Transformers</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/transmission-grid-infrastructure.html">Read online</a><div class="card-footer">
           <a href="transmission_grid_industry_primer_may2026.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-transmission-grid-infrastructure" class="btn-anchor" onclick="copyAnchor(event, 'card-transmission-grid-infrastructure')" title="Copy link">
+          <a href="#card-transmission-grid-infrastructure" class="btn-anchor" onclick="copyAnchor(event, 'card-transmission-grid-infrastructure')" title="Copy link" aria-label="Copy primer link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -1532,7 +1548,7 @@
         <h3 class="card-title">U.S. Energy Policy</h3>
         <div class="card-desc">
           <span class="card-desc-text">The most rapidly shifting policy environment in the American economy. Covers the IRA-to-OBBBA sequence ($369B enacted, $496B reversed), FERC institutional framework, ISO/RTO market structure, the 2,600 GW interconnection crisis, AI power demand surge, and state vs. federal policy interplay.</span>
-          <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
+          <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
         </div>
         <div class="card-updated">Last Updated: <strong>May 2026</strong></div>
         <div class="card-sections">
@@ -1543,12 +1559,12 @@
           <span class="section-chip">State Policy</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/us-energy-policy.html">Read online</a><div class="card-footer">
           <a href="us_energy_policy_primer_may2026.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-us-energy-policy" class="btn-anchor" onclick="copyAnchor(event, 'card-us-energy-policy')" title="Copy link">
+          <a href="#card-us-energy-policy" class="btn-anchor" onclick="copyAnchor(event, 'card-us-energy-policy')" title="Copy link" aria-label="Copy primer link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -1563,7 +1579,7 @@
         <h3 class="card-title">Water Infrastructure</h3>
         <div class="card-desc">
           <span class="card-desc-text">The most essential and most underfunded sector in the global economy. Covers the $7T global funding gap, PFAS "forever chemicals" and the $80B+ remediation market, desalination, the American Water Works merger, water rights markets, and why the Hormuz crisis exposed water-energy interdependence in the Gulf.</span>
-          <button class="read-more-btn" onclick="toggleDesc(this)">Show more</button>
+          <button class="read-more-btn" aria-expanded="false" onclick="toggleDesc(this)">Show more</button>
         </div>
         <div class="card-updated">Last Updated: <strong>May 2026</strong></div>
         <div class="card-sections">
@@ -1574,12 +1590,12 @@
           <span class="section-chip">Climate & Scarcity</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <div class="card-footer">
+        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/water-infrastructure.html">Read online</a><div class="card-footer">
           <a href="water_infrastructure_primer_may2026.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-water-infrastructure" class="btn-anchor" onclick="copyAnchor(event, 'card-water-infrastructure')" title="Copy link">
+          <a href="#card-water-infrastructure" class="btn-anchor" onclick="copyAnchor(event, 'card-water-infrastructure')" title="Copy link" aria-label="Copy primer link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -1661,6 +1677,7 @@
     // Checkmarks
     document.querySelectorAll('.dropdown-item').forEach(item => {
       const cat = item.dataset.cat;
+      item.setAttribute('aria-pressed', String(cat === 'all' ? activeFilters.size === 0 : activeFilters.has(cat)));
       if (cat === 'all') {
         item.classList.toggle('selected', activeFilters.size === 0);
       } else {
@@ -1687,9 +1704,12 @@
     if (!container) return;
     container.innerHTML = '';
     activeFilters.forEach(cat => {
-      const pill = document.createElement('span');
+      const pill = document.createElement('button');
+      pill.type = 'button';
+      pill.setAttribute('aria-label', 'Remove ' + cat + ' filter');
+      pill.onclick = () => removeFilter(cat);
       pill.className = 'filter-pill';
-      pill.innerHTML = labels[cat] + ' <span class="filter-pill-x" onclick="removeFilter(\'' + cat + '\')">&#215;</span>';
+      pill.textContent = labels[cat] + ' ×';
       container.appendChild(pill);
     });
   }
@@ -1699,6 +1719,7 @@
     const btn = document.getElementById('filterBtn');
     const ch  = document.getElementById('chevron');
     const open = dd.classList.toggle('open');
+    btn.setAttribute('aria-expanded', String(open));
     ch.classList.toggle('open', open);
     // Keep active style if filters selected
     btn.classList.toggle('active', open || activeFilters.size > 0);
@@ -1707,6 +1728,7 @@
   document.addEventListener('click', e => {
     if (!e.target.closest('.filter-wrap') && !e.target.closest('#activeFilterPills')) {
       document.getElementById('dropdown').classList.remove('open');
+      document.getElementById('filterBtn').setAttribute('aria-expanded', 'false');
       document.getElementById('chevron').classList.remove('open');
       if (activeFilters.size === 0) document.getElementById('filterBtn').classList.remove('active');
     }
@@ -1759,6 +1781,7 @@
     const el = btn.previousElementSibling;
     const expanded = el.classList.toggle('expanded');
     btn.textContent = expanded ? 'Show less' : 'Show more';
+    btn.setAttribute('aria-expanded', String(expanded));
   }
 
   // ── Anchor / copy link ──────────────────────────────────────────────────────
@@ -1795,17 +1818,19 @@
     }
   }
 
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') { document.getElementById('dropdown').classList.remove('open'); document.getElementById('filterBtn').setAttribute('aria-expanded','false'); document.getElementById('chevron').classList.remove('open'); document.getElementById('filterBtn').focus(); } });
+
   // ── On load ─────────────────────────────────────────────────────────────────
   window.addEventListener('load', () => {
     applyFilters();
     syncDropdownUI(); // initialise "All Primers" as selected
     if (location.hash) {
-      const el = document.querySelector(location.hash);
+      const el = document.getElementById(decodeURIComponent(location.hash.slice(1)));
       if (el) setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 200);
     }
   });
 </script>
 
-<div class="copy-toast"></div>
+<div class="copy-toast" role="status"></div>
 </body>
 </html>

@@ -7,14 +7,38 @@ permissions:
   contents: read
 jobs:
   library-checks:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - run: python scripts/build_legacy_readers.py
+      - run: git diff --exit-code -- read/
       - run: python scripts/check_config.py
+      - run: python scripts/sync_intake_links.py --check
       - run: python scripts/check_site.py
       - run: python scripts/check_legacy.py
       - run: python scripts/check_research.py
       - run: python -m unittest discover -s tests -v
+  browser-checks:
+    runs-on: ubuntu-24.04
+    env:
+      BROWSER_CHANNEL: chrome
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-save playwright@1.56.1 @axe-core/playwright@4.10.2
+      # Ubuntu's hosted runner includes Chrome and its system dependencies.
+      - run: google-chrome --version
+      - run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 &
+          node scripts/browser_checks.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: browser-screenshots
+          path: work/screenshots/
