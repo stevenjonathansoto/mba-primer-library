@@ -9,7 +9,7 @@ verification, rendered content CI and the controlled benchmark are complete.
 
 1. In Settings → Rules → Rulesets, create an active branch ruleset for main.
 2. Require pull requests and status checks. After the validation workflow has
-   run, select `library-checks`. Require branches to be up to date. Block
+   run, select `library-checks`, `browser-checks` and `rendered-documents`. Require branches to be up to date. Block
    force pushes and deletion. Apply rules to administrators without bypass.
 3. In Settings → General → Pull Requests, enable Allow auto-merge. Enable squash
    merge. Never use an immediate merge merely because no checks are reported.

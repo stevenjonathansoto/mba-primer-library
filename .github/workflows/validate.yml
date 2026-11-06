@@ -19,6 +19,7 @@ jobs:
       - run: python scripts/check_config.py
       - run: python scripts/sync_intake_links.py --check
       - run: python scripts/check_site.py
+      - run: python scripts/check_links.py
       - run: python scripts/check_legacy.py
       - run: python scripts/check_research.py
       - run: python -m unittest discover -s tests -v
