@@ -14,3 +14,5 @@ body{background:#fff;color:#293238}header{background:#fff;border-bottom:0}.heade
 .primer-card:has(.learning-link) .card-updated{display:none}
 .primer-card .legacy-status{margin:6px 0 0}
 .primer-card:has(.card-open):hover,.primer-card:focus-within{background:#f4f7f4}
+
+.header-inner .header-title{font-size:clamp(.875rem,3.8vw,2.625rem)}
