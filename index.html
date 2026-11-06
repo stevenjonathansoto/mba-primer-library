@@ -753,7 +753,7 @@
     <label for="formatFilter">Learning format<select id="formatFilter" onchange="applyFilters()"><option value="">All content</option><option value="three">Three-format learning</option><option value="legacy">Original online primers</option><option value="soon">Coming soon</option></select></label>
     <button class="reset-discovery" onclick="resetDiscovery()">Clear all filters</button>
   </div>
-  <p class="discovery-note">1 three-format learning edition · 25 original primers · 2 coming soon. Original edition dates are not verification dates. Recruiting filters are editorial topic groupings, not employer recommendations.</p>
+  <p class="discovery-note">2 three-format learning editions · 25 original primers · 2 coming soon. Original edition dates are not verification dates. Recruiting filters are editorial topic groupings, not employer recommendations.</p>
   <div class="section-header">
     <h2 class="section-title">Available Primers</h2>
     <div style="display:flex; align-items:center; gap:16px;">
@@ -1446,7 +1446,7 @@
           <span class="section-chip">DOE LPO</span>
           <span class="section-chip">Interview Starters</span>
         </div>
-        <p class="legacy-status">Legacy edition · Verification pending</p><a class="read-online" href="read/project-finance.html">Read online</a><div class="card-footer">
+        <p class="legacy-status">Learning edition · Sources reviewed November 6, 2026</p><a class="learning-link" href="learn/project-finance.html">Open three-format learning →</a><a href="learn/project-finance.docx" download>Download new edition</a><a class="read-online" href="read/project-finance.html">Read original edition</a><div class="card-footer">
           <a href="project_finance_primer_may2026.docx" download class="btn-download">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
@@ -1656,7 +1656,7 @@
       const careerCats = {banking:['finance','infrastructure','energy'],pe:['finance','infrastructure'],infrastructure:['infrastructure','energy'],vc:['technology','decarbonization','agriculture'],strategy:['energy','materials','technology','geopolitics','policy','agriculture']};
       const matchCareer = !career || cardCats.some(c => careerCats[career].includes(c));
       const format = document.getElementById('formatFilter').value;
-      const isLearning = card.id === 'card-water-infrastructure';
+      const isLearning = !!card.querySelector('.learning-link');
       const available = !!card.querySelector('a[download]');
       const matchFormat = !format || (format === 'three' && isLearning) || (format === 'legacy' && available) || (format === 'soon' && !available);
       const visible = matchSearch && matchFilter && matchCareer && matchFormat;

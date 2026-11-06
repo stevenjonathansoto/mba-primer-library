@@ -27,7 +27,7 @@ const AxeBuilder=require('@axe-core/playwright').default;
   if(!await page.locator('#card-solar-energy').isVisible())throw Error('search failed');
   await page.locator('#searchInput').fill('');
   await page.locator('#formatFilter').selectOption('three');
-  if(await page.locator('.primer-card:not(.hidden)').count()!==1 || !await page.locator('#card-water-infrastructure').isVisible())throw Error('learning format filter failed');
+  if(await page.locator('.primer-card:not(.hidden)').count()!==2 || !await page.locator('#card-water-infrastructure').isVisible() || !await page.locator('#card-project-finance').isVisible())throw Error('learning format filter failed');
   await page.locator('#formatFilter').selectOption('soon');
   if(await page.locator('.primer-card:not(.hidden)').count()!==2)throw Error('coming soon filter failed');
   await page.locator('#formatFilter').selectOption('');
@@ -90,6 +90,24 @@ const AxeBuilder=require('@axe-core/playwright').default;
   await page.emulateMedia({media:'print'});
   if(!await page.locator('.value-chain').isVisible() || !await page.locator('.cash-flow').isVisible())throw Error('print lost figures');
   await page.emulateMedia({media:'screen'});
+  await page.goto('http://127.0.0.1:8765/learn/project-finance.html');
+  for(const mode of ['brief','full','interview']) {
+   await page.locator('#tab-'+mode).click();
+   if(await page.locator('.format-panel:visible').count()!==1)throw Error('project finance tabs');
+   if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth))throw Error('project finance overflow');
+   const audit=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();
+   if(audit.violations.length)throw Error(JSON.stringify(audit.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)}))));
+  }
+  if(await page.locator('#interview .question').count()!==12)throw Error('project finance questions missing');
+  await page.locator('#tab-brief').click();
+  await page.locator('#brief .claim').first().click();
+  if(await page.locator('#evidence').getAttribute('open')===null)throw Error('project finance source drilldown');
+  await page.goto('http://127.0.0.1:8765/learn/project-finance.html');
+  await page.screenshot({path:`work/screenshots/project-finance-${width}.png`,fullPage:false});
+  for(const figure of ['project-capital','project-waterfall','project-risk']) {
+   await page.locator('.'+figure).screenshot({path:`work/screenshots/${figure}-${width}.png`});
+  }
+
  }
  await browser.close();
  if(errors.length)throw Error(errors.join('\n'));

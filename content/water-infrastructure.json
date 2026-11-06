@@ -356,5 +356,11 @@
     "Distinguish a proposed deadline change from a final requirement, and date the claim.",
     "Essential demand does not guarantee attractive investor returns.",
     "Ask which part of the investment thesis is hardest to validate, then explore a concrete example."
-  ]
+  ],
+  "visuals": {
+    "intro": "water-chain",
+    "sections": {
+      "Higher operating costs leave less cash for debt payments": "water-cash"
+    }
+  }
 }
