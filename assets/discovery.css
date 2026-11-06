@@ -13,3 +13,4 @@ body{background:#fff;color:#293238}header{background:#fff;border-bottom:0}.heade
 .primer-card .card-open:focus-visible::after{outline:3px solid #315a45;outline-offset:2px}
 .primer-card:has(.learning-link) .card-updated{display:none}
 .primer-card .legacy-status{margin:6px 0 0}
+.primer-card:has(.card-open):hover,.primer-card:focus-within{background:#f4f7f4}
