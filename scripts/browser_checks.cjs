@@ -10,6 +10,7 @@ const AxeBuilder=require('@axe-core/playwright').default;
  for(const width of [1440,375]){
   await page.setViewportSize({width,height:900});
   await page.goto('http://127.0.0.1:8765/');
+  await page.evaluate(async()=>{await document.fonts.ready; await Promise.all(document.getAnimations().map(a=>a.finished));});
   const accessibility=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();
   if(accessibility.violations.length)throw Error(JSON.stringify(accessibility.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)}))));
   await page.screenshot({path:`work/screenshots/library-${width}.png`,fullPage:false});
