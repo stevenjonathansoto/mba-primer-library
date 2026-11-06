@@ -26,6 +26,6 @@ class ProjectLearningTests(unittest.TestCase):
         self.assertTrue(700<=sum(len(p.split()) for _,p in data['brief'])<=1100)
         self.assertNotIn('Follow the water',page)
         self.assertIn('title=Project%20Finance%20learning%20edition',page)
-        self.assertIn('../read/project-finance.html',page)
+        self.assertNotIn('../read/project-finance.html',page)
 
 if __name__=='__main__':unittest.main()
