@@ -1,0 +1,317 @@
+{
+  "status": "source-reviewed-learning-edition",
+  "reviewed": "2026-11-06",
+  "title": "Water Infrastructure",
+  "scope": "U.S. water utility economics, capital allocation and recruiting. Source-linked facts were checked against the listed primary pages; analytical frameworks and hypothetical examples are labeled. This is not a comprehensive legal or investment review.",
+  "sources": [
+    {
+      "id": "treatment",
+      "publisher": "CDC",
+      "title": "How Water Treatment Works",
+      "url": "https://www.cdc.gov/drinking-water/about/how-water-treatment-works.html",
+      "date": "2024-02-06",
+      "claim": "Utilities commonly use coagulation, flocculation, sedimentation, filtration and disinfection.",
+      "excerpt": "coagulation, flocculation, sedimentation, filtration, and disinfection",
+      "sections": [
+        "brief",
+        "value-chain",
+        "interview"
+      ]
+    },
+    {
+      "id": "funding",
+      "publisher": "U.S. EPA",
+      "title": "Financing Water Infrastructure",
+      "url": "https://www.epa.gov/sustainable-water-infrastructure/financing-water-infrastructure",
+      "date": "2026-03-09",
+      "claim": "Infrastructure renewal requires cost recovery, debt management and affordability considerations.",
+      "excerpt": "while managing long-term debt and ensuring that services remain affordable",
+      "sections": [
+        "brief",
+        "economics",
+        "recruiting"
+      ]
+    },
+    {
+      "id": "efficiency",
+      "publisher": "U.S. EPA",
+      "title": "Water Efficiency for Water Suppliers",
+      "url": "https://www.epa.gov/sustainable-water-infrastructure/water-efficiency-water-suppliers",
+      "date": "2026-03-09",
+      "claim": "Efficiency can reduce pumping and treatment costs and postpone supply expansion; desalination residuals need disposal.",
+      "excerpt": "Improving water efficiency reduces operating costs",
+      "sections": [
+        "brief",
+        "technology",
+        "interview"
+      ]
+    },
+    {
+      "id": "wifia",
+      "publisher": "U.S. EPA",
+      "title": "WIFIA Benefits and Flexibilities",
+      "url": "https://www.epa.gov/wifia/wifia-benefits-and-flexibilities",
+      "date": null,
+      "claim": "WIFIA can combine with SRF loans, grants and bonds; repayment may extend up to 35 years after completion, with deferral up to five years.",
+      "excerpt": "repayment terms of up to 35 years after project completion",
+      "sections": [
+        "financing",
+        "interview"
+      ]
+    },
+    {
+      "id": "rate-case",
+      "publisher": "American Water",
+      "title": "2025 Annual Report, PDF page 93 / report page 81",
+      "url": "https://s26.q4cdn.com/750150140/files/doc_financials/2025/ar/American-Water-2025-Annual-Report.pdf#page=93",
+      "date": "2025 reporting year",
+      "claim": "The disclosed Illinois rate case used 9.84% authorized ROE, $2.2 billion rate base and a 49% equity component; these are historical case inputs, not current sector averages.",
+      "excerpt": "return on equity of 9.84%, authorized rate base of $2.2 billion",
+      "sections": [
+        "market",
+        "economics",
+        "interview"
+      ]
+    },
+    {
+      "id": "pfas",
+      "publisher": "U.S. EPA",
+      "title": "Proposed PFOA and PFOS Compliance Extension Rule",
+      "url": "https://www.epa.gov/sdwa/proposed-pfoa-and-pfos-compliance-extension-rule",
+      "date": "2026-05-18 announcement",
+      "claim": "EPA describes a proposal allowing systems to request two additional compliance years to 2031; the page does not establish a universal final 2031 deadline.",
+      "excerpt": "proposed rule",
+      "sections": [
+        "policy",
+        "brief",
+        "interview"
+      ]
+    }
+  ],
+  "brief": [
+    [
+      "What the industry does",
+      "Water infrastructure turns source water into a dependable service and handles water after use. The treatment train can include coagulation, flocculation, sedimentation, filtration and disinfection. [treatment] For an MBA, the useful starting point is the business boundary: an owner of pipes and plants, a contracted operator, and a supplier of equipment are different businesses. A funding need is not a revenue forecast. Identify the customer, the payer and the decision maker before judging an opportunity."
+    ],
+    [
+      "Value chain and competitive landscape",
+      "Follow source water through treatment, distribution and metering, then consider wastewater collection, treatment and reuse. This is a simplified analytical map, not a universal plant design. Competition should be analyzed at the relevant level: a utility transaction, an operating contract, or a technology procurement. Ask whether a supplier is competing on lifecycle cost, reliability, installation capability or service. American Water provides a concrete regulated-utility case study in its annual report; its rate-case inputs are specific to jurisdictions and decisions, not sector-wide benchmarks. [rate-case]"
+    ],
+    [
+      "How companies make money",
+      "Use three analytical categories. A utility recovers approved costs and a return through its applicable tariff arrangements. A contracted asset depends on the payment and risk-allocation terms of its agreement. A supplier depends on product economics and customer purchasing behavior. For each, map cash receipts against operating expenses, investment and financing. EPA frames infrastructure finance around cost recovery, debt management and affordability. [funding] The implication for diligence is simple: essential service does not remove the need to prove the cash-flow mechanism."
+    ],
+    [
+      "The financial drivers to understand",
+      "Begin with capital expenditure, operating efficiency, financing cost and the timing of recovery. In a deliberately simplified example, $100 million of eligible rate base financed with 50% equity at a 10% allowed equity return implies $5 million of annual equity return before the adjustments omitted from the example. It does not imply $10 million of equity earnings or a 10% investor IRR. Next investigate construction timing, depreciation, taxes and regulatory lag. This is an educational calculation, not a forecast or a claim about an actual utility. A useful next step is a downside bridge: hold revenue constant, increase operating expense, delay recovery and show the effect on cash. Explain which changes are assumptions and which are supported by a tariff, contract or filing."
+    ],
+    [
+      "Trends with commercial consequences",
+      "Efficiency can lower pumping and treatment costs and defer supply expansion. [efficiency] To evaluate a leak-detection proposal, compare the complete implementation cost with avoidable operating expense, recovered billable volumes where relevant, and the value of deferred capacity. Do not count the same benefit twice. For reuse or desalination, assess the local alternative, operating requirements and disposal obligations. Treat technology adoption as a customer decision with constraints, not an automatic response to a large addressable market. A successful pilot should lead to measurable performance and a workable purchasing process."
+    ],
+    [
+      "Policy and evidence discipline",
+      "Read the status of a rule as carefully as its headline. The EPA page reviewed here describes a proposed option to request additional PFOA/PFOS compliance time to 2031; it is not evidence of a universal final deadline. [pfas] In an interview, explain how uncertain timing affects procurement and capital planning without presenting the proposal as settled law. The original May 2026 download is retained separately for continuity. This edition avoids carrying forward its unverified market totals, transaction claims and deadline statements."
+    ],
+    [
+      "Five recruiting takeaways",
+      "1. Start with who pays: customer tariffs, a contracted buyer or an equipment customer. 2. Separate allowed return from realized earnings and your acquisition return. 3. Underwrite cash timing as carefully as total spending. 4. Translate technology into an operational result and a procurement case. 5. State what evidence would change your conclusion. For banking, connect the thesis to financing and transaction structure; for infrastructure or PE, focus on downside protection and execution; for VC and strategy, focus on adoption and unit economics. These are analytical perspectives, not employer-specific interview questions."
+    ]
+  ],
+  "full": [
+    {
+      "title": "Executive perspective",
+      "id": "executive",
+      "paragraphs": [
+        "Water investing starts with a tension: the service must remain reliable while infrastructure is maintained, upgraded and paid for. EPA identifies cost recovery, long-term debt management and affordability as linked financing concerns. [funding] This primer focuses on how to reason about those concerns in U.S. utility and infrastructure discussions. It does not offer a global market-size forecast or recommend a security.",
+        "The central analytical discipline is to distinguish need, revenue and investor return. A community can need an upgrade without having a ready funding package. A project can earn revenue without generating distributable cash during construction. An asset can be operationally sound but be a poor investment at the acquisition price. Throughout this guide, examples marked hypothetical illustrate mechanics; they are not estimates of an actual company."
+      ]
+    },
+    {
+      "title": "Value chain and operating choices",
+      "id": "value-chain",
+      "paragraphs": [
+        "CDC describes common treatment stages that include coagulation, flocculation, sedimentation, filtration and disinfection. [treatment] Treatment choices depend on the source water and required output; this list is an orientation rather than an engineering specification.",
+        "Use the following simplified value-chain map to locate the business. Draw an ownership boundary around the asset being evaluated and a separate payment boundary around its revenues. Then identify dependencies outside those boundaries. A technology supplier may influence plant performance without owning the utility's revenue relationship. A utility may own the network but rely on suppliers and contractors for delivery. This separation is useful when determining which risks belong in the operating model and which belong in contract diligence."
+      ],
+      "table": [
+        [
+          "Stage",
+          "Commercial question"
+        ],
+        [
+          "Source and intake",
+          "What quantity and quality are available, and under which rights or agreements?"
+        ],
+        [
+          "Treatment",
+          "What performance must be delivered, at what lifecycle cost?"
+        ],
+        [
+          "Distribution and metering",
+          "Where are losses, reliability constraints and billing gaps?"
+        ],
+        [
+          "Collection and wastewater treatment",
+          "What service obligations and disposal or reuse pathways apply?"
+        ]
+      ]
+    },
+    {
+      "title": "Market structure and business models",
+      "id": "market",
+      "paragraphs": [
+        "Use business models rather than a single 'water sector' multiple. For a regulated utility, investigate the regulatory asset base, tariff process and financing plan. For a contracted asset, read the contract before assigning a revenue profile: determine whether payment depends on availability, output or another condition. For an equipment or service supplier, test the customer value proposition, order cycle, installation responsibilities and ongoing support economics. These are diligence frameworks; a particular company's filings and agreements determine the actual terms.",
+        "American Water's 2025 annual report describes an Illinois rate-case outcome with a 9.84% authorized equity return, $2.2 billion authorized rate base and a 49% equity share. [rate-case] The example shows why a general statement such as 'water earns ten percent' is insufficient: a decision specifies a jurisdiction, asset base and financing structure. Do not transplant this historical case into another utility or treat it as a current industry average.",
+        "For competitive analysis, ask who can win the next customer decision. An acquisition buyer may compete on price, execution and operating capability. A technology vendor may compete against another product or against the customer's decision to defer investment. A strong commercial thesis identifies the actual alternative, the switching friction and the evidence that the proposed solution improves outcomes."
+      ]
+    },
+    {
+      "title": "Utility economics with a worked example",
+      "id": "economics",
+      "paragraphs": [
+        "The following simplified analytical model separates capital structure from return. Assume an eligible rate base of $100 million, an equity component of 50%, an allowed equity return of 10%, and debt costing 5%. The equity return component is $100m × 50% × 10% = $5m. The debt return component is $100m × 50% × 5% = $2.5m. The combined $7.5m is not the entire revenue requirement: this example excludes operating expense, depreciation, taxes and other adjustments.",
+        "The model also does not calculate equity IRR. To evaluate a purchase, project actual equity cash flows after capital expenditure and financing, then compare them with the price paid. If an investor pays more for the same future cash flows, its expected return falls, all else equal. Allowed return is a regulatory input; acquisition return is an investment outcome. Confusing the two can make a high-quality asset look attractive at any price.",
+        "Timing is a separate risk. Imagine construction cash is spent a year before the assumed recovery begins. Even if the eventual tariff is unchanged, the investor must finance that gap. Model cash by period, specify the assumptions about recovery, and test a delayed case rather than applying a vague risk premium. Approval, recovery and actual earning of a return are distinct questions."
+      ],
+      "table": [
+        [
+          "Hypothetical input or result",
+          "Amount"
+        ],
+        [
+          "Eligible rate base",
+          "$100m"
+        ],
+        [
+          "Equity share / allowed equity return",
+          "50% / 10%"
+        ],
+        [
+          "Annual equity return component",
+          "$5m"
+        ],
+        [
+          "Debt share / debt cost",
+          "50% / 5%"
+        ],
+        [
+          "Annual debt return component",
+          "$2.5m"
+        ]
+      ]
+    },
+    {
+      "title": "Financing and debt capacity",
+      "id": "financing",
+      "paragraphs": [
+        "EPA describes WIFIA as compatible with other sources including SRF loans, grants and bonds. Its flexibility page describes repayment terms up to 35 years after project completion and potential deferral up to five years. [wifia] These are program features, not an assurance that a particular applicant qualifies or receives every option. Financing structure must still fit the project's cash flows and applicable agreements.",
+        "For an interview calculation, assume cash flow available for debt service of $12m and annual debt service of $8m. DSCR equals 1.50×. If operating costs rise by $2m with no offsetting revenue or other changes, available cash falls to $10m and DSCR to 1.25×. This hypothetical says nothing about an actual loan covenant; it demonstrates how operating risk reaches lenders.",
+        "Do not equate EBITDA with cash available for debt service without a bridge. Define what the financing documents permit, then account for items such as taxes, working capital and required reserves as applicable. Likewise, extending maturity may reduce near-term annual payments but does not erase the economic cost of capital. Compare financing options over a consistent cash-flow horizon, including fees, interest and refinancing exposure."
+      ]
+    },
+    {
+      "title": "Technology economics and investment selection",
+      "id": "technology",
+      "paragraphs": [
+        "EPA identifies water efficiency as a way to reduce pumping and treatment costs and reduce the need for supply expansion. It also notes that saline-water treatment generates residuals requiring disposal. [efficiency] These observations turn broad themes into diligence topics: what cost is avoided, what capacity is deferred, and what new operating obligation is created?",
+        "Consider a hypothetical $2m leak-management investment with $0.4m of annual gross avoidable cost and $0.1m of annual support cost. Net annual savings are $0.3m, giving a simple payback of about 6.7 years. Simple payback ignores discounting, asset life and the timing of cash flows. A proper investment case should also test implementation failure, benefit persistence and the baseline used to measure savings.",
+        "Keep benefit categories separate. Avoided pumping cost is not the same as additional collected revenue; neither is automatically equal to the value of deferred capital expenditure. If the analysis assigns value to recovered water, explain whether there is demand, treatment capacity and a collection mechanism. If capacity is deferred, identify the actual project and when it would otherwise have been required.",
+        "For a vendor, bridge the customer's economics to the vendor's economics. Ask about hardware margin, installation cost, support obligations, renewal behavior where relevant and cash tied up during deployment. A large technical opportunity with slow procurement and costly implementation can demand more patient capital than a headline growth rate suggests."
+      ]
+    },
+    {
+      "title": "Policy and change monitoring",
+      "id": "policy",
+      "paragraphs": [
+        "The EPA page reviewed on November 6, 2026 describes the May 18 proposal for systems to request two additional years, to 2031, for PFOA/PFOS compliance. [pfas] This is intentionally described as a proposal on that source page; it is not presented as proof that a universal final deadline has taken effect. For an actual investment decision, confirm the applicable final rules, state requirements and system-specific obligations.",
+        "This distinction matters commercially. A change in compliance timing can affect the sequencing of procurement and financing, but does not by itself establish the size of a vendor's sales pipeline. Underwrite awarded work, customer readiness and delivery capacity separately. Do not convert an estimated industry compliance cost directly into a supplier's addressable revenue.",
+        "A targeted refresh should revisit the policy paragraph and interview answer when the cited rule changes, while leaving the hypothetical DSCR example untouched. The source register below records those dependencies. This page implements that traceability; automatic paid refreshing remains disabled."
+      ]
+    },
+    {
+      "title": "Recruiting applications and investment debates",
+      "id": "recruiting",
+      "paragraphs": [
+        "For investment banking, connect the operating thesis to the transaction: what capital is needed, which risks a lender or buyer is taking, and what evidence supports the financing story. For infrastructure or private equity, articulate the cash-flow protection, downside and execution plan. For venture capital or corporate strategy, explain the customer's problem, adoption constraints and unit economics. These are editorial role lenses, not claims about a particular employer.",
+        "A productive debate is whether scale solves the capital-program problem. The pro-consolidation thesis is that capability and resources can be combined. The counter-thesis is that price, integration, governance or customer impacts can offset the benefits. Evaluate a proposed transaction by specifying measurable improvements, responsibilities and timing rather than asserting that larger is always better.",
+        "Another debate is how to balance affordability with renewal. Treat that as a constrained capital-allocation problem: which projects have the greatest service consequences if deferred, which financing options are actually available, and how will the effect on customers be assessed? A strong answer identifies tradeoffs and evidence rather than pretending all objectives can be maximized simultaneously.",
+        "Before a coffee chat, choose one business model, one quantitative example and one unresolved question. Be ready to explain your assumptions, not just your conclusion. Ask the practitioner where execution most often differs from the investment thesis, and use their answer to investigate the operating or contractual detail you had overlooked."
+      ]
+    }
+  ],
+  "takeaways": [
+    "Identify who pays and under what mechanism.",
+    "Separate allowed ROE, realized earnings and investment IRR.",
+    "Model construction, recovery and debt service by period.",
+    "Test technology against customer economics and procurement.",
+    "Distinguish proposals, final rules and company-specific obligations."
+  ],
+  "questions": [
+    [
+      "Explain the industry without treating every water business alike.",
+      "Separate asset ownership, operating obligations and equipment supply. For each business, identify who pays, what performance earns payment and what costs must be incurred before cash arrives. Then locate the decision maker: a regulator, a contracted buyer or a procurement team. My investment comparison would use those revenue and risk mechanisms rather than a single water-sector multiple. The operating value chain provides the map, but actual agreements determine the exposure.",
+      "What is the most important contract or regulatory document for each model?"
+    ],
+    [
+      "How does a rate-base investment translate into equity return?",
+      "Use a deliberately simplified case: $100m eligible rate base, 50% equity and 10% allowed ROE implies a $5m equity return component. Applying 10% to the entire asset base would ignore the financing mix. Then examine when the investment is included, what adjustments apply and whether operating performance permits the return to be earned. American Water's historical Illinois disclosure illustrates that rate cases specify these inputs separately. [rate-case] The example is not an estimate of actual earnings.",
+      "How would a lower equity percentage change the calculation?"
+    ],
+    [
+      "Why is allowed ROE not the same as investment IRR?",
+      "Allowed ROE is an input in a regulatory framework; investment IRR depends on the price paid and the timing of actual equity cash flows. In a hypothetical acquisition, paying a premium for unchanged future cash flows reduces expected return. I would build the bridge from operating results through capital spending and financing to distributions, rather than equating a regulatory percentage with an investor's realized return. I would also test whether recovery occurs on the assumed timeline.",
+      "What happens to IRR if recovery is delayed without changing the eventual tariff?"
+    ],
+    [
+      "Calculate DSCR and explain the downside.",
+      "Assume $12m cash available for annual debt service and $8m debt service. DSCR is 1.50×. A $2m cost increase without offsets reduces available cash to $10m and DSCR to 1.25×. These are hypothetical inputs, not a covenant or company forecast. I would check the agreement's definition of available cash, reserve requirements and consequences of a breach. EBITDA alone is not enough unless it has been reconciled to the contractual cash measure.",
+      "Which operating and financing sensitivities would you test together?"
+    ],
+    [
+      "How would you assess a desalination contract?",
+      "I would first read the payment mechanism: does revenue depend on availability, delivered volume or another condition? Then I would map construction, energy, performance and counterparty risks to the party responsible for them. EPA flags residual disposal as a consideration in saline-water treatment. [efficiency] My downside case would test the cost and operational consequences of the specific obligations. A long-duration contract can improve visibility, but its value depends on enforceability, counterparty quality and allocation of risks.",
+      "Who pays if the plant is available but demand is lower than expected?"
+    ],
+    [
+      "Can low-cost financing solve the affordability problem?",
+      "It can change the timing and cost of payments, but should not be confused with eliminating the underlying cost. EPA describes WIFIA co-funding and flexible repayment features, including terms up to 35 years after completion and possible deferral up to five years. [wifia] I would compare actual eligible options using full cash-flow schedules, including fees and interest. A lower payment today can coexist with costs later, so customer impacts and debt capacity need analysis over time.",
+      "What assumptions would make a longer repayment schedule unattractive?"
+    ],
+    [
+      "How would you assess a leak-detection investment?",
+      "Hypothetically, a $2m investment with $0.4m annual gross savings and $0.1m support cost yields $0.3m net savings and about 6.7 years of simple payback. I would then move beyond payback to discounted cash flow, benefit persistence and implementation risk. EPA supports the link between efficiency, operating cost and supply expansion. [efficiency] I would separate avoided cost, incremental collected revenue and deferred capital spending so the investment case does not count the same water twice.",
+      "How would you establish the baseline and prove the savings?"
+    ],
+    [
+      "Why can a compelling water technology struggle commercially?",
+      "A useful analytical explanation separates technical performance from the customer's buying process and the supplier's economics. I would investigate whether the result is repeatable, whether installation and service costs are included, and whether the product fits the customer's budget and operating constraints. A pilot is evidence about a particular deployment; it is not automatically evidence of repeat purchasing at attractive margins. I would bridge deployments to revenue, gross profit and working-capital requirements.",
+      "What must be true for the next ten deployments to be better than the first?"
+    ],
+    [
+      "What is the commercial debate around consolidation?",
+      "The investment thesis might be stronger execution capability and coordinated capital planning. I would challenge it with acquisition price, integration cost, governance and customer outcomes. The useful answer specifies a measurable improvement, an owner and a timetable. I would distinguish benefits that are within management's control from those dependent on external approval. Scale is a proposed mechanism for improvement, not proof of value creation or permission to ignore the downside.",
+      "Which integration milestone would make you revise your thesis?"
+    ],
+    [
+      "How should you discuss the PFAS compliance timetable?",
+      "Name the source, date and regulatory status. The EPA page reviewed here describes a proposed option for systems to request additional time to 2031. [pfas] I would not repeat the legacy primer's assertion of a universal final deadline. For diligence, confirm the applicable requirements and then translate timing into procurement, construction and funding needs. A policy announcement is not the same thing as a contracted order or an executable customer capital program.",
+      "What evidence would trigger an update to your forecast?"
+    ],
+    [
+      "What is the biggest misconception in a water investment thesis?",
+      "That scarcity or essential demand guarantees attractive investor returns. Those conditions do not specify price, collections, construction cost, operating performance or funding. I would ask how the asset converts demand into cash and what the investor must pay and spend to receive it. Then I would state the conditions under which the thesis fails. This moves the conversation from a broad theme to an underwriting argument that can be tested.",
+      "Which single assumption has the greatest effect on your downside case?"
+    ],
+    [
+      "What would you ask in a substantive coffee chat?",
+      "I would ask: 'Which part of a water investment thesis is hardest to validate before committing capital?' Then I would follow the answer into a concrete example—recovery timing, procurement, operating data or contract allocation—rather than asking for confidential deal details. A second question is: 'What evidence changed your view on a project?' These questions invite discussion of judgment and execution and give me a useful way to connect the financial framework with real work.",
+      "For a technology operator, ask what turns a successful pilot into repeat procurement."
+    ]
+  ],
+  "networking": [
+    "Where does your team see the largest gap between a water investment thesis and execution?",
+    "Which operating metric tells you most about the quality of a system?",
+    "What do candidates most often misunderstand about capital recovery or customer adoption?"
+  ]
+}

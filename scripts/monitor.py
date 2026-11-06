@@ -32,6 +32,10 @@ def report(today):
     for path in sorted((ROOT/'primers').glob('*/research.json')):
         research=json.loads(path.read_text(encoding='utf-8'))
         queue.append({'slug':path.parent.name,'status':'structured','plan':plan_refresh(research,today,config['refresh']['review_after_days'])})
+    for path in sorted((ROOT/'content').glob('*.json')):
+        edition=json.loads(path.read_text(encoding='utf-8'))
+        research={'claims':[{'id':s['id'],'last_verified':edition['reviewed'],'verification':'supported','sections':s['sections']} for s in edition['sources']]}
+        queue.append({'slug':path.stem,'status':'source-reviewed-learning-edition','plan':plan_refresh(research,today,config['refresh']['review_after_days'])})
     return {'as_of':today.isoformat(),'paid_calls':0,'scheduled_paid_refresh_enabled':config['scheduled_refresh_enabled'],'queue':queue}
 
 if __name__=='__main__':

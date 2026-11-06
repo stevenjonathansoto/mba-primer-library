@@ -14,8 +14,11 @@ jobs:
       - run: pip install -r requirements.txt PyMuPDF==1.26.6
       - run: sudo apt-get update && sudo apt-get install -y libreoffice-writer fonts-liberation
       - run: python scripts/smoke_render.py
+      - run: python scripts/render_learning.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: rendered-document-smoke-test
-          path: work/render-smoke/
+          path: |
+            work/render-smoke/
+            work/learning-render/
