@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MBA Industry Primer Library — Columbia Business School</title>
+<title>Energy &amp; Infrastructure Industry Library — Columbia Business School</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -675,7 +675,7 @@
     <!-- search box -->
     <div class="search-wrap">
       <svg class="search-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>
-      <input aria-label="Search industries, topics and recruiting concepts" type="search" id="searchInput" placeholder="Search primers..." oninput="applyFilters()" />
+      <input aria-label="Search industries, topics and recruiting concepts" type="search" id="searchInput" placeholder="Search industries…" oninput="applyFilters()" />
     </div>
 
     <!-- filter dropdown -->
@@ -687,7 +687,7 @@
       <div id="activeFilterPills" style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;"></div>
       <div class="dropdown" id="dropdown">
         <button type="button" class="dropdown-item" aria-pressed="false" data-cat="all" onclick="toggleFilter('all', this)">
-          <span class="dropdown-label">All Primers</span>
+          <span class="dropdown-label">All Industries</span>
           <svg class="check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
         </button>
         <div class="dropdown-divider"></div>
@@ -742,16 +742,16 @@
 <!-- MAIN -->
 <main id="main-content">
   <div class="section-header">
-    <h2 class="section-title">Available Primers</h2>
+    <h2 class="section-title">Available Industries</h2>
     <div style="display:flex; align-items:center; gap:16px;">
       <span id="countLabel" role="status" aria-live="polite" style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap"></span>
       <a href="mailto:ssoto27@gsb.columbia.edu?subject=Primer%20Request&amp;body=Industry%3A%0ASpecific%20focus%3A%0ARecruiting%20relevance%3A%0AAdditional%20context%3A%0A" class="btn-request">
-        Request a Primer
+        Request an Industry
       </a>
     </div>
   </div>
 
-  <div class="no-results">No primers match your search.</div>
+  <div class="no-results">No industries match your search.</div>
 
   <div class="primer-grid" id="primerGrid">
 <div id="card-agribusiness-food-systems" class="primer-card" data-category="agriculture finance" data-title="agribusiness food systems agriculture farming commodity trading precision agriculture alternative protein" data-read-time="50">
@@ -780,7 +780,7 @@
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-agribusiness-food-systems" class="btn-anchor" onclick="copyAnchor(event, 'card-agribusiness-food-systems')" title="Copy link" aria-label="Copy primer link">
+          <a href="#card-agribusiness-food-systems" class="btn-anchor" onclick="copyAnchor(event, 'card-agribusiness-food-systems')" title="Copy link" aria-label="Copy industry link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -812,7 +812,7 @@
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-ai-power-demand" class="btn-anchor" onclick="copyAnchor(event, 'card-ai-power-demand')" title="Copy link" aria-label="Copy primer link">
+          <a href="#card-ai-power-demand" class="btn-anchor" onclick="copyAnchor(event, 'card-ai-power-demand')" title="Copy link" aria-label="Copy industry link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -843,7 +843,7 @@
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-battery-storage" class="btn-anchor" onclick="copyAnchor(event, 'card-battery-storage')" title="Copy link" aria-label="Copy primer link">
+          <a href="#card-battery-storage" class="btn-anchor" onclick="copyAnchor(event, 'card-battery-storage')" title="Copy link" aria-label="Copy industry link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -875,7 +875,7 @@
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-carbon-capture-storage" class="btn-anchor" onclick="copyAnchor(event, 'card-carbon-capture-storage')" title="Copy link" aria-label="Copy primer link">
+          <a href="#card-carbon-capture-storage" class="btn-anchor" onclick="copyAnchor(event, 'card-carbon-capture-storage')" title="Copy link" aria-label="Copy industry link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -907,7 +907,7 @@
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-china-energy-industrial-policy" class="btn-anchor" onclick="copyAnchor(event, 'card-china-energy-industrial-policy')" title="Copy link" aria-label="Copy primer link">
+          <a href="#card-china-energy-industrial-policy" class="btn-anchor" onclick="copyAnchor(event, 'card-china-energy-industrial-policy')" title="Copy link" aria-label="Copy industry link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -939,7 +939,7 @@
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-climatetech-venture-capital" class="btn-anchor" onclick="copyAnchor(event, 'card-climatetech-venture-capital')" title="Copy link" aria-label="Copy primer link">
+          <a href="#card-climatetech-venture-capital" class="btn-anchor" onclick="copyAnchor(event, 'card-climatetech-venture-capital')" title="Copy link" aria-label="Copy industry link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -970,7 +970,7 @@
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-critical-minerals" class="btn-anchor" onclick="copyAnchor(event, 'card-critical-minerals')" title="Copy link" aria-label="Copy primer link">
+          <a href="#card-critical-minerals" class="btn-anchor" onclick="copyAnchor(event, 'card-critical-minerals')" title="Copy link" aria-label="Copy industry link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -1002,7 +1002,7 @@
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-data-centers" class="btn-anchor" onclick="copyAnchor(event, 'card-data-centers')" title="Copy link" aria-label="Copy primer link">
+          <a href="#card-data-centers" class="btn-anchor" onclick="copyAnchor(event, 'card-data-centers')" title="Copy link" aria-label="Copy industry link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -1033,7 +1033,7 @@
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-electric-vehicles" class="btn-anchor" onclick="copyAnchor(event, 'card-electric-vehicles')" title="Copy link" aria-label="Copy primer link">
+          <a href="#card-electric-vehicles" class="btn-anchor" onclick="copyAnchor(event, 'card-electric-vehicles')" title="Copy link" aria-label="Copy industry link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -1065,7 +1065,7 @@
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-energytech-venture-capital" class="btn-anchor" onclick="copyAnchor(event, 'card-energytech-venture-capital')" title="Copy link" aria-label="Copy primer link">
+          <a href="#card-energytech-venture-capital" class="btn-anchor" onclick="copyAnchor(event, 'card-energytech-venture-capital')" title="Copy link" aria-label="Copy industry link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -1096,7 +1096,7 @@
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-geothermal-energy" class="btn-anchor" onclick="copyAnchor(event, 'card-geothermal-energy')" title="Copy link" aria-label="Copy primer link">
+          <a href="#card-geothermal-energy" class="btn-anchor" onclick="copyAnchor(event, 'card-geothermal-energy')" title="Copy link" aria-label="Copy industry link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -1128,7 +1128,7 @@
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-grid-software-vpp" class="btn-anchor" onclick="copyAnchor(event, 'card-grid-software-vpp')" title="Copy link" aria-label="Copy primer link">
+          <a href="#card-grid-software-vpp" class="btn-anchor" onclick="copyAnchor(event, 'card-grid-software-vpp')" title="Copy link" aria-label="Copy industry link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -1159,7 +1159,7 @@
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-hydrogen-energy" class="btn-anchor" onclick="copyAnchor(event, 'card-hydrogen-energy')" title="Copy link" aria-label="Copy primer link">
+          <a href="#card-hydrogen-energy" class="btn-anchor" onclick="copyAnchor(event, 'card-hydrogen-energy')" title="Copy link" aria-label="Copy industry link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -1188,7 +1188,7 @@
         </div>
         <div class="card-footer">
           <span class="coming-badge">Coming Soon</span>
-          <a href="#card-infrastructure-investing" class="btn-anchor" onclick="copyAnchor(event, 'card-infrastructure-investing')" title="Copy link" aria-label="Copy primer link">
+          <a href="#card-infrastructure-investing" class="btn-anchor" onclick="copyAnchor(event, 'card-infrastructure-investing')" title="Copy link" aria-label="Copy industry link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -1219,7 +1219,7 @@
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-mining-metals" class="btn-anchor" onclick="copyAnchor(event, 'card-mining-metals')" title="Copy link" aria-label="Copy primer link">
+          <a href="#card-mining-metals" class="btn-anchor" onclick="copyAnchor(event, 'card-mining-metals')" title="Copy link" aria-label="Copy industry link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -1250,7 +1250,7 @@
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-natural-gas-lng" class="btn-anchor" onclick="copyAnchor(event, 'card-natural-gas-lng')" title="Copy link" aria-label="Copy primer link">
+          <a href="#card-natural-gas-lng" class="btn-anchor" onclick="copyAnchor(event, 'card-natural-gas-lng')" title="Copy link" aria-label="Copy industry link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -1281,7 +1281,7 @@
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-nuclear-energy" class="btn-anchor" onclick="copyAnchor(event, 'card-nuclear-energy')" title="Copy link" aria-label="Copy primer link">
+          <a href="#card-nuclear-energy" class="btn-anchor" onclick="copyAnchor(event, 'card-nuclear-energy')" title="Copy link" aria-label="Copy industry link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -1312,7 +1312,7 @@
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-offshore-wind-energy" class="btn-anchor" onclick="copyAnchor(event, 'card-offshore-wind-energy')" title="Copy link" aria-label="Copy primer link">
+          <a href="#card-offshore-wind-energy" class="btn-anchor" onclick="copyAnchor(event, 'card-offshore-wind-energy')" title="Copy link" aria-label="Copy industry link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -1343,7 +1343,7 @@
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-oil-petroleum" class="btn-anchor" onclick="copyAnchor(event, 'card-oil-petroleum')" title="Copy link" aria-label="Copy primer link">
+          <a href="#card-oil-petroleum" class="btn-anchor" onclick="copyAnchor(event, 'card-oil-petroleum')" title="Copy link" aria-label="Copy industry link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -1374,7 +1374,7 @@
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-onshore-wind-energy" class="btn-anchor" onclick="copyAnchor(event, 'card-onshore-wind-energy')" title="Copy link" aria-label="Copy primer link">
+          <a href="#card-onshore-wind-energy" class="btn-anchor" onclick="copyAnchor(event, 'card-onshore-wind-energy')" title="Copy link" aria-label="Copy industry link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -1406,7 +1406,7 @@
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-private-equity-in-energy-infrastructure" class="btn-anchor" onclick="copyAnchor(event, 'card-private-equity-in-energy-infrastructure')" title="Copy link" aria-label="Copy primer link">
+          <a href="#card-private-equity-in-energy-infrastructure" class="btn-anchor" onclick="copyAnchor(event, 'card-private-equity-in-energy-infrastructure')" title="Copy link" aria-label="Copy industry link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -1438,7 +1438,7 @@
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-project-finance" class="btn-anchor" onclick="copyAnchor(event, 'card-project-finance')" title="Copy link" aria-label="Copy primer link">
+          <a href="#card-project-finance" class="btn-anchor" onclick="copyAnchor(event, 'card-project-finance')" title="Copy link" aria-label="Copy industry link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -1466,7 +1466,7 @@
         </div>
         <div class="card-footer">
           <span class="coming-badge">Coming Soon</span>
-          <a href="#card-semiconductors-ai-chips" class="btn-anchor" onclick="copyAnchor(event, 'card-semiconductors-ai-chips')" title="Copy link" aria-label="Copy primer link">
+          <a href="#card-semiconductors-ai-chips" class="btn-anchor" onclick="copyAnchor(event, 'card-semiconductors-ai-chips')" title="Copy link" aria-label="Copy industry link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -1497,7 +1497,7 @@
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-solar-energy" class="btn-anchor" onclick="copyAnchor(event, 'card-solar-energy')" title="Copy link" aria-label="Copy primer link">
+          <a href="#card-solar-energy" class="btn-anchor" onclick="copyAnchor(event, 'card-solar-energy')" title="Copy link" aria-label="Copy industry link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -1529,7 +1529,7 @@
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-transmission-grid-infrastructure" class="btn-anchor" onclick="copyAnchor(event, 'card-transmission-grid-infrastructure')" title="Copy link" aria-label="Copy primer link">
+          <a href="#card-transmission-grid-infrastructure" class="btn-anchor" onclick="copyAnchor(event, 'card-transmission-grid-infrastructure')" title="Copy link" aria-label="Copy industry link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -1561,7 +1561,7 @@
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-us-energy-policy" class="btn-anchor" onclick="copyAnchor(event, 'card-us-energy-policy')" title="Copy link" aria-label="Copy primer link">
+          <a href="#card-us-energy-policy" class="btn-anchor" onclick="copyAnchor(event, 'card-us-energy-policy')" title="Copy link" aria-label="Copy industry link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -1592,7 +1592,7 @@
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download
           </a>
-          <a href="#card-water-infrastructure" class="btn-anchor" onclick="copyAnchor(event, 'card-water-infrastructure')" title="Copy link" aria-label="Copy primer link">
+          <a href="#card-water-infrastructure" class="btn-anchor" onclick="copyAnchor(event, 'card-water-infrastructure')" title="Copy link" aria-label="Copy industry link">
             <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </a>
         </div>
@@ -1820,7 +1820,7 @@
   // ── On load ─────────────────────────────────────────────────────────────────
   window.addEventListener('load', () => {
     applyFilters();
-    syncDropdownUI(); // initialise "All Primers" as selected
+    syncDropdownUI(); // initialise "All Industries" as selected
     if (location.hash) {
       const el = document.getElementById(decodeURIComponent(location.hash.slice(1)));
       if (el) setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 200);
