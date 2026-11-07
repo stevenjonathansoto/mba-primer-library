@@ -1,0 +1,702 @@
+{
+  "agribusiness-food-systems": {
+    "summary": "Farmers produce the crop. Input suppliers, traders, processors, and logistics companies earn money at different points between the farm and the customer.",
+    "figures": [
+      [
+        "$639B",
+        "2025 global agribusiness market estimate"
+      ],
+      [
+        "$9.5B",
+        "2025 precision agriculture segment estimate"
+      ]
+    ],
+    "trends": [
+      [
+        "Precision farming",
+        "Growers use sensors, guidance, and analytics to target input use."
+      ],
+      [
+        "Storage and freight",
+        "Elevators, ports, and cold chains connect seasonal production to buyers and shape delivered cost."
+      ]
+    ],
+    "players": [
+      "Cargill, ADM, Bunge",
+      "Trade and process commodities. Bayer and Corteva sell seeds and crop inputs."
+    ],
+    "question": "Which step in the chain has the most bargaining power when freight costs rise?"
+  },
+  "ai-power-demand": {
+    "summary": "AI campuses need large blocks of dependable electricity. The local grid connection can determine where and when a campus opens.",
+    "figures": [
+      [
+        "485 TWh",
+        "2025 global data center electricity use in the edition"
+      ],
+      [
+        "950 TWh",
+        "2030 global projection cited in the edition"
+      ]
+    ],
+    "trends": [
+      [
+        "Firm supply",
+        "Gas, existing nuclear, and emerging geothermal compete to supply around-the-clock demand."
+      ],
+      [
+        "Speed to power",
+        "Grid connection dates and equipment lead times can matter as much as the electricity price."
+      ]
+    ],
+    "players": [
+      "Microsoft, Google, Amazon",
+      "Large power buyers. Constellation operates nuclear plants, and GE Vernova supplies gas turbines."
+    ],
+    "question": "If a utility connection is years away, what options can serve the load, and who pays for them?"
+  },
+  "battery-storage": {
+    "summary": "Grid batteries shift electricity across hours and sell services that help keep the grid reliable.",
+    "figures": [
+      [
+        "110+ GWh",
+        "Estimated global deployments in 2025"
+      ],
+      [
+        "30+ GWh",
+        "Estimated U.S. utility-scale deployments in 2025"
+      ]
+    ],
+    "trends": [
+      [
+        "Revenue",
+        "A battery can earn from energy price spreads, availability during peaks, and grid services."
+      ],
+      [
+        "Duration",
+        "A battery can have ample power in megawatts and still run out of energy before a long peak ends."
+      ]
+    ],
+    "players": [
+      "CATL and BYD",
+      "Make cells. Tesla and Fluence integrate grid storage systems."
+    ],
+    "question": "What changes in the revenue model when several batteries start chasing the same price spikes?"
+  },
+  "carbon-capture-storage": {
+    "summary": "Industrial carbon capture links three assets: a capture plant, a transport route, and a permitted storage site.",
+    "figures": [
+      [
+        "~50 million tonnes per year",
+        "Global operating capture capacity cited for 2025"
+      ],
+      [
+        "~5,000 miles",
+        "U.S. CO₂ pipeline network cited in the edition"
+      ]
+    ],
+    "trends": [
+      [
+        "Shared infrastructure",
+        "A hub can connect multiple emitters to transport and storage infrastructure."
+      ],
+      [
+        "Project risk",
+        "Capture performance, power use, pipeline access, and storage permitting all affect delivered cost."
+      ]
+    ],
+    "players": [
+      "ExxonMobil and Occidental",
+      "ExxonMobil acquired Denbury’s CO₂ network. Occidental’s 1PointFive and Climeworks pursue direct air capture."
+    ],
+    "question": "Which party carries the risk if captured volumes come in below the pipeline commitment?"
+  },
+  "china-energy-industrial-policy": {
+    "summary": "China combines a large domestic market with coordinated industrial policy to build clean energy manufacturing at scale.",
+    "figures": [
+      [
+        "$625B+",
+        "China’s 2024 clean energy investment cited in the edition"
+      ],
+      [
+        "~82%",
+        "China’s share of global solar manufacturing cited in the edition"
+      ]
+    ],
+    "trends": [
+      [
+        "Scale and trade",
+        "Manufacturing clusters lower costs, while tariffs and sourcing rules can change where suppliers build."
+      ],
+      [
+        "Power mix",
+        "Fast renewable growth coexists with heavy coal use, so capacity additions only tell part of the story."
+      ]
+    ],
+    "players": [
+      "NDRC, State Grid, CATL, Jinko",
+      "NDRC guides investment. State Grid operates the grid. CATL makes batteries and Jinko makes solar modules."
+    ],
+    "question": "Which stage of a clean energy supply chain is hardest to replicate outside China?"
+  },
+  "climatetech-venture-capital": {
+    "summary": "ClimateTech investors back companies that cut or remove emissions across sectors, from electricity and transport to agriculture and industry.",
+    "figures": [
+      [
+        "$40.5B",
+        "2025 global venture and growth funding, per Sightline in the edition"
+      ],
+      [
+        "28%",
+        "Share of 2025 U.S. funding captured by the ten largest deals, per the edition"
+      ]
+    ],
+    "trends": [
+      [
+        "Capital intensity",
+        "Hardware companies may need several funding rounds before their first commercial plant."
+      ],
+      [
+        "Demand",
+        "Policy can help early sales, but recurring demand depends on customer economics and performance."
+      ]
+    ],
+    "players": [
+      "Breakthrough Energy Ventures, Lowercarbon Capital, S2G",
+      "Examples of hard tech, broad climate, and food and agriculture investment strategies."
+    ],
+    "question": "What would you need to see at a pilot before funding the first commercial plant?"
+  },
+  "critical-minerals": {
+    "summary": "Critical mineral risk often sits in processing. Having ore in the ground does little for a buyer who needs battery-grade or magnet-grade material.",
+    "figures": [
+      [
+        "~$391B",
+        "2025 global market estimate cited in the edition"
+      ],
+      [
+        "10–20 years",
+        "New-mine development lead time cited in the edition"
+      ]
+    ],
+    "trends": [
+      [
+        "Where supply is concentrated",
+        "The DRC matters for mined cobalt, Indonesia for nickel, and China for several refining stages."
+      ],
+      [
+        "Demand exposure",
+        "Battery chemistry, recycling, and substitution can change demand for individual minerals."
+      ]
+    ],
+    "players": [
+      "Glencore, Rio Tinto, BHP",
+      "Glencore has cobalt and copper exposure. Rio Tinto and BHP have large diversified mining portfolios."
+    ],
+    "question": "How would you identify whether a supply shock starts in mining, refining, or logistics?"
+  },
+  "data-centers": {
+    "summary": "A data center sells computing capacity or the space, power, and cooling needed to run it.",
+    "figures": [
+      [
+        "24.4 GW",
+        "Estimated global IT power capacity in 2025"
+      ],
+      [
+        "$660–690B",
+        "Combined 2026 capital spending estimate for five hyperscalers in the edition"
+      ]
+    ],
+    "trends": [
+      [
+        "Site selection",
+        "Power availability and connection timing can decide whether a site is usable."
+      ],
+      [
+        "Cooling",
+        "Dense AI racks increase demand for liquid cooling and electrical equipment."
+      ]
+    ],
+    "players": [
+      "AWS and Google",
+      "Cloud operators. Equinix and Digital Realty provide colocation, while NVIDIA supplies accelerators."
+    ],
+    "question": "What would you check before believing a developer’s promised power delivery date?"
+  },
+  "electric-vehicles": {
+    "summary": "EV competition runs through the battery, vehicle, and charging network. Each layer has different costs and competitive advantages.",
+    "figures": [
+      [
+        "21.6 million",
+        "2025 global EV sales cited in the edition"
+      ],
+      [
+        "~23%",
+        "EV share of 2025 global new-car sales cited in the edition"
+      ]
+    ],
+    "trends": [
+      [
+        "Cost and chemistry",
+        "Battery chemistry and cell manufacturing scale shape vehicle costs and sourcing exposure."
+      ],
+      [
+        "Market access",
+        "Tariffs, local production, and changes to incentives can affect adoption by region."
+      ]
+    ],
+    "players": [
+      "BYD and Tesla",
+      "Major vehicle makers. CATL and LG Energy Solution supply cells."
+    ],
+    "question": "Where can a vehicle maker reduce costs without giving up too much range or charging speed?"
+  },
+  "energytech-venture-capital": {
+    "summary": "EnergyTech investors look for businesses that make power cheaper, more reliable, or easier to manage.",
+    "figures": [
+      [
+        "$17–20B",
+        "2025 energy-focused venture and growth estimate in the edition"
+      ],
+      [
+        "~$4.2B",
+        "2025 grid software and AI segment estimate in the edition"
+      ]
+    ],
+    "trends": [
+      [
+        "Buyer needs",
+        "Data center load and grid congestion create demand for power, flexibility, and better forecasts."
+      ],
+      [
+        "Commercial proof",
+        "Selling software to a utility is a different financing path from building a first-of-a-kind power project."
+      ]
+    ],
+    "players": [
+      "Fervo Energy, Form Energy, Fluence",
+      "Examples across advanced geothermal, long-duration storage, and battery integration."
+    ],
+    "question": "Who pays for the product and what operational result will get the buyer to renew or expand?"
+  },
+  "geothermal-energy": {
+    "summary": "Geothermal uses underground heat to deliver steady power. Enhanced geothermal applies drilling techniques to reach a wider range of resources.",
+    "figures": [
+      [
+        "~16 GW",
+        "2024 global geothermal electric capacity cited in the edition"
+      ],
+      [
+        "40–60%",
+        "Drilling share of project capital cost cited in the edition"
+      ]
+    ],
+    "trends": [
+      [
+        "Resource risk",
+        "A well can miss the needed temperature or flow, so early drilling results matter for financing."
+      ],
+      [
+        "Firm demand",
+        "A buyer seeking clean power around the clock may pay for predictable output."
+      ]
+    ],
+    "players": [
+      "Ormat and Fervo Energy",
+      "Ormat develops and operates geothermal plants. Fervo develops enhanced geothermal projects."
+    ],
+    "question": "Which drilling result would give lenders enough confidence to fund the rest of the project?"
+  },
+  "grid-software-vpp": {
+    "summary": "A virtual power plant coordinates batteries, thermostats, and other small devices so they can supply a useful amount of grid flexibility together.",
+    "figures": [
+      [
+        "$3.94B",
+        "One estimate of the 2025 global VPP market"
+      ],
+      [
+        "Order 2222",
+        "FERC’s 2020 rule opening a route for aggregations into wholesale markets"
+      ]
+    ],
+    "trends": [
+      [
+        "Revenue",
+        "Aggregators can earn from capacity, energy, or grid services where market rules allow."
+      ],
+      [
+        "Execution",
+        "Enrollment only becomes valuable if devices respond reliably when the operator calls on them."
+      ]
+    ],
+    "players": [
+      "AutoGrid/Uplight, Enel X, Next Kraftwerke",
+      "Examples of software and aggregation businesses."
+    ],
+    "question": "What share of enrolled capacity can the aggregator actually deliver during the system peak?"
+  },
+  "hydrogen-energy": {
+    "summary": "Hydrogen is an industrial feedstock. Cleaner production has to compete on delivered cost, reliability, and emissions.",
+    "figures": [
+      [
+        "~95 million tonnes per year",
+        "Global production estimate cited in the edition"
+      ],
+      [
+        "$4–8/kg",
+        "Illustrative 2025 green hydrogen production cost range cited in the edition"
+      ]
+    ],
+    "trends": [
+      [
+        "Cost",
+        "Electricity price and electrolyzer utilization shape green hydrogen economics."
+      ],
+      [
+        "Offtake",
+        "A credible industrial buyer and a realistic transport plan matter more than announced capacity."
+      ]
+    ],
+    "players": [
+      "Nel, thyssenkrupp nucera, Siemens Energy",
+      "Electrolyzer suppliers serving different designs and industrial applications."
+    ],
+    "question": "What has to be true about the buyer, power price, and plant utilization for a project to get financed?"
+  },
+  "mining-metals": {
+    "summary": "Mines commit capital years before they sell metal. Margins move with commodity prices, ore quality, and extraction costs.",
+    "figures": [
+      [
+        "$1.19T",
+        "2025 global mining and metals market estimate in the edition"
+      ],
+      [
+        "5–15 years",
+        "Project development timeline cited in the edition"
+      ]
+    ],
+    "trends": [
+      [
+        "Demand",
+        "Grid investment and electrification pull on copper. Batteries create demand for several different metals."
+      ],
+      [
+        "Supply",
+        "Permitting, falling grades, and large capital commitments make new production slow to arrive."
+      ]
+    ],
+    "players": [
+      "BHP, Rio Tinto, Glencore",
+      "Diversified miners with different portfolios across copper, lithium, cobalt, and other commodities."
+    ],
+    "question": "What happens to a project’s economics if ore grades fall while the commodity price stays flat?"
+  },
+  "natural-gas-lng": {
+    "summary": "LNG turns natural gas into a shippable commodity. Liquefaction, shipping, and regasification link markets that otherwise depend on pipelines.",
+    "figures": [
+      [
+        "15.2 Bcf/day",
+        "Average U.S. LNG exports in 2025, as reported in the edition"
+      ],
+      [
+        "118.5 Bcf/day",
+        "2025 U.S. gas production figure cited in the edition"
+      ]
+    ],
+    "trends": [
+      [
+        "Domestic demand",
+        "Power generation and export terminals compete for gas where takeaway capacity is tight."
+      ],
+      [
+        "Global supply",
+        "A disruption at a terminal or shipping chokepoint can quickly change regional gas prices."
+      ]
+    ],
+    "players": [
+      "Cheniere, Venture Global, Freeport LNG",
+      "U.S. exporters and terminal operators."
+    ],
+    "question": "When a shipment reroutes, who captures the price difference and who bears the shipping cost?"
+  },
+  "nuclear-energy": {
+    "summary": "Nuclear plants supply steady power. Extending an existing plant, restarting one, and building a new reactor carry different costs and risks.",
+    "figures": [
+      [
+        "96 reactors",
+        "Operating U.S. fleet as of March 2026 in the edition"
+      ],
+      [
+        "~18–19%",
+        "U.S. electricity supplied by nuclear in the edition"
+      ]
+    ],
+    "trends": [
+      [
+        "Existing fleet",
+        "Long-term power contracts can support upgrades or restarts when buyers value steady output."
+      ],
+      [
+        "New builds",
+        "Financing depends on construction execution, licensing, and fuel supply. Small modular reactors still face those hurdles."
+      ]
+    ],
+    "players": [
+      "Constellation, Westinghouse, GE Hitachi",
+      "Constellation operates plants. Westinghouse and GE Hitachi supply reactor technologies."
+    ],
+    "question": "When does a buyer pay for a restart instead of backing a new build?"
+  },
+  "offshore-wind-energy": {
+    "summary": "Offshore wind combines large turbines with ports, installation vessels, foundations, and a grid connection at sea.",
+    "figures": [
+      [
+        "84.5 GW",
+        "Global operating offshore wind at year-end 2025, per the edition"
+      ],
+      [
+        "6 GW",
+        "Global 2025 additions, versus about 11 GW in 2024"
+      ]
+    ],
+    "trends": [
+      [
+        "Costs and contracts",
+        "Higher financing and construction costs can undermine a project with a fixed price power contract."
+      ],
+      [
+        "Floating wind",
+        "Floating foundations can reach deeper water but add cost and deployment complexity."
+      ]
+    ],
+    "players": [
+      "Siemens Gamesa, Vestas, GE Vernova",
+      "Major offshore turbine suppliers."
+    ],
+    "question": "Which costs would you lock in before signing a long-term power contract?"
+  },
+  "oil-petroleum": {
+    "summary": "Oil economics differ across production, transport, and refining. A disruption can benefit one part of the chain and hurt another.",
+    "figures": [
+      [
+        "~103.5 million barrels per day",
+        "2025 global oil demand cited in the edition"
+      ],
+      [
+        "$117/barrel",
+        "April 2026 Brent peak reported in the edition"
+      ]
+    ],
+    "trends": [
+      [
+        "Supply response",
+        "OPEC+ production decisions and U.S. shale output help shape the global balance."
+      ],
+      [
+        "Chokepoints",
+        "Shipping disruptions can raise freight rates and change which refineries can source the crude they need."
+      ]
+    ],
+    "players": [
+      "Saudi Aramco, ExxonMobil, Shell",
+      "A national oil company and two global integrated producers."
+    ],
+    "question": "How could a crude price spike change margins for a producer and a refiner?"
+  },
+  "onshore-wind-energy": {
+    "summary": "Onshore wind developers turn a wind resource and grid connection into a project that earns from contracted or merchant power sales.",
+    "figures": [
+      [
+        "145+ GW",
+        "Cumulative U.S. capacity cited in the edition"
+      ],
+      [
+        "310+ GW",
+        "Cumulative Chinese capacity cited in the edition"
+      ]
+    ],
+    "trends": [
+      [
+        "Development",
+        "Permitting, local acceptance, and grid access determine whether a project can proceed."
+      ],
+      [
+        "Output",
+        "Larger rotors and taller towers can improve energy capture, but transport and site constraints shape the design."
+      ]
+    ],
+    "players": [
+      "Vestas, Siemens Gamesa, GE Vernova",
+      "Major onshore turbine suppliers."
+    ],
+    "question": "Would you prefer a stronger wind resource or a faster, cheaper grid connection?"
+  },
+  "private-equity-in-energy-infrastructure": {
+    "summary": "Energy investors buy both long-lived assets and operating businesses. The cash flows and the way investors create value differ.",
+    "figures": [
+      [
+        "~$104B",
+        "Infrastructure equity raised by Brookfield in 2020–2024, per the edition"
+      ],
+      [
+        "~$73B",
+        "Stonepeak assets under management cited for 2025"
+      ]
+    ],
+    "trends": [
+      [
+        "Contracted assets",
+        "Cash flow depends on contract terms, counterparties, and operating performance."
+      ],
+      [
+        "Operating platforms",
+        "A buyout can depend on growth, add-on acquisitions, or margin improvement."
+      ]
+    ],
+    "players": [
+      "Brookfield, Energy Capital Partners, Blackstone",
+      "Examples of infrastructure, energy-focused, and multi-strategy investors."
+    ],
+    "question": "Which part of the return depends on reliable cash flow, and which depends on improving or selling the business?"
+  },
+  "solar-energy": {
+    "summary": "Solar manufacturing and solar project ownership are different businesses. A cheap module helps, but grid access and the value of daytime power shape project returns.",
+    "figures": [
+      [
+        "43.2 GWdc",
+        "U.S. solar capacity added in 2025, per the edition"
+      ],
+      [
+        "~54%",
+        "Solar share of new U.S. power capacity in 2025, per the edition"
+      ]
+    ],
+    "trends": [
+      [
+        "Supply chain",
+        "China dominates several upstream stages. Sourcing rules and trade barriers affect procurement."
+      ],
+      [
+        "Power value",
+        "Storage can shift midday production into hours when electricity is worth more."
+      ]
+    ],
+    "players": [
+      "Jinko and LONGi",
+      "Major module and cell manufacturers. First Solar makes thin-film modules."
+    ],
+    "question": "What happens to revenue when many nearby solar plants produce at the same time?"
+  },
+  "transmission-grid-infrastructure": {
+    "summary": "Transmission carries electricity between regions and connects new generators and large customers. Delays affect both the supply of power and where new loads can go.",
+    "figures": [
+      [
+        "~$470B",
+        "2025 global grid investment cited in the edition"
+      ],
+      [
+        "2,000+ GW",
+        "U.S. interconnection queue capacity cited in the edition"
+      ]
+    ],
+    "trends": [
+      [
+        "Bottlenecks",
+        "Siting, cost allocation, and long equipment lead times can delay upgrades."
+      ],
+      [
+        "Demand",
+        "New generation and large loads can both require substations, transformers, or new lines."
+      ]
+    ],
+    "players": [
+      "Utilities and grid operators",
+      "Plan or operate networks. GE Vernova, Siemens Energy, and Hitachi Energy supply equipment."
+    ],
+    "question": "What is actually delaying connection at a specific site, and who controls the decision?"
+  },
+  "us-energy-policy": {
+    "summary": "U.S. energy policy works through federal tax credits and rules, state utility decisions, and regional grid operations.",
+    "figures": [
+      [
+        "$369B",
+        "Clean energy spending and credits associated with the 2022 IRA in the edition"
+      ],
+      [
+        "July 2025",
+        "Enactment of OBBBA, which revised several incentives"
+      ]
+    ],
+    "trends": [
+      [
+        "Eligibility",
+        "The project type, construction date, and sourcing rules determine how much policy support it can claim."
+      ],
+      [
+        "Local approvals",
+        "Federal incentives still leave state permitting, utility cost recovery, and grid connection to other decision-makers."
+      ]
+    ],
+    "players": [
+      "FERC, DOE, EPA, state commissions",
+      "Oversee different parts of power markets, financing, emissions, and utility regulation."
+    ],
+    "question": "Which policy change affects project cash flow, and which decision still depends on a state regulator?"
+  },
+  "project-finance": {
+    "summary": "A dedicated project company owns the asset and repays debt primarily from its own cash flows.",
+    "figures": [
+      [
+        "$70M debt / $30M equity",
+        "Illustrative funding mix for a $100M solar project"
+      ],
+      [
+        "1.50× DSCR",
+        "Illustrative coverage when $12M of available cash supports $8M of debt service"
+      ]
+    ],
+    "trends": [
+      [
+        "Construction",
+        "A delay pushes revenue back while costs and interest can keep accruing."
+      ],
+      [
+        "Cash priority",
+        "Operating costs and debt payments come before distributions to shareholders."
+      ]
+    ],
+    "players": [
+      "Project company, lenders, sponsors",
+      "The project company signs the contracts. Lenders provide debt and sponsors fund equity. Contractors build and offtakers buy output."
+    ],
+    "question": "If construction costs rise $8 million, who is committed to covering the gap?"
+  },
+  "water-infrastructure": {
+    "summary": "Water utilities sell a service, contracted plants earn under an agreement, and suppliers sell the equipment and services that keep both running.",
+    "figures": [
+      [
+        "$5M per year",
+        "Illustrative allowed equity return on a $100M rate base with 50% equity and a 10% allowed return"
+      ],
+      [
+        "1.50× to 1.25×",
+        "Illustrative debt coverage after a $2M increase in operating costs"
+      ]
+    ],
+    "trends": [
+      [
+        "Capital recovery",
+        "The timing of approved rates determines when regulated investment starts earning a return."
+      ],
+      [
+        "Affordability",
+        "Utilities must balance customer bills with debt payments and the cost of maintaining service."
+      ]
+    ],
+    "players": [
+      "Utilities, regulators, equipment suppliers",
+      "Utilities provide service, regulators set recovery terms, and suppliers sell pumps, treatment equipment, or operating support."
+    ],
+    "question": "Who pays for an upgrade, and what happens to cash flow if recovery is delayed?"
+  }
+}

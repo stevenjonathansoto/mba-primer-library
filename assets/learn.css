@@ -31,18 +31,101 @@
 .capital-sources{display:grid;grid-template-columns:1fr 1fr;gap:18px}.capital-sources>div,.project-entity{background:#f2f6f4;padding:16px}.capital-sources strong,.capital-sources span,.capital-sources small,.project-entity strong,.project-entity span{display:block}.capital-sources span{font-size:1.2rem;color:#214d43;font-weight:bold}.capital-sources small,.project-entity span{font-size:.82rem}.flow-arrow{margin:4px 0;text-align:center;color:#52645b}.project-entity{text-align:center}.payment-flow{list-style:none;padding:0;margin:0}.payment-flow li{display:flex;gap:18px;justify-content:space-between;padding:10px 12px;border-bottom:1px solid #e0e6e2;font-size:.9rem}.payment-flow strong{white-space:nowrap}.payment-flow .subtotal{background:#f2f6f4;font-weight:bold}.risk-map{margin:0}.risk-map>div{padding:12px 0;border-bottom:1px solid #e0e6e2}.risk-map dt{font-size:.9rem;font-weight:bold}.risk-map dd{font-size:.85rem;margin:4px 0 0}@media(max-width:600px){.capital-sources{gap:10px}.capital-sources>div{padding:12px}.capital-sources span{font-size:1.1rem}}
 .reading-tools a{background:#2d5545;color:#fff;padding:0 14px;border-radius:4px;text-decoration:none;font-weight:600}.reading-tools a:hover{background:#244738}
 
-/* Legacy editions share a reading column across all three formats. */
-.legacy-learning .learn-header,.legacy-learning .learning,.legacy-learning>footer{max-width:804px;padding-inline:clamp(20px,4vw,32px)}
-.legacy-learning .long-read{max-width:none}
-.legacy-learning #brief h2{margin:0 0 12px;font-size:1.25rem;color:#253b34}
-.legacy-learning .long-read>section+section{margin-top:36px}
-.legacy-learning .long-read h3{margin:0 0 12px}
-.legacy-learning .long-read p{margin:0 0 14px;line-height:1.7}
-.legacy-learning .long-read :is(td,th) p,.legacy-learning .long-read>section>:last-child{margin-bottom:0}
-.legacy-learning .reading-tools a{background:#2d5545;color:#fff;padding:0 14px;border-radius:4px;text-decoration:none;font-weight:600}
-.legacy-learning .reading-tools a:hover{background:#244738}
-.legacy-learning .contents{margin:8px 0 24px}
-.legacy-learning #figure-status:empty{display:none}
-.legacy-learning .legacy-starters{margin:0;padding-left:1.6em}
-.legacy-learning .legacy-starters li{padding:12px 0;border-top:1px solid #e1e6e3}
-.legacy-learning .legacy-starters p{margin:0}
+/* Align the reader chrome and the full primer to one reading column. */
+header.learn-header,
+main.learning,
+body > footer {
+  max-width: 804px;
+  padding-inline: clamp(20px, 4vw, 32px);
+}
+
+.long-read { max-width: none; }
+.long-read .reading-tools { padding-block: 0 8px; }
+.long-read .contents { margin-bottom: 28px; }
+.long-read > section + section { margin-top: clamp(32px, 5vw, 44px); }
+.long-read h3 { margin: 0 0 12px; }
+.long-read p { margin: 0 0 14px; line-height: 1.7; }
+.long-read > section > :last-child { margin-bottom: 0; }
+
+.long-read .primer-figure,
+.long-read .table-scroll { margin: 20px 0; }
+.primer-figure img { display: block; width: 100%; height: auto; border-radius: 4px; }
+.primer-figure figcaption { margin-top: 8px; font-size: .875rem; line-height: 1.5; color: #52645b; }
+.long-read th,
+.long-read td { padding: 10px 12px; vertical-align: top; }
+@media (max-width: 600px) {
+  .long-read .contents { margin-bottom: 22px; }
+  .long-read th, .long-read td { padding: 8px 10px; }
+}
+
+/* One scan pattern for every Brief tab. */
+.meeting-brief {
+  color: #293238;
+  line-height: 1.55;
+}
+.meeting-brief .meeting-summary {
+  font-size: clamp(1.08rem, 2.2vw, 1.22rem);
+  line-height: 1.45;
+  margin: 0 0 16px;
+}
+.meeting-brief section + section {
+  margin-top: 16px;
+}
+.meeting-brief section h2 {
+  margin: 0 0 6px;
+  color: #253b34;
+  font-size: 1rem;
+}
+.meeting-brief p {
+  margin: 0;
+}
+.meeting-figures {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+.meeting-figures li {
+  background: #f2f6f4;
+  border-radius: 4px;
+  padding: 10px 12px;
+}
+.meeting-figures strong,
+.meeting-figures span {
+  display: block;
+}
+.meeting-figures strong {
+  color: #214d43;
+  font-size: clamp(1.05rem, 2.6vw, 1.35rem);
+  line-height: 1.25;
+}
+.meeting-figures span {
+  color: #52645b;
+  font-size: .875rem;
+  line-height: 1.45;
+  margin-top: 4px;
+}
+.meeting-trends {
+  margin: 0;
+  padding-left: 1.15em;
+}
+.meeting-trends li + li {
+  margin-top: 5px;
+}
+.meeting-question {
+  border-inline-start: 3px solid #9eb9aa;
+  padding-inline-start: 12px;
+}
+.meeting-more {
+  border-top: 1px solid #dfe6e2;
+  margin: 30px 0 12px;
+  padding-top: 20px;
+  color: #253b34;
+  font-size: 1.2rem;
+}
+.legacy-learning #figure-status:empty { display: none; }
+.legacy-learning .legacy-starters { margin: 0; padding-left: 1.6em; }
+.legacy-learning .legacy-starters li { padding: 12px 0; border-top: 1px solid #e1e6e3; }
+.legacy-learning .legacy-starters p { margin: 0; }
