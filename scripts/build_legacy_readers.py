@@ -7,6 +7,7 @@ from docx import Document
 from docx.oxml.ns import qn
 from docx.table import Table
 from docx.text.paragraph import Paragraph
+from meeting_brief import render_meeting_brief
 
 ROOT=Path(__file__).resolve().parents[1]
 UPDATED_READERS = {'project-finance', 'water-infrastructure'}
@@ -17,7 +18,6 @@ def legacy_learning_page(entry, title, slug, blocks):
     document = html.escape('../' + entry['downloads'][0], quote=True)
     edition = html.escape(entry['updated'].removeprefix('Last Updated:').strip())
     contents = []
-    brief = []
     interview = []
     full = []
     current_heading = ''
@@ -32,14 +32,13 @@ def legacy_learning_page(entry, title, slug, blocks):
             anchor = f'full-section-{len(contents) + 1}'
             contents.append(f'<a href="#{anchor}">{heading[1]}</a>')
             block = block.replace('<h2>', f'<h3 id="{anchor}">', 1).replace('</h2>', '</h3>', 1)
-        elif current_heading in {'INDUSTRY AT A GLANCE', 'INTERVIEW CONVERSATION STARTERS'}:
+        elif current_heading == 'INTERVIEW CONVERSATION STARTERS':
             paragraph = re.match(r'<p>.*?</p>', block, re.S)
             if paragraph:
-                target = brief if current_heading == 'INDUSTRY AT A GLANCE' else interview
-                target.append(paragraph[0])
+                interview.append(paragraph[0])
         full.append(block)
-    if not brief or not interview:
-        raise ValueError(f'Missing opening or interview material in {slug}')
+    if not interview:
+        raise ValueError(f'Missing interview material in {slug}')
     # Wrap groups for the shared primer spacing rules while preserving every block.
     body = ''.join(full)
     body = re.sub(r'(<h3 id="full-section-\d+">)', r'</section><section>\1', '<section>' + body) + '</section>'
@@ -47,11 +46,11 @@ def legacy_learning_page(entry, title, slug, blocks):
     starters = ''.join(f'<li>{paragraph}</li>' for paragraph in interview)
     feedback = f'https://github.com/stevenjonathansoto/mba-primer-library/issues/new?labels=feedback&amp;title=Feedback%3A%20{slug}'
     return f'''<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{title} | Energy &amp; Infrastructure Industry Library</title><link rel="stylesheet" href="../assets/reader.css"><link rel="stylesheet" href="../assets/learn.css?v=reader-spacing"></head>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{title} | Energy &amp; Infrastructure Industry Library</title><link rel="stylesheet" href="../assets/reader.css"><link rel="stylesheet" href="../assets/learn.css?v=meeting-brief"></head>
 <body class="legacy-learning" data-document="{document}"><a class="skip" href="#learning">Skip to content</a>
 <header class="learn-header"><a class="back" href="../index.html#{entry['id']}">← Library</a><h1>{title}</h1><p class="dek">{edition} edition · Market figures reflect the original edition.</p></header>
 <main id="learning" class="learning"><nav class="format-nav" aria-label="Learning formats"><a id="tab-brief" href="#brief">Brief</a><a id="tab-full" href="#full">Full primer</a><a id="tab-interview" href="#interview">Interview prep</a></nav>
-<section id="brief" class="format-panel long-read" aria-labelledby="tab-brief"><h2>Industry at a glance</h2>{''.join(brief)}</section>
+<section id="brief" class="format-panel" aria-labelledby="tab-brief">{render_meeting_brief(slug)}</section>
 <section id="full" class="format-panel long-read" aria-labelledby="tab-full"><div class="reading-tools"><span>FULL PRIMER</span><a href="{document}" download>Download Word</a></div><details class="contents"><summary>Contents</summary><nav aria-label="Primer contents">{''.join(contents)}</nav></details><p id="figure-status" role="status"></p>{body}</section>
 <section id="interview" class="format-panel interview" aria-labelledby="tab-interview"><h2>Interview prep</h2><p class="muted">Use these conversation starters from the {edition} edition to practice explaining an industry driver in your own words. Check the date of any figures you plan to quote.</p><ol class="legacy-starters">{starters}</ol></section></main>
 <footer>Educational material · <a href="{feedback}">Report an issue</a></footer><script src="../assets/reader.js" defer></script><script src="../assets/learn.js" defer></script></body></html>'''
